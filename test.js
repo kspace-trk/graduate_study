@@ -1,187 +1,12 @@
 (function () {
+  const fs = require("fs");
   //曲名：happy with you
-  const input_notes = [
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 68,
-      name: "G#4",
-      ticks: 0,
-      time: 0,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 68,
-      name: "G#4",
-      ticks: 72,
-      time: 0.375,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.375,
-      durationTicks: 72,
-      midi: 75,
-      name: "D#5",
-      ticks: 144,
-      time: 0.75,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 75,
-      name: "D#5",
-      ticks: 240,
-      time: 1.25,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 63,
-      name: "D#4",
-      ticks: 312,
-      time: 1.625,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 67,
-      name: "G4",
-      ticks: 384,
-      time: 2,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 67,
-      name: "G4",
-      ticks: 456,
-      time: 2.375,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.375,
-      durationTicks: 72,
-      midi: 68,
-      name: "G#4",
-      ticks: 528,
-      time: 2.75,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 68,
-      name: "G#4",
-      ticks: 624,
-      time: 3.25,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 70,
-      name: "A#4",
-      ticks: 696,
-      time: 3.625,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 68,
-      name: "G#4",
-      ticks: 768,
-      time: 4,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 68,
-      name: "G#4",
-      ticks: 840,
-      time: 4.375,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.375,
-      durationTicks: 72,
-      midi: 75,
-      name: "D#5",
-      ticks: 912,
-      time: 4.75,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 75,
-      name: "D#5",
-      ticks: 1008,
-      time: 5.25,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 63,
-      name: "D#4",
-      ticks: 1080,
-      time: 5.625,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 70,
-      name: "A#4",
-      ticks: 1152,
-      time: 6,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 70,
-      name: "A#4",
-      ticks: 1224,
-      time: 6.375,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.375,
-      durationTicks: 72,
-      midi: 72,
-      name: "C5",
-      ticks: 1296,
-      time: 6.75,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 73,
-      name: "C#5",
-      ticks: 1392,
-      time: 7.25,
-      velocity: 0.7874015748031497,
-    },
-    {
-      duration: 0.25,
-      durationTicks: 48,
-      midi: 72,
-      name: "C5",
-      ticks: 1464,
-      time: 7.625,
-      velocity: 0.7874015748031497,
-    },
-  ];
+  const input_notes = JSON.parse(
+    fs.readFileSync(
+      "./input_data/WildVibes_Vs_WildHearts_X_WINARTA_Feat._Arild_Aas_-_Happy_With_You.json",
+      "utf8"
+    )
+  );
   let notes = [
     {
       duration: [],
@@ -285,7 +110,7 @@
     }
   };
   const distin = () => {
-    input_notes.forEach((element) => {
+    input_notes.notes.forEach((element) => {
       if (element.time < 2) {
         notes[0].duration.push(element.duration);
         notes[0].name.push(element.name);
