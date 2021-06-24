@@ -1,12 +1,7 @@
 (function () {
   const fs = require("fs");
   //曲名：happy with you
-  const input_notes = JSON.parse(
-    fs.readFileSync(
-      "./input_data/WildVibes_Vs_WildHearts_X_WINARTA_Feat._Arild_Aas_-_Happy_With_You.json",
-      "utf8"
-    )
-  );
+  const input_notes = [];
   let notes = [
     {
       duration: [],
@@ -32,8 +27,21 @@
   let params = {
     recurring_match_degrees: 0.5, // どれくらい音高が一致してたら繰り返し判定にするか
   };
-
-  let = recurring_times = null; // 4小節内の繰り返し回数
+  let measure_repeating_time = null; // 何小節ごとに繰り返すか
+  let one_measure_repeating_notes = []; // 1小節ごとの繰り返しnoteデータ
+  let two_measure_repeating_notes = []; // 2小節ごとの繰り返しnoteデータ
+  let four_measure_repeating_notes = []; // 4小節ごとの繰り返しnoteデータ
+  const parse_json = async () => {
+    const fs = require("fs");
+    await fs.readdir("input_data", (err, files) => {
+      files.forEach((file) => {
+        input_notes.push(
+          JSON.parse(fs.readFileSync(`input_data/${file}`, "utf8"))
+        );
+      });
+      console.log("parse終わり");
+    });
+  };
   const is_1_measure_repeating = () => {
     let time_matched_degrees = null; // timeの一致度
     let name_matched_degrees = null; // nameの一致度
@@ -60,7 +68,7 @@
           params.recurring_match_degrees
         ) {
           // 1小節ごとに繰り返す判定時の処理
-          recurring_times = 4;
+          measure_repeating_time = 1;
         } else {
           // notes[0]と[1]を結合
           Array.prototype.push.apply(notes[0].duration, notes[1].duration);
@@ -72,8 +80,8 @@
           Array.prototype.push.apply(notes[2].time, notes[3].time);
           notes[1] = notes[2];
           // notes[2]と[3]を初期化
-          notes[2] = null;
-          notes[3] = null;
+          delete notes[2];
+          delete notes[3];
         }
       }
     }
@@ -104,36 +112,55 @@
           params.recurring_match_degrees
         ) {
           // 1小節ごとに繰り返す判定時の処理
-          recurring_times = 2;
+          measure_repeating_time = 2;
         }
       }
     }
   };
   const distin = () => {
-    input_notes.notes.forEach((element) => {
-      if (element.time < 2) {
-        notes[0].duration.push(element.duration);
-        notes[0].name.push(element.name);
-        notes[0].time.push(element.time);
-      } else if (element.time < 4) {
-        notes[1].duration.push(element.duration);
-        notes[1].name.push(element.name);
-        notes[1].time.push(element.time);
-      } else if (element.time < 6) {
-        notes[2].duration.push(element.duration);
-        notes[2].name.push(element.name);
-        notes[2].time.push(element.time);
+    input_notes.forEach((elem_note) => {
+      elem_note.notes.forEach((element) => {
+        if (element.time < 2) {
+          notes[0].duration.push(element.duration);
+          notes[0].name.push(element.name);
+          notes[0].time.push(element.time);
+        } else if (element.time < 4) {
+          notes[0].duration.push(element.duration);
+          notes[1].name.push(element.name);
+          notes[1].time.push(element.time);
+        } else if (element.time < 6) {
+          notes[2].duration.push(element.duration);
+          notes[2].name.push(element.name);
+          notes[2].time.push(element.time);
+        } else {
+          notes[3].duration.push(element.duration);
+          notes[3].name.push(element.name);
+          notes[3].time.push(element.time);
+        }
+      });
+      is_1_measure_repeating();
+      is_2_measure_repeating();
+      if (measure_repeating_time === 1) {
+        one_measure_repeating_notes.push(notes);
+      } else if (measure_repeating_time === 2) {
+        two_measure_repeating_notes.push(notes);
       } else {
-        notes[3].duration.push(element.duration);
-        notes[3].name.push(element.name);
-        notes[3].time.push(element.time);
+        four_measure_repeating_notes.push(notes);
       }
     });
-    is_1_measure_repeating();
-    is_2_measure_repeating();
-    console.log(notes[0]);
-    console.log(notes[1]);
-    console.log("4小節内の繰り返し回数：" + recurring_times);
+    console.log(
+      "1小節ごとの繰り返し曲数" + one_measure_repeating_notes.length + "曲"
+    );
+    console.log(
+      "2小節ごとの繰り返し曲数" + two_measure_repeating_notes.length + "曲"
+    );
+    console.log(
+      "4小節ごとの繰り返し曲数" + four_measure_repeating_notes.length + "曲"
+    );
   };
-  distin();
+  const main = async () => {
+    await parse_json();
+    setTimeout(distin, 200);
+  };
+  main();
 })();
