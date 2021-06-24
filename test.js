@@ -31,6 +31,30 @@
   let one_measure_repeating_notes = []; // 1小節ごとの繰り返しnoteデータ
   let two_measure_repeating_notes = []; // 2小節ごとの繰り返しnoteデータ
   let four_measure_repeating_notes = []; // 4小節ごとの繰り返しnoteデータ
+  const constructor = () => {
+    notes = [
+      {
+        duration: [],
+        name: [],
+        time: [],
+      },
+      {
+        duration: [],
+        name: [],
+        time: [],
+      },
+      {
+        duration: [],
+        name: [],
+        time: [],
+      },
+      {
+        duration: [],
+        name: [],
+        time: [],
+      },
+    ];
+  };
   const parse_json = async () => {
     const fs = require("fs");
     await fs.readdir("input_data", (err, files) => {
@@ -39,7 +63,6 @@
           JSON.parse(fs.readFileSync(`input_data/${file}`, "utf8"))
         );
       });
-      console.log("parse終わり");
     });
   };
   const is_1_measure_repeating = () => {
@@ -147,6 +170,7 @@
       } else {
         four_measure_repeating_notes.push(notes);
       }
+      constructor();
     });
     console.log(
       "1小節ごとの繰り返し曲数" + one_measure_repeating_notes.length + "曲"
