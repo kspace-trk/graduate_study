@@ -58,11 +58,11 @@ const init = () => {
 };
 const parse_json = async () => {
   const fs = require("fs");
-  await fs.readdir("input_data", (err, files) => {
+  await fs.readdir("./input_data", (err, files) => {
     files.forEach((file) => {
       if (file !== ".DS_Store") {
         input_notes.push(
-          JSON.parse(fs.readFileSync(`input_data/${file}`, "utf8"))
+          JSON.parse(fs.readFileSync(`./input_data/${file}`, "utf8"))
         );
       }
     });
@@ -161,15 +161,15 @@ const output = () => {
     ""
   );
   fs.writeFileSync(
-    "output_json/one_measure_repeating_notes.json",
+    "./output_json/one_measure_repeating_notes.json",
     one_measure_repeating_notes_json
   );
   fs.writeFileSync(
-    "output_json/two_measure_repeating_notes.json",
+    "./output_json/two_measure_repeating_notes.json",
     two_measure_repeating_notes_json
   );
   fs.writeFileSync(
-    "output_json/four_measure_repeating_notes.json",
+    "./output_json/four_measure_repeating_notes.json",
     four_measure_repeating_notes_json
   );
 };
