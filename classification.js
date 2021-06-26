@@ -56,15 +56,52 @@ const init = () => {
   measure_repeating_time = null;
 };
 const parse_json = async () => {
-  await fs.readdir("./input_data", (err, files) => {
+  await fs.readdir("./test_data", (err, files) => {
     files.forEach((file) => {
       if (file !== ".DS_Store") {
         input_notes.push(
-          JSON.parse(fs.readFileSync(`./input_data/${file}`, "utf8"))
+          JSON.parse(fs.readFileSync(`./test_data/${file}`, "utf8"))
         );
       }
     });
   });
+};
+const scale_distin = () => {
+  const scales = [
+    ["C", "D", "E", "F", "G", "A", "B"], //c_maj
+    ["C#", "D#", "F", "F#", "G#", "A#", "C"], //c_sharp_maj
+    ["D", "E", "F#", "G", "A", "B", "C#"], //d_maj
+    ["D#", "F", "G", "G#", "A#", "C", "D"], //d_sharp_maj
+    ["E", "F#", "G#", "A", "B", "C#", "D#"], //e_maj
+    ["F", "G", "A", "A#", "C", "D", "E"], //f_maj
+    ["F#", "G#", "A#", "B", "C#", "D#", "F"], //f_sharp_maj
+    ["G", "A", "B", "C", "D", "E", "F#"], //g_maj
+    ["G#", "A#", "C", "C#", "D#", "F", "G"], //g_sharp_maj
+    ["A", "B", "C#", "D", "E", "F#", "G#"], //a_maj
+    ["A#", "C", "D", "D#", "F", "G", "A"], //a_sharp_maj
+    ["B", "C#", "D#", "E", "F#", "G#", "A#"], //b_maj
+  ];
+  let keys_matched_degrees = [
+    { value: 0, label: "c_maj" },
+    { value: 0, label: "c_sharp_maj" },
+    { value: 0, label: "d_maj" },
+    { value: 0, label: "d_sharp_maj" },
+    { value: 0, label: "e_maj" },
+    { value: 0, label: "e_sharp_maj" },
+    { value: 0, label: "f_maj" },
+    { value: 0, label: "f_sharp_maj" },
+    { value: 0, label: "g_maj" },
+    { value: 0, label: "g_sharp_maj" },
+    { value: 0, label: "a_maj" },
+    { value: 0, label: "a_sharp_maj" },
+    { value: 0, label: "b_maj" },
+    { value: 0, label: "b_sharp_maj" },
+  ];
+  let names = [];
+  input_notes[0].notes.forEach((element) => {
+    names.push(element.name);
+  });
+  console.log(names);
 };
 const combination_note = () => {
   Array.prototype.push.apply(notes[0].duration, notes[1].duration);
@@ -171,7 +208,7 @@ const output = () => {
     four_measure_repeating_notes_json
   );
 };
-const distin = () => {
+const measure_distin = () => {
   input_notes.forEach((elem_note) => {
     elem_note.notes.forEach((element) => {
       if (element.time < 2) {
@@ -218,6 +255,7 @@ const distin = () => {
 };
 const main = async () => {
   await parse_json();
-  setTimeout(distin, 200);
+  setTimeout(scale_distin, 200);
+  setTimeout(measure_distin, 200);
 };
 main();
