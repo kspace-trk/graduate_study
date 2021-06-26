@@ -87,7 +87,6 @@ const scale_distin = () => {
     { value: 0, label: "d_maj" },
     { value: 0, label: "d_sharp_maj" },
     { value: 0, label: "e_maj" },
-    { value: 0, label: "e_sharp_maj" },
     { value: 0, label: "f_maj" },
     { value: 0, label: "f_sharp_maj" },
     { value: 0, label: "g_maj" },
@@ -95,13 +94,21 @@ const scale_distin = () => {
     { value: 0, label: "a_maj" },
     { value: 0, label: "a_sharp_maj" },
     { value: 0, label: "b_maj" },
-    { value: 0, label: "b_sharp_maj" },
   ];
   let names = [];
-  input_notes[0].notes.forEach((element) => {
-    names.push(element.name);
+  input_notes[0].notes.forEach((notes_elem) => {
+    names.push(notes_elem.name);
+    scales.forEach((scales_elem, index) => {
+      //12回
+      scales_elem.forEach((scale) => {
+        //7回
+        if (scale == notes_elem.name.slice(0, -1)) {
+          keys_matched_degrees[index].value++;
+        }
+      });
+    });
   });
-  console.log(names);
+  console.log(keys_matched_degrees);
 };
 const combination_note = () => {
   Array.prototype.push.apply(notes[0].duration, notes[1].duration);
