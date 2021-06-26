@@ -1,5 +1,4 @@
 const fs = require("fs");
-//曲名：happy with you
 const input_notes = [];
 let notes = [
   {
@@ -57,7 +56,6 @@ const init = () => {
   measure_repeating_time = null;
 };
 const parse_json = async () => {
-  const fs = require("fs");
   await fs.readdir("./input_data", (err, files) => {
     files.forEach((file) => {
       if (file !== ".DS_Store") {
