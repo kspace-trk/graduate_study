@@ -144,6 +144,35 @@ const is_2_measure_repeating = () => {
     }
   }
 };
+const output = () => {
+  let one_measure_repeating_notes_json = JSON.stringify(
+    { notes: one_measure_repeating_notes },
+    null,
+    ""
+  );
+  let two_measure_repeating_notes_json = JSON.stringify(
+    { notes: two_measure_repeating_notes },
+    null,
+    ""
+  );
+  let four_measure_repeating_notes_json = JSON.stringify(
+    { notes: four_measure_repeating_notes },
+    null,
+    ""
+  );
+  fs.writeFileSync(
+    "output_json/one_measure_repeating_notes.json",
+    one_measure_repeating_notes_json
+  );
+  fs.writeFileSync(
+    "output_json/two_measure_repeating_notes.json",
+    two_measure_repeating_notes_json
+  );
+  fs.writeFileSync(
+    "output_json/four_measure_repeating_notes.json",
+    four_measure_repeating_notes_json
+  );
+};
 const distin = () => {
   input_notes.forEach((elem_note) => {
     elem_note.notes.forEach((element) => {
@@ -152,7 +181,7 @@ const distin = () => {
         notes[0].name.push(element.name);
         notes[0].time.push(element.time);
       } else if (element.time < 4) {
-        notes[0].duration.push(element.duration);
+        notes[1].duration.push(element.duration);
         notes[1].name.push(element.name);
         notes[1].time.push(element.time);
       } else if (element.time < 6) {
@@ -187,6 +216,7 @@ const distin = () => {
   console.log(
     "4小節ごとの繰り返し曲数" + four_measure_repeating_notes.length + "曲"
   );
+  output();
 };
 const main = async () => {
   await parse_json();
