@@ -31,7 +31,7 @@ let measure_repeating_time = null; // 何小節ごとに繰り返すか
 let one_measure_repeating_notes = []; // 1小節ごとの繰り返しnoteデータ
 let two_measure_repeating_notes = []; // 2小節ごとの繰り返しnoteデータ
 let four_measure_repeating_notes = []; // 4小節ごとの繰り返しnoteデータ
-const constructor = () => {
+const init = () => {
   notes = [
     {
       duration: [],
@@ -176,7 +176,7 @@ const distin = () => {
     } else {
       four_measure_repeating_notes.push(notes);
     }
-    constructor();
+    init();
   });
   console.log(
     "1小節ごとの繰り返し曲数" + one_measure_repeating_notes.length + "曲"
