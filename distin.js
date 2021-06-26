@@ -161,15 +161,15 @@ const output = () => {
     ""
   );
   fs.writeFileSync(
-    "./output_json/one_measure_repeating_notes.json",
+    "./notes/ one_measure_repeating_notes.json",
     one_measure_repeating_notes_json
   );
   fs.writeFileSync(
-    "./output_json/two_measure_repeating_notes.json",
+    "./notes/two_measure_repeating_notes.json",
     two_measure_repeating_notes_json
   );
   fs.writeFileSync(
-    "./output_json/four_measure_repeating_notes.json",
+    "./notes/four_measure_repeating_notes.json",
     four_measure_repeating_notes_json
   );
 };
