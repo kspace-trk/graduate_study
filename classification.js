@@ -109,7 +109,7 @@ const scale_distin = () => {
     });
   });
   let max_value = 0;
-  let notes_scale = null;
+  let notes_scale = null; // 曲のスケール番号
   keys_matched_degrees.forEach((elem, index) => {
     if (max_value < elem.value) {
       max_value = elem.value;
@@ -119,6 +119,36 @@ const scale_distin = () => {
   console.log(
     "この曲のスケールは" + keys_matched_degrees[notes_scale].label + "です"
   );
+  name_conversion(scales[notes_scale]);
+};
+const calc_base_name_num = (notes) => {
+  let tmp = 0;
+  notes.forEach((elem) => {
+    tmp += Number(elem.name.slice(-1));
+  });
+  return parseInt(tmp / notes.length);
+};
+const name_conversion = (scale) => {
+  // notes_scaleの値を使ってnameをstringからintにする
+  let base_name_num = calc_base_name_num(input_notes[0].notes); //基準となる音高の数値を算出
+  input_notes[0].notes.forEach((elem_input_notes) => {
+    let sliced_name = elem_input_notes.name.slice(0, -1); // 音高のアルファベット
+    let sliced_name_num = elem_input_notes.name.slice(-1); // 音高の数字
+    scale.forEach((elem_scale, index) => {
+      if (elem_scale.slice(0, 1) == "C") {
+        //nameの先頭の文字がCだった場合、sliced_name_numを-1して、1オクターブ上判定を防ぐ
+        sliced_name_num--;
+      }
+      if (sliced_name == elem_scale && base_name_num == sliced_name_num) {
+        elem_input_notes.name = index;
+      } else if (sliced_name == elem_scale && base_name_num > sliced_name_num) {
+        elem_input_notes.name = index * -1;
+      } else if (sliced_name == elem_scale) {
+        elem_input_notes.name = index + 7;
+      }
+    });
+  });
+  console.log(input_notes[0].notes);
 };
 const combination_note = () => {
   Array.prototype.push.apply(notes[0].duration, notes[1].duration);
