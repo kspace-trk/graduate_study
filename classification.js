@@ -56,11 +56,11 @@ const init = () => {
   measure_repeating_time = null;
 };
 const parse_json = async () => {
-  await fs.readdir("./test_data", (err, files) => {
+  await fs.readdir("./input_data", (err, files) => {
     files.forEach((file) => {
       if (file !== ".DS_Store") {
         input_notes.push(
-          JSON.parse(fs.readFileSync(`./test_data/${file}`, "utf8"))
+          JSON.parse(fs.readFileSync(`./input_data/${file}`, "utf8"))
         );
       }
     });
@@ -81,45 +81,48 @@ const scale_distin = () => {
     ["A#", "C", "D", "D#", "F", "G", "A"], //a_sharp_maj
     ["B", "C#", "D#", "E", "F#", "G#", "A#"], //b_maj
   ];
-  let keys_matched_degrees = [
-    { value: 0, label: "c_maj" },
-    { value: 0, label: "c_sharp_maj" },
-    { value: 0, label: "d_maj" },
-    { value: 0, label: "d_sharp_maj" },
-    { value: 0, label: "e_maj" },
-    { value: 0, label: "f_maj" },
-    { value: 0, label: "f_sharp_maj" },
-    { value: 0, label: "g_maj" },
-    { value: 0, label: "g_sharp_maj" },
-    { value: 0, label: "a_maj" },
-    { value: 0, label: "a_sharp_maj" },
-    { value: 0, label: "b_maj" },
-  ];
-  let names = [];
-  input_notes[0].notes.forEach((notes_elem) => {
-    names.push(notes_elem.name);
-    scales.forEach((scales_elem, index) => {
-      //12回
-      scales_elem.forEach((scale) => {
-        //7回
-        if (scale == notes_elem.name.slice(0, -1)) {
-          keys_matched_degrees[index].value++;
-        }
+  input_notes.forEach((element) => {
+    let keys_matched_degrees = [
+      { value: 0, label: "c_maj" },
+      { value: 0, label: "c_sharp_maj" },
+      { value: 0, label: "d_maj" },
+      { value: 0, label: "d_sharp_maj" },
+      { value: 0, label: "e_maj" },
+      { value: 0, label: "f_maj" },
+      { value: 0, label: "f_sharp_maj" },
+      { value: 0, label: "g_maj" },
+      { value: 0, label: "g_sharp_maj" },
+      { value: 0, label: "a_maj" },
+      { value: 0, label: "a_sharp_maj" },
+      { value: 0, label: "b_maj" },
+    ];
+    let names = [];
+    element.notes.forEach((notes_elem) => {
+      names.push(notes_elem.name);
+      scales.forEach((scales_elem, index) => {
+        //12回
+        scales_elem.forEach((scale) => {
+          //7回
+          if (scale == notes_elem.name.slice(0, -1)) {
+            keys_matched_degrees[index].value++;
+          }
+        });
       });
     });
+
+    let max_value = 0;
+    let notes_scale = null; // 曲のスケール番号
+    keys_matched_degrees.forEach((elem, index) => {
+      if (max_value < elem.value) {
+        max_value = elem.value;
+        notes_scale = index;
+      }
+    });
+    console.log(
+      "この曲のスケールは" + keys_matched_degrees[notes_scale].label + "です"
+    );
+    name_conversion(element, scales[notes_scale]);
   });
-  let max_value = 0;
-  let notes_scale = null; // 曲のスケール番号
-  keys_matched_degrees.forEach((elem, index) => {
-    if (max_value < elem.value) {
-      max_value = elem.value;
-      notes_scale = index;
-    }
-  });
-  console.log(
-    "この曲のスケールは" + keys_matched_degrees[notes_scale].label + "です"
-  );
-  name_conversion(scales[notes_scale]);
 };
 const calc_base_name_num = (notes) => {
   let tmp = 0;
@@ -128,10 +131,10 @@ const calc_base_name_num = (notes) => {
   });
   return parseInt(tmp / notes.length);
 };
-const name_conversion = (scale) => {
+const name_conversion = (element, scale) => {
   // notes_scaleの値を使ってnameをstringからintにする
-  let base_name_num = calc_base_name_num(input_notes[0].notes); //基準となる音高の数値を算出
-  input_notes[0].notes.forEach((elem_input_notes) => {
+  let base_name_num = calc_base_name_num(element.notes); //基準となる音高の数値を算出
+  element.notes.forEach((elem_input_notes) => {
     let sliced_name = elem_input_notes.name.slice(0, -1); // 音高のアルファベット
     let sliced_name_num = elem_input_notes.name.slice(-1); // 音高の数字
     scale.forEach((elem_scale, index) => {
@@ -148,7 +151,7 @@ const name_conversion = (scale) => {
       }
     });
   });
-  console.log(input_notes[0].notes);
+  console.log(element.notes);
 };
 const combination_note = () => {
   Array.prototype.push.apply(notes[0].duration, notes[1].duration);
