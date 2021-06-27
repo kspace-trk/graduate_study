@@ -118,9 +118,6 @@ const scale_distin = () => {
         notes_scale = index;
       }
     });
-    console.log(
-      "この曲のスケールは" + keys_matched_degrees[notes_scale].label + "です"
-    );
     name_conversion(element, scales[notes_scale]);
   });
 };
@@ -139,7 +136,7 @@ const name_conversion = (element, scale) => {
     let sliced_name_num = elem_input_notes.name.slice(-1); // 音高の数字
     scale.forEach((elem_scale, index) => {
       if (elem_scale.slice(0, 1) == "C") {
-        //nameの先頭の文字がCだった場合、sliced_name_numを-1して、1オクターブ上判定を防ぐ
+        //nameの先頭の文字がCを経由した場合、sliced_name_numを-1して、1オクターブ上判定を防ぐ
         sliced_name_num--;
       }
       if (sliced_name == elem_scale && base_name_num == sliced_name_num) {
@@ -246,7 +243,7 @@ const output = () => {
     ""
   );
   fs.writeFileSync(
-    "./notes/ one_measure_repeating_notes.json",
+    "./notes/one_measure_repeating_notes.json",
     one_measure_repeating_notes_json
   );
   fs.writeFileSync(
