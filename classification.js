@@ -108,7 +108,17 @@ const scale_distin = () => {
       });
     });
   });
-  console.log(keys_matched_degrees);
+  let max_value = 0;
+  let notes_scale = null;
+  keys_matched_degrees.forEach((elem, index) => {
+    if (max_value < elem.value) {
+      max_value = elem.value;
+      notes_scale = index;
+    }
+  });
+  console.log(
+    "この曲のスケールは" + keys_matched_degrees[notes_scale].label + "です"
+  );
 };
 const combination_note = () => {
   Array.prototype.push.apply(notes[0].duration, notes[1].duration);
