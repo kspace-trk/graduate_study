@@ -8,7 +8,6 @@ const input_notes_data = [
   two_measure_repeating_notes,
   four_measure_repeating_notes,
 ];
-const times = []; //生成したリズムデータ
 const input_notes = () => {
   input_notes_data[0] = JSON.parse(
     fs.readFileSync("./notes/one_measure_repeating_notes.json", "utf8")
@@ -22,6 +21,7 @@ const input_notes = () => {
   one_measure_repeating_notes = input_notes_data[0];
 };
 const select_time = (measure_repeating_time) => {
+  let times = [];
   let times_sum = 0;
   let random_song_num_4_first_note = Math.floor(
     Math.random() * input_notes_data[measure_repeating_time].notes.length
@@ -77,11 +77,35 @@ const select_time = (measure_repeating_time) => {
       times.push(selected_time); //決定したtimeをtimesにpush
     }
   }
-  console.log(times);
+  return times;
+};
+const select_pitch = (measure_repeating_time, notes_num) => {
+  const pitch = [];
+  [...Array(notes_num)].forEach(() => {
+    const random_note_num = Math.floor(
+      Math.random() * input_notes_data[measure_repeating_time].notes.length
+    );
+    const ranodm_name_num = Math.floor(
+      Math.random() *
+        input_notes_data[measure_repeating_time].notes[random_note_num][0].name
+          .length
+    );
+
+    pitch.push(
+      input_notes_data[measure_repeating_time].notes[random_note_num][0].name[
+        ranodm_name_num
+      ]
+    );
+  });
+  return pitch;
 };
 const main = () => {
   input_notes();
   measure_repeating_time = 0;
-  select_time(measure_repeating_time);
+  const times = select_time(measure_repeating_time); //リズム算出
+  const notes_num = times.length; //音数算出
+  const pitch = select_pitch(measure_repeating_time, notes_num); //音高データ
+  console.log(times);
+  console.log(pitch);
 };
 main();
