@@ -150,6 +150,7 @@ const name_conversion = (element, scale) => {
   });
 };
 const combination_note = () => {
+  if(measure_repeating_time !== 4){
   Array.prototype.push.apply(notes[0].duration, notes[1].duration);
   Array.prototype.push.apply(notes[0].name, notes[1].name);
   Array.prototype.push.apply(notes[0].time, notes[1].time);
@@ -161,6 +162,13 @@ const combination_note = () => {
   // notes[2]と[3]を初期化
   delete notes[2];
   delete notes[3];
+} else {
+  // 全てのnotesを[0]に結合
+  Array.prototype.push.apply(notes[0].duration, notes[1].duration);
+  Array.prototype.push.apply(notes[0].name, notes[1].name);
+  Array.prototype.push.apply(notes[0].time, notes[1].time);
+  delete notes[1];
+}
 };
 const is_1_measure_repeating = () => {
   let time_matched_degrees = null; // timeの一致度
@@ -222,6 +230,9 @@ const is_2_measure_repeating = () => {
     if (name_matched_degrees / notes[1].name.length >= params.match_per_name) {
       // 2小節ごとに繰り返す判定時の処理
       measure_repeating_time = 2;
+    } else {
+      measure_repeating_time = 4;
+      combination_note();
     }
   }
 };
