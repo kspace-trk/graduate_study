@@ -148,7 +148,6 @@ const name_conversion = (element, scale) => {
       }
     });
   });
-  console.log(element.notes);
 };
 const combination_note = () => {
   Array.prototype.push.apply(notes[0].duration, notes[1].duration);
