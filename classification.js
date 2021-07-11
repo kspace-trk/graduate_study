@@ -22,6 +22,37 @@ let notes = [
     time: [],
   },
 ];
+let one_measure_repeating_notes_diff = [];
+let two_measure_repeating_notes_diff = [
+  {
+    duration_diff: [],
+    name_diff: [],
+    time_diff: [],
+    time_mutation_start_point: [],
+    name_mutation_start_point: [],
+  },
+  {
+    duration_diff: [],
+    name_diff: [],
+    time_diff: [],
+    time_mutation_start_point: [],
+    name_mutation_start_point: [],
+  },
+  {
+    duration_diff: [],
+    name_diff: [],
+    time_diff: [],
+    time_mutation_start_point: [],
+    name_mutation_start_point: [],
+  },
+  {
+    duration_diff: [],
+    name_diff: [],
+    time_diff: [],
+    time_mutation_start_point: [],
+    name_mutation_start_point: [],
+  },
+];
 let params = {
   match_per_name: 0.4, // どれくらい音高が一致してたら繰り返し判定にするか
   match_per_time: 0.8, // どれくらいリズムが一致してたら繰り返し判定にするか
@@ -150,25 +181,25 @@ const name_conversion = (element, scale) => {
   });
 };
 const combination_note = () => {
-  if(measure_repeating_time !== 4){
-  Array.prototype.push.apply(notes[0].duration, notes[1].duration);
-  Array.prototype.push.apply(notes[0].name, notes[1].name);
-  Array.prototype.push.apply(notes[0].time, notes[1].time);
-  // note[1]にnotes[2]と[3]を結合したのを代入
-  Array.prototype.push.apply(notes[2].duration, notes[3].duration);
-  Array.prototype.push.apply(notes[2].name, notes[3].name);
-  Array.prototype.push.apply(notes[2].time, notes[3].time);
-  notes[1] = notes[2];
-  // notes[2]と[3]を初期化
-  delete notes[2];
-  delete notes[3];
-} else {
-  // 全てのnotesを[0]に結合
-  Array.prototype.push.apply(notes[0].duration, notes[1].duration);
-  Array.prototype.push.apply(notes[0].name, notes[1].name);
-  Array.prototype.push.apply(notes[0].time, notes[1].time);
-  delete notes[1];
-}
+  if (measure_repeating_time !== 4) {
+    Array.prototype.push.apply(notes[0].duration, notes[1].duration);
+    Array.prototype.push.apply(notes[0].name, notes[1].name);
+    Array.prototype.push.apply(notes[0].time, notes[1].time);
+    // note[1]にnotes[2]と[3]を結合したのを代入
+    Array.prototype.push.apply(notes[2].duration, notes[3].duration);
+    Array.prototype.push.apply(notes[2].name, notes[3].name);
+    Array.prototype.push.apply(notes[2].time, notes[3].time);
+    notes[1] = notes[2];
+    // notes[2]と[3]を初期化
+    delete notes[2];
+    delete notes[3];
+  } else {
+    // 全てのnotesを[0]に結合
+    Array.prototype.push.apply(notes[0].duration, notes[1].duration);
+    Array.prototype.push.apply(notes[0].name, notes[1].name);
+    Array.prototype.push.apply(notes[0].time, notes[1].time);
+    delete notes[1];
+  }
 };
 const is_1_measure_repeating = () => {
   let time_matched_degrees = null; // timeの一致度
@@ -265,6 +296,66 @@ const output = () => {
     four_measure_repeating_notes_json
   );
 };
+const calc_note_defferencial = (elem_song) => {
+  elem_song[0].time.forEach(() => {});
+};
+const check_time_mutation_start_point = (elem_song) => {
+  let time_mutation_start_point = null;
+  elem_song[0].time.forEach((elem_one_measure_note, index) => {
+    if (
+      elem_one_measure_note !== elem_song[1].time[index] - 2 &&
+      !time_mutation_start_point
+    ) {
+      time_mutation_start_point = index / elem_song[0].time.length;
+      time_mutation_start_point =
+        Math.round(time_mutation_start_point * 100) / 100;
+    }
+  });
+  return time_mutation_start_point;
+};
+const calc_mutation_start_point = (
+  elem_song,
+  one_measure_repeating_note_diff
+) => {
+  if (elem_song[0].time.length === elem_song[1].time.length) {
+    // 1小節目と2小節目の音数が一致したときの処理
+    // 差分を測る
+    console.log("一致");
+    calc_note_defferencial(elem_song);
+    one_measure_repeating_note_diff.time_mutation_start_point.push(
+      check_time_mutation_start_point(elem_song)
+    );
+  } else {
+    // 1小節目と2小節目の音数が一致しなかったときの処理
+    // 差分は測らずに、変異タイミングだけ測る
+    console.log("一致しない");
+    one_measure_repeating_note_diff.time_mutation_start_point.push(
+      check_time_mutation_start_point(elem_song)
+    );
+  }
+  console.log(one_measure_repeating_note_diff);
+  return one_measure_repeating_note_diff;
+};
+const calc_note_diff = () => {
+  one_measure_repeating_notes.forEach((elem_song) => {
+    let one_measure_repeating_note_diff = {
+      duration_diff: [],
+      name_diff: [],
+      time_diff: [],
+      time_mutation_start_point: [0],
+      name_mutation_start_point: [0],
+    };
+    // 変異開始地点をone_measure_repeating_note_diff以下に入れる
+    one_measure_repeating_note_diff.time_mutation_start_point =
+      calc_mutation_start_point(
+        elem_song,
+        one_measure_repeating_note_diff
+      ).time_mutation_start_point;
+    // 上記と同様にnameも代入する
+    one_measure_repeating_notes_diff.push(one_measure_repeating_note_diff);
+  });
+  //console.log(one_measure_repeating_notes_diff);
+};
 const measure_distin = () => {
   input_notes.forEach((elem_note) => {
     elem_note.notes.forEach((element) => {
@@ -309,6 +400,7 @@ const measure_distin = () => {
     "4小節ごとの繰り返し曲数" + four_measure_repeating_notes.length + "曲"
   );
   output();
+  calc_note_diff();
 };
 const main = async () => {
   await parse_json();
