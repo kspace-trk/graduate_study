@@ -297,7 +297,17 @@ const output = () => {
   );
 };
 const calc_note_defferencial = (elem_song) => {
-  elem_song[0].time.forEach(() => {});
+  let time_diff = [];
+  // 音数は同じ
+  elem_song[0].time.forEach((elem_one_measure_note, index) => {
+    let tmp = null;
+    tmp = elem_one_measure_note - (elem_song[1].time[index] - 2);
+    if (tmp < 0) {
+      tmp = tmp * -1;
+    }
+    time_diff.push(elem_one_measure_note - (elem_song[1].time[index] - 2));
+  });
+  return time_diff;
 };
 const check_time_mutation_start_point = (elem_song) => {
   let time_mutation_start_point = null;
@@ -321,7 +331,8 @@ const calc_mutation_start_point = (
     // 1小節目と2小節目の音数が一致したときの処理
     // 差分を測る
     console.log("一致");
-    calc_note_defferencial(elem_song);
+    one_measure_repeating_note_diff.time_diff =
+      calc_note_defferencial(elem_song);
     one_measure_repeating_note_diff.time_mutation_start_point.push(
       check_time_mutation_start_point(elem_song)
     );
