@@ -298,7 +298,7 @@ const output = () => {
     four_measure_repeating_notes_json
   );
 };
-const calc_note_defferencial = (elem_song) => {
+const calc_time_defferencial = (elem_song) => {
   let time_diff = [];
   // 音数は同じ
   elem_song[0].time.forEach((elem_one_measure_note, index) => {
@@ -307,20 +307,31 @@ const calc_note_defferencial = (elem_song) => {
     if (tmp < 0) {
       tmp = tmp * -1;
     }
-    time_diff.push(elem_one_measure_note - (elem_song[1].time[index] - 2));
+    time_diff.push(tmp);
   });
   return time_diff;
 };
+const calc_name_defferencial = (elem_song) => {
+  let name_diff = [];
+  // 音数は同じ
+  elem_song[0].name.forEach((elem_one_measure_note, index) => {
+    let tmp = null;
+    if (elem_one_measure_note > elem_song[1].name[index]) {
+      tmp = elem_song[1].name[index] - elem_one_measure_note;
+    } else {
+      tmp = elem_one_measure_note - elem_song[1].name[index];
+    }
+    name_diff.push(tmp);
+  });
+  return name_diff;
+};
 const check_time_mutation_start_point = (elem_song) => {
+  let tmp = null;
   let time_mutation_start_point = null;
   elem_song[0].time.forEach((elem_one_measure_note, index) => {
-    if (
-      elem_one_measure_note !== elem_song[1].time[index] - 2 &&
-      !time_mutation_start_point
-    ) {
-      time_mutation_start_point = index / elem_song[0].time.length;
-      time_mutation_start_point =
-        Math.round(time_mutation_start_point * 100) / 100;
+    if (elem_one_measure_note !== elem_song[1].time[index] - 2 && !tmp) {
+      tmp = index / elem_song[0].time.length;
+      time_mutation_start_point = Math.round(tmp * 100) / 100;
     }
   });
   return time_mutation_start_point;
@@ -334,7 +345,9 @@ const calc_mutation_start_point = (
     // 差分を測る
     console.log("一致");
     one_measure_repeating_note_diff.time_diff =
-      calc_note_defferencial(elem_song);
+      calc_time_defferencial(elem_song);
+    one_measure_repeating_note_diff.name_diff =
+      calc_name_defferencial(elem_song);
     one_measure_repeating_note_diff.time_mutation_start_point.push(
       check_time_mutation_start_point(elem_song)
     );
