@@ -293,7 +293,7 @@ const calc_time_defferencial = (elem_song, compartion) => {
       time_diff.push(tmp);
     });
   } else if (compartion == 3) {
-    // 1小節目と3小節目の比較
+    // 1小節目と4小節目の比較
     elem_song[0].time.forEach((elem_one_measure_note, index) => {
       let tmp = null;
       tmp = elem_one_measure_note - (elem_song[3].time[index] - 6);
@@ -355,33 +355,75 @@ const calc_name_defferencial = (elem_song, compartion) => {
   return name_diff;
 };
 const check_time_mutation_start_point = (elem_song, compartion) => {
-  let tmp = null;
   let time_mutation_start_point = null;
   if (compartion == 1) {
+    let tmp = null;
     elem_song[0].time.forEach((elem_one_measure_note, index) => {
-      if (elem_one_measure_note !== elem_song[1].time[index] - 2 && !tmp) {
+      if (
+        elem_one_measure_note !== elem_song[1].time[index] - 2 &&
+        tmp === null
+      ) {
         tmp = index / elem_song[0].time.length;
         time_mutation_start_point = Math.round(tmp * 100) / 100;
       }
     });
   }
   if (compartion == 2) {
+    let tmp = null;
     elem_song[0].time.forEach((elem_one_measure_note, index) => {
-      if (elem_one_measure_note !== elem_song[2].time[index] - 4 && !tmp) {
+      if (
+        elem_one_measure_note !== elem_song[2].time[index] - 4 &&
+        tmp === null
+      ) {
         tmp = index / elem_song[0].time.length;
         time_mutation_start_point = Math.round(tmp * 100) / 100;
       }
     });
   }
   if (compartion == 3) {
+    let tmp = null;
     elem_song[0].time.forEach((elem_one_measure_note, index) => {
-      if (elem_one_measure_note !== elem_song[2].time[index] - 6 && !tmp) {
+      if (
+        elem_one_measure_note !== elem_song[3].time[index] - 6 &&
+        tmp === null
+      ) {
         tmp = index / elem_song[0].time.length;
         time_mutation_start_point = Math.round(tmp * 100) / 100;
       }
     });
   }
   return time_mutation_start_point;
+};
+const check_name_mutation_start_point = (elem_song, compartion) => {
+  let name_mutation_start_point = null;
+  if (compartion == 1) {
+    let tmp = null;
+    elem_song[0].name.forEach((elem_one_measure_note, index) => {
+      if (elem_one_measure_note !== elem_song[1].name[index] && tmp === null) {
+        tmp = index / elem_song[0].name.length;
+        name_mutation_start_point = Math.round(tmp * 100) / 100;
+      }
+    });
+  }
+  if (compartion == 2) {
+    let tmp = null;
+    elem_song[0].name.forEach((elem_one_measure_note, index) => {
+      if (elem_one_measure_note !== elem_song[2].name[index] && tmp === null) {
+        tmp = index / elem_song[0].name.length;
+        name_mutation_start_point = Math.round(tmp * 100) / 100;
+      }
+    });
+  }
+  if (compartion == 3) {
+    let tmp = null;
+    elem_song[0].name.forEach((elem_one_measure_note, index) => {
+      if (elem_one_measure_note !== elem_song[3].name[index] && tmp === null) {
+        tmp = index / elem_song[0].name.length;
+        name_mutation_start_point = Math.round(tmp * 100) / 100;
+      }
+    });
+  }
+  return name_mutation_start_point;
 };
 const calc_mutation_start_point = (elem_song, note_diff, repeating_time) => {
   let compartion = null;
@@ -394,6 +436,9 @@ const calc_mutation_start_point = (elem_song, note_diff, repeating_time) => {
     note_diff.time_mutation_start_point.push(
       check_time_mutation_start_point(elem_song, compartion)
     );
+    note_diff.name_mutation_start_point.push(
+      check_name_mutation_start_point(elem_song, compartion)
+    );
   } else {
     // 1小節目と2小節目の音数が一致しなかったときの処理
     // 差分は測らずに、変異タイミングだけ測る
@@ -402,6 +447,9 @@ const calc_mutation_start_point = (elem_song, note_diff, repeating_time) => {
     note_diff.name_diff.push([]);
     note_diff.time_mutation_start_point.push(
       check_time_mutation_start_point(elem_song, compartion)
+    );
+    note_diff.name_mutation_start_point.push(
+      check_name_mutation_start_point(elem_song, compartion)
     );
   }
   if (repeating_time == 1) {
@@ -414,6 +462,9 @@ const calc_mutation_start_point = (elem_song, note_diff, repeating_time) => {
       note_diff.time_mutation_start_point.push(
         check_time_mutation_start_point(elem_song, compartion)
       );
+      note_diff.name_mutation_start_point.push(
+        check_name_mutation_start_point(elem_song, compartion)
+      );
     } else {
       // 1小節目と3小節目の音数が一致しなかったときの処理
       // 差分は測らずに、変異タイミングだけ測る
@@ -422,6 +473,9 @@ const calc_mutation_start_point = (elem_song, note_diff, repeating_time) => {
       note_diff.name_diff.push([]);
       note_diff.time_mutation_start_point.push(
         check_time_mutation_start_point(elem_song, compartion)
+      );
+      note_diff.name_mutation_start_point.push(
+        check_name_mutation_start_point(elem_song, compartion)
       );
     }
     if (elem_song[0].time.length === elem_song[3].time.length) {
@@ -433,6 +487,9 @@ const calc_mutation_start_point = (elem_song, note_diff, repeating_time) => {
       note_diff.time_mutation_start_point.push(
         check_time_mutation_start_point(elem_song, compartion)
       );
+      note_diff.name_mutation_start_point.push(
+        check_name_mutation_start_point(elem_song, compartion)
+      );
     } else {
       // 1小節目と4小節目の音数が一致しなかったときの処理
       // 差分は測らずに、変異タイミングだけ測る
@@ -441,6 +498,9 @@ const calc_mutation_start_point = (elem_song, note_diff, repeating_time) => {
       note_diff.name_diff.push([]);
       note_diff.time_mutation_start_point.push(
         check_time_mutation_start_point(elem_song, compartion)
+      );
+      note_diff.name_mutation_start_point.push(
+        check_name_mutation_start_point(elem_song, compartion)
       );
     }
   }
@@ -460,6 +520,7 @@ const calc_note_diff = () => {
         [], // 1小節目の空配列
       ],
       time_mutation_start_point: [null],
+      name_mutation_start_point: [null],
     };
     // 変異開始地点をone_measure_repeating_note_diff以下に入れる
     note_diff.time_mutation_start_point = calc_mutation_start_point(
@@ -483,6 +544,7 @@ const calc_note_diff = () => {
         [], // 1小節目の空配列
       ],
       time_mutation_start_point: [null],
+      name_mutation_start_point: [null],
     };
     // 変異開始地点をone_measure_repeating_note_diff以下に入れる
     note_diff.time_mutation_start_point = calc_mutation_start_point(
