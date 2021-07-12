@@ -323,8 +323,6 @@ const calc_name_defferencial = (elem_song, compartion) => {
     // 1小節目と3小節目の比較
     elem_song[0].name.forEach((elem_one_measure_note, index) => {
       let tmp = null;
-      console.log("elem_one_measure_note：" + elem_one_measure_note);
-      console.log("elem_song[2].name[index]：" + elem_song[2].name[index]);
       if (
         elem_one_measure_note < elem_song[2].name[index] &&
         elem_song[2].name[index] < 0
@@ -341,8 +339,6 @@ const calc_name_defferencial = (elem_song, compartion) => {
     // 1小節目と3小節目の比較
     elem_song[0].name.forEach((elem_one_measure_note, index) => {
       let tmp = null;
-      console.log("elem_one_measure_note：" + elem_one_measure_note);
-      console.log("elem_song[2].name[index]：" + elem_song[3].name[index]);
       if (
         elem_one_measure_note < elem_song[3].name[index] &&
         elem_song[3].name[index] < 0
@@ -393,7 +389,6 @@ const calc_mutation_start_point = (elem_song, note_diff, repeating_time) => {
     // 1小節目と2小節目の音数が一致したときの処理
     // 差分を測る
     compartion = 1;
-    console.log("1小節目と2小節目の音数一致");
     note_diff.time_diff.push(calc_time_defferencial(elem_song, compartion));
     note_diff.name_diff.push(calc_name_defferencial(elem_song, compartion));
     note_diff.time_mutation_start_point.push(
@@ -403,7 +398,6 @@ const calc_mutation_start_point = (elem_song, note_diff, repeating_time) => {
     // 1小節目と2小節目の音数が一致しなかったときの処理
     // 差分は測らずに、変異タイミングだけ測る
     compartion = 1;
-    console.log("1小節目と2小節目の音数一致しない");
     note_diff.time_diff.push([]);
     note_diff.name_diff.push([]);
     note_diff.time_mutation_start_point.push(
@@ -415,7 +409,6 @@ const calc_mutation_start_point = (elem_song, note_diff, repeating_time) => {
       // 1小節目と3小節目の音数が一致したときの処理
       // 差分を測る
       compartion = 2;
-      console.log("1小節目と3小節目の音数一致");
       note_diff.time_diff.push(calc_time_defferencial(elem_song, compartion));
       note_diff.name_diff.push(calc_name_defferencial(elem_song, compartion));
       note_diff.time_mutation_start_point.push(
@@ -425,7 +418,6 @@ const calc_mutation_start_point = (elem_song, note_diff, repeating_time) => {
       // 1小節目と3小節目の音数が一致しなかったときの処理
       // 差分は測らずに、変異タイミングだけ測る
       compartion = 2;
-      console.log("1小節目と3小節目の音数一致しない");
       note_diff.time_diff.push([]);
       note_diff.name_diff.push([]);
       note_diff.time_mutation_start_point.push(
@@ -436,7 +428,6 @@ const calc_mutation_start_point = (elem_song, note_diff, repeating_time) => {
       // 1小節目と4小節目の音数が一致したときの処理
       // 差分を測る
       compartion = 3;
-      console.log("1小節目と4小節目の音数一致");
       note_diff.time_diff.push(calc_time_defferencial(elem_song, compartion));
       note_diff.name_diff.push(calc_name_defferencial(elem_song, compartion));
       note_diff.time_mutation_start_point.push(
@@ -446,7 +437,6 @@ const calc_mutation_start_point = (elem_song, note_diff, repeating_time) => {
       // 1小節目と4小節目の音数が一致しなかったときの処理
       // 差分は測らずに、変異タイミングだけ測る
       compartion = 3;
-      console.log("1小節目と4小節目の音数一致しない");
       note_diff.time_diff.push([]);
       note_diff.name_diff.push([]);
       note_diff.time_mutation_start_point.push(
@@ -503,11 +493,27 @@ const calc_note_diff = () => {
     // 全曲を1つの配列にまとめるために、1曲1曲one_measure_repeating_notes_diffにpushする
     two_measure_repeating_notes_diff.push(note_diff);
   });
-  console.log(one_measure_repeating_notes_diff);
-  console.log(two_measure_repeating_notes_diff);
 };
 const output_diff = () => {
   // one_measure_repeating_notes_diffとtwo_measure_repeating_notes_diffをjsonに書き出す
+  let one_measure_repeating_notes_diff_json = JSON.stringify(
+    { notes: one_measure_repeating_notes_diff },
+    null,
+    ""
+  );
+  let two_measure_repeating_notes_diff_json = JSON.stringify(
+    { notes: two_measure_repeating_notes_diff },
+    null,
+    ""
+  );
+  fs.writeFileSync(
+    "./mutation_data/one_measure_repeating_notes_diff.json",
+    one_measure_repeating_notes_diff_json
+  );
+  fs.writeFileSync(
+    "./mutation_data/two_measure_repeating_notes_diff.json",
+    two_measure_repeating_notes_diff_json
+  );
 };
 const measure_distin = () => {
   input_notes.forEach((elem_note) => {
