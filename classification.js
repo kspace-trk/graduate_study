@@ -167,14 +167,15 @@ const name_conversion = (element, scale) => {
     let sliced_name_num = elem_input_notes.name.slice(-1); // 音高の数字
     scale.forEach((elem_scale, index) => {
       if (elem_scale == "C") {
-        console.log(elem_scale);
-        //nameの先頭の文字がCを経由した場合、sliced_name_numを-1して、1オクターブ上判定を防ぐ
+        //nameがCを経由した場合、sliced_name_numを-1して、1オクターブ上判定を防ぐ
         sliced_name_num--;
       }
       if (sliced_name == elem_scale && base_name_num == sliced_name_num) {
         elem_input_notes.name = index;
       } else if (sliced_name == elem_scale && base_name_num > sliced_name_num) {
         elem_input_notes.name = index * -1;
+        // -6を-1に、-5を-2に、-3を-4など、マイナス領域の上下を入れ替える
+        elem_input_notes.name = (7 + elem_input_notes.name) * -1;
       } else if (sliced_name == elem_scale) {
         elem_input_notes.name = index + 7;
       }
