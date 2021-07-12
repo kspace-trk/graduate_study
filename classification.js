@@ -496,7 +496,6 @@ const calc_mutation_start_point = (
       check_time_mutation_start_point(elem_song, compartion)
     );
   }
-  console.log(one_measure_repeating_note_diff);
   return one_measure_repeating_note_diff;
 };
 const calc_note_diff = () => {
@@ -522,7 +521,32 @@ const calc_note_diff = () => {
     // 全曲を1つの配列にまとめるために、1曲1曲one_measure_repeating_notes_diffにpushする
     one_measure_repeating_notes_diff.push(one_measure_repeating_note_diff);
   });
-  //console.log(one_measure_repeating_notes_diff);
+  two_measure_repeating_notes.forEach((elem_song) => {
+    let two_measure_repeating_note_diff = {
+      duration_diff: [
+        [], // 1小節目の空配列
+      ],
+      name_diff: [
+        [], // 1小節目の空配列
+      ],
+      time_diff: [
+        [], // 1小節目の空配列
+      ],
+      time_mutation_start_point: [null],
+    };
+    // 変異開始地点をone_measure_repeating_note_diff以下に入れる
+    two_measure_repeating_note_diff.time_mutation_start_point =
+      calc_mutation_start_point(
+        elem_song,
+        two_measure_repeating_note_diff
+      ).time_mutation_start_point;
+    // 全曲を1つの配列にまとめるために、1曲1曲one_measure_repeating_notes_diffにpushする
+    two_measure_repeating_notes_diff.push(two_measure_repeating_note_diff);
+  });
+  console.log(one_measure_repeating_notes_diff);
+};
+const output_diff = () => {
+  // one_measure_repeating_notes_diffとtwo_measure_repeating_notes_diffをjsonに書き出す
 };
 const measure_distin = () => {
   input_notes.forEach((elem_note) => {
@@ -569,6 +593,7 @@ const measure_distin = () => {
   );
   output();
   calc_note_diff();
+  output_diff();
 };
 const main = async () => {
   await parse_json();
