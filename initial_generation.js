@@ -140,38 +140,38 @@ const repeat_melody = (first_measure_time, first_measure_pitch) => {
   if (input_notes_data_index == 0) {
     repeated_melody = [
       {
-        time: [first_measure_time],
+        time: first_measure_time,
+        pitch: first_measure_pitch,
+      },
+      {
+        time: first_measure_time,
+        pitch: first_measure_pitch,
+      },
+      {
+        time: first_measure_time,
         pitch: [first_measure_pitch],
       },
       {
-        time: [first_measure_time],
-        pitch: [first_measure_pitch],
-      },
-      {
-        time: [first_measure_time],
-        pitch: [first_measure_pitch],
-      },
-      {
-        time: [first_measure_time],
-        pitch: [first_measure_pitch],
+        time: first_measure_time,
+        pitch: first_measure_pitch,
       },
     ];
   } else if (input_notes_data_index == 1) {
     repeated_melody = [
       {
-        time: [first_measure_time],
-        pitch: [first_measure_pitch],
+        time: first_measure_time,
+        pitch: first_measure_pitch,
       },
       {
-        time: [first_measure_time],
-        pitch: [first_measure_pitch],
+        time: first_measure_time,
+        pitch: first_measure_pitch,
       },
     ];
   } else {
     repeated_melody = [
       {
-        time: [first_measure_time],
-        pitch: [first_measure_pitch],
+        time: first_measure_time,
+        pitch: first_measure_pitch,
       },
     ];
   }
@@ -188,9 +188,15 @@ const time_mutation = (repeated_melody) => {
         mutation_data[input_notes_data_index].notes[random_num]
           .time_mutation_start_point[index]
       ) {
-        console.log("変異する");
+        let mutation_start_point = Math.floor(
+          elem_measure.time.length *
+            mutation_data[input_notes_data_index].notes[random_num]
+              .time_mutation_start_point[index]
+        );
+        elem_measure.time.splice(mutation_start_point);
+        console.log(elem_measure.time);
       } else {
-        console.log("変異しない");
+        //console.log("変異しない");
       }
     }
   });
