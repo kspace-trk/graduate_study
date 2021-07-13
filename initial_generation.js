@@ -177,33 +177,106 @@ const repeat_melody = (first_measure_time, first_measure_pitch) => {
   }
   return repeated_melody;
 };
+const add_time_mutation = (spliced_time, mutation_base_data, index) => {
+  let times_sum = 0;
+  spliced_time.forEach((elem) => {
+    times_sum += elem;
+  });
+  let max_times_sum = null;
+  if (input_notes_data_index == 0) {
+    max_times_sum = 2;
+  } else if (input_notes_data_index == 1) {
+    max_times_sum = 4;
+  } else if (input_notes_data_index == 2) {
+    max_times_sum = 8;
+  }
+  while (times_sum < max_times_sum) {
+    let random_song_num = Math.floor(
+      Math.random() * input_notes_data[0].notes.length
+    );
+    let random_measure_num = index;
+    let max_of_random_note_num =
+      input_notes_data[input_notes_data_index].notes[random_song_num][
+        random_measure_num
+      ].time.length;
+    let min_of_random_note_num = Math.floor(
+      input_notes_data[input_notes_data_index].notes[random_song_num][
+        random_measure_num
+      ].time.length * mutation_base_data
+    );
+    let random_note_num =
+      Math.floor(
+        Math.random() * (max_of_random_note_num - min_of_random_note_num)
+      ) + min_of_random_note_num;
+    // 何番目のnoteを取得するかの数字ゲット
+    while (random_note_num == 0) {
+      random_note_num = Math.floor(
+        Math.random() *
+          input_notes_data[input_notes_data_index].notes[random_song_num][
+            random_measure_num
+          ].time.length
+      );
+    }
+    let selected_time = null;
+    if (
+      input_notes_data[input_notes_data_index].notes[random_song_num][
+        random_measure_num
+      ].time[random_note_num] !== 0
+    ) {
+      selected_time =
+        input_notes_data[input_notes_data_index].notes[random_song_num][
+          random_measure_num
+        ].time[random_note_num] -
+        input_notes_data[input_notes_data_index].notes[random_song_num][
+          random_measure_num
+        ].time[random_note_num - 1];
+    }
+    times_sum += selected_time;
+    if (times_sum + selected_time < max_times_sum) {
+      spliced_time.push(selected_time); //決定したtimeをtimesにpush
+    }
+  }
+  return spliced_time;
+};
 const time_mutation = (repeated_melody) => {
   // 1小節ごとだったら4回まわる。2小節ごとだったら2回。4小節ごとだったら1回。
   // 1回目は回避する必要がある
   repeated_melody.forEach((elem_measure, index) => {
     let max_of_random_num = mutation_data[input_notes_data_index].notes.length;
     let random_num = Math.floor(Math.random() * max_of_random_num);
+    let time_mutated_data = null;
     if (index !== 0) {
       if (
         mutation_data[input_notes_data_index].notes[random_num]
           .time_mutation_start_point[index]
       ) {
+        console.log("変異前↓");
+        console.log(elem_measure.time);
+        let mutation_base_data =
+          mutation_data[input_notes_data_index].notes[random_num]
+            .time_mutation_start_point[index];
         let mutation_start_point = Math.floor(
-          elem_measure.time.length *
-            mutation_data[input_notes_data_index].notes[random_num]
-              .time_mutation_start_point[index]
+          elem_measure.time.length * mutation_base_data
         );
         elem_measure.time.splice(mutation_start_point);
-        console.log(elem_measure.time);
+        time_mutated_data = add_time_mutation(
+          elem_measure.time,
+          mutation_base_data,
+          index
+        );
+        console.log("変異後↓");
+        console.log(time_mutated_data);
       } else {
-        //console.log("変異しない");
+        console.log("変異しない");
+        //console.log(repeated_melody[0]);
       }
     }
   });
 };
 const generate_random_melody = (first_measure_time, first_measure_pitch) => {
   let repeated_melody = repeat_melody(first_measure_time, first_measure_pitch);
-  let random_melody = time_mutation(repeated_melody);
+  // let random_melodyに代入する↓
+  time_mutation(repeated_melody);
 };
 const main = () => {
   input_notes();
