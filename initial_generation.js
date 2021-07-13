@@ -149,7 +149,7 @@ const repeat_melody = (first_measure_time, first_measure_pitch) => {
       },
       {
         time: first_measure_time,
-        pitch: [first_measure_pitch],
+        pitch: first_measure_pitch,
       },
       {
         time: first_measure_time,
@@ -250,28 +250,30 @@ const time_mutation = (repeated_melody) => {
         mutation_data[input_notes_data_index].notes[random_num]
           .time_mutation_start_point[index]
       ) {
-        console.log("変異前↓");
-        console.log(elem_measure.time);
+        console.log(index + 1 + "小節目time変異開始");
         let mutation_base_data =
           mutation_data[input_notes_data_index].notes[random_num]
             .time_mutation_start_point[index];
         let mutation_start_point = Math.floor(
           elem_measure.time.length * mutation_base_data
         );
-        elem_measure.time.splice(mutation_start_point);
+        let spliced_time = elem_measure.time.slice(0, elem_measure.time.length);
+        spliced_time.splice(mutation_start_point);
         time_mutated_data = add_time_mutation(
-          elem_measure.time,
+          spliced_time,
           mutation_base_data,
           index
         );
-        console.log("変異後↓");
-        console.log(time_mutated_data);
+        repeated_melody[index].time = time_mutated_data;
+        // console.log("time変異後↓");
+        // console.log(time_mutated_data);
       } else {
-        console.log("変異しない");
-        //console.log(repeated_melody[0]);
+        // console.log(index + 1 + "小節目は変異しない");
       }
     }
   });
+  console.log("最終結果↓");
+  console.log(repeated_melody);
 };
 const generate_random_melody = (first_measure_time, first_measure_pitch) => {
   let repeated_melody = repeat_melody(first_measure_time, first_measure_pitch);
@@ -282,11 +284,10 @@ const main = () => {
   input_notes();
   input_mutation_data();
   const first_measure_time = generate_first_measure_time();
+  // console.log("初期time↓");
+  // console.log(first_measure_time);
   const first_measure_pitch = generate_first_measure_pitch(first_measure_time);
   // 最終結果代入
-  const random_melody = generate_random_melody(
-    first_measure_time,
-    first_measure_pitch
-  );
+  generate_random_melody(first_measure_time, first_measure_pitch);
 };
 main();
