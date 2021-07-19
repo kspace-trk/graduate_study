@@ -276,14 +276,12 @@ const time_mutation = (repeated_melody) => {
 };
 const add_pitch_mutation = (pitch, index, input_notes_data_index) => {
   pitch.forEach((elem_pitch, pitch_index) => {
-    console.log("変更前" + elem_pitch)
     let max_of_random_num = mutation_data[input_notes_data_index].notes.length;
     let random_num = Math.floor(Math.random() * max_of_random_num);
     let max_of_random_pitch_num = mutation_data[input_notes_data_index].notes[random_num].name_diff[index].length
     let random_pitch_num = Math.floor(Math.random() * max_of_random_pitch_num);
     if(random_pitch_num !== 0) {
       pitch[pitch_index] = pitch[pitch_index] + mutation_data[input_notes_data_index].notes[random_num].name_diff[index][random_pitch_num];
-      console.log("変更後" + elem_pitch)
     }
   })
   return pitch
@@ -306,14 +304,13 @@ const pitch_mutation = (mutated_melody) => {
   })
   // 1小節ごとだったら4回まわる。2小節ごとだったら2回。4小節ごとだったら1回。
   // 1回目は回避する必要がある
-  console.log(mutated_melody)
   return mutated_melody;
 };
 const generate_random_melody = (first_measure_time, first_measure_pitch) => {
   let repeated_melody = repeat_melody(first_measure_time, first_measure_pitch);
   // let random_melodyに代入する↓
   let mutated_melody = time_mutation(repeated_melody);
-  pitch_mutation(mutated_melody);
+  return pitch_mutation(mutated_melody);
 };
 const main = () => {
   input_notes();
@@ -323,6 +320,7 @@ const main = () => {
   // console.log(first_measure_time);
   const first_measure_pitch = generate_first_measure_pitch(first_measure_time);
   // 最終結果代入
-  generate_random_melody(first_measure_time, first_measure_pitch);
+  const random_melody =  generate_random_melody(first_measure_time, first_measure_pitch);
+  console.log(random_melody)
 };
 main();
