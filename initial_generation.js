@@ -274,7 +274,7 @@ const time_mutation = (repeated_melody) => {
   });
   return repeated_melody;
 };
-const add_pitch_mutation = (pitch, index, input_notes_data_index) => {
+const add_pitch_mutation = (pitch, time_length, index, input_notes_data_index) => {
   pitch.forEach((elem_pitch, pitch_index) => {
     let max_of_random_num = mutation_data[input_notes_data_index].notes.length;
     let random_num = Math.floor(Math.random() * max_of_random_num);
@@ -286,18 +286,47 @@ const add_pitch_mutation = (pitch, index, input_notes_data_index) => {
   })
   return pitch
 }
+const align_sound_count = (pitch, time_length, index, input_notes_data_index) => {
+  // time_lengthとpitchの音数を合わせる
+  console.log(index)
+  console.log("pitch.length：" + pitch.length);
+  console.log("time_length：" + time_length);
+  if(pitch.length < time_length){
+    // pitchのほうが音数少ない場合
+    console.log("pitchが音数少ない")
+    while(pitch.length < time_length){
+      // どの曲からとるか決める乱数
+      let max_of_random_num = input_notes_data.length;
+      let random_num = Math.floor(Math.random() * max_of_random_num);
+      // 曲のnameのどこからもってくるかきめる
+      let max_of_random_name_num = input_notes_data[input_notes_data_index].notes[random_num][index].name.length
+      let random_name_num = Math.floor(Math.random() * max_of_random_name_num);
+      pitch.push(input_notes_data[input_notes_data_index].notes[random_num][index].name[random_name_num])
+    }
+  } else if (pitch.length > time_length) {
+    while(pitch.length > time_length) {
+      pitch.pop()
+    }
+  }
+  return pitch
+}
 const pitch_mutation = (mutated_melody) => {
   mutated_melody.forEach((elem_measure, index) => {
     let max_of_random_num = mutation_data[input_notes_data_index].notes.length;
     let random_num = Math.floor(Math.random() * max_of_random_num);
     let pitch_mutated_data = null;
     if(index !== 0){
+      let elem_pitch = elem_measure.pitch.slice()
+      let time_length = elem_measure.time.length
+      pitch_mutated_data = align_sound_count(elem_pitch, time_length, index, input_notes_data_index);
       if (
         mutation_data[input_notes_data_index].notes[random_num]
           .name_mutation_start_point[index] !== null
       ) {
         // 音高を変化させる
-        pitch_mutated_data = add_pitch_mutation(elem_measure.pitch, index, input_notes_data_index)
+        pitch_mutated_data = add_pitch_mutation(elem_pitch, time_length, index, input_notes_data_index)
+      }
+      if(pitch_mutated_data){
         mutated_melody[index].pitch = pitch_mutated_data.slice()
       }
     }
@@ -319,8 +348,33 @@ const main = () => {
   // console.log("初期time↓");
   // console.log(first_measure_time);
   const first_measure_pitch = generate_first_measure_pitch(first_measure_time);
+  console.log("初期pitch↓");
+  console.log(first_measure_pitch);
   // 最終結果代入
   const random_melody =  generate_random_melody(first_measure_time, first_measure_pitch);
   console.log(random_melody)
+  return random_melody
 };
-main();
+// main();
+
+
+
+
+
+// 以下テストコード
+const sound_count_test = () => {
+  let err = false
+  let n = 0;
+  while(!err && n < 100){
+    let result = main();
+    n++;
+    result.forEach((elem_measure) => {
+      if(elem_measure.time.length !== elem_measure.pitch.length){
+        err = true
+        console.log("エラー！")
+      }
+    })
+  }
+  console.log("実行回数：" + n + "回")
+}
+sound_count_test();
