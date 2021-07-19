@@ -250,7 +250,7 @@ const time_mutation = (repeated_melody) => {
         mutation_data[input_notes_data_index].notes[random_num]
           .time_mutation_start_point[index]
       ) {
-        console.log(index + 1 + "小節目time変異開始");
+        // console.log(index + 1 + "小節目time変異開始");
         let mutation_base_data =
           mutation_data[input_notes_data_index].notes[random_num]
             .time_mutation_start_point[index];
@@ -272,13 +272,48 @@ const time_mutation = (repeated_melody) => {
       }
     }
   });
-  console.log("最終結果↓");
-  console.log(repeated_melody);
+  return repeated_melody;
+};
+const add_pitch_mutation = (pitch, index, input_notes_data_index) => {
+  pitch.forEach((elem_pitch, pitch_index) => {
+    console.log("変更前" + elem_pitch)
+    let max_of_random_num = mutation_data[input_notes_data_index].notes.length;
+    let random_num = Math.floor(Math.random() * max_of_random_num);
+    let max_of_random_pitch_num = mutation_data[input_notes_data_index].notes[random_num].name_diff[index].length
+    let random_pitch_num = Math.floor(Math.random() * max_of_random_pitch_num);
+    if(random_pitch_num !== 0) {
+      pitch[pitch_index] = pitch[pitch_index] + mutation_data[input_notes_data_index].notes[random_num].name_diff[index][random_pitch_num];
+      console.log("変更後" + elem_pitch)
+    }
+  })
+  return pitch
+}
+const pitch_mutation = (mutated_melody) => {
+  mutated_melody.forEach((elem_measure, index) => {
+    let max_of_random_num = mutation_data[input_notes_data_index].notes.length;
+    let random_num = Math.floor(Math.random() * max_of_random_num);
+    let pitch_mutated_data = null;
+    if(index !== 0){
+      if (
+        mutation_data[input_notes_data_index].notes[random_num]
+          .name_mutation_start_point[index] !== null
+      ) {
+        // 音高を変化させる
+        pitch_mutated_data = add_pitch_mutation(elem_measure.pitch, index, input_notes_data_index)
+        mutated_melody[index].pitch = pitch_mutated_data.slice()
+      }
+    }
+  })
+  // 1小節ごとだったら4回まわる。2小節ごとだったら2回。4小節ごとだったら1回。
+  // 1回目は回避する必要がある
+  console.log(mutated_melody)
+  return mutated_melody;
 };
 const generate_random_melody = (first_measure_time, first_measure_pitch) => {
   let repeated_melody = repeat_melody(first_measure_time, first_measure_pitch);
   // let random_melodyに代入する↓
-  time_mutation(repeated_melody);
+  let mutated_melody = time_mutation(repeated_melody);
+  pitch_mutation(mutated_melody);
 };
 const main = () => {
   input_notes();
