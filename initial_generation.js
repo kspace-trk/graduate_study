@@ -15,7 +15,7 @@ let mutation_data = [
   two_measure_repeating_mutation_data,
   four_measure_repeating_mutation_data,
 ];
-let input_notes_data_index = 0; //1小節ごとの繰り返しは0, 2小節ごとの繰り返しは1, 4小節ごとの繰り返しは2
+let input_notes_data_index = 2; //1小節ごとの繰り返しは0, 2小節ごとの繰り返しは1, 4小節ごとの繰り返しは2
 const input_notes = () => {
   input_notes_data[0] = JSON.parse(
     fs.readFileSync("./notes/one_measure_repeating_notes.json", "utf8")
@@ -36,13 +36,7 @@ const input_mutation_data = () => {
   );
   mutation_data[1] = JSON.parse(
     fs.readFileSync(
-      "./mutation_data/one_measure_repeating_notes_diff.json",
-      "utf8"
-    )
-  );
-  mutation_data[2] = JSON.parse(
-    fs.readFileSync(
-      "./mutation_data/one_measure_repeating_notes_diff.json",
+      "./mutation_data/two_measure_repeating_notes_diff.json",
       "utf8"
     )
   );
@@ -275,11 +269,16 @@ const time_mutation = (repeated_melody) => {
   return repeated_melody;
 };
 const add_pitch_mutation = (pitch, time_length, index, input_notes_data_index) => {
+  // ひとつひとつの音高をみていく
   pitch.forEach((elem_pitch, pitch_index) => {
+    // 指定繰り返し回数のmutation dataのlength取得
     let max_of_random_num = mutation_data[input_notes_data_index].notes.length;
+    // mutation data内の使用する変異曲データ番号を決める
     let random_num = Math.floor(Math.random() * max_of_random_num);
+    // ランダムでひとつ変異データをもってくる
     let max_of_random_pitch_num = mutation_data[input_notes_data_index].notes[random_num].name_diff[index].length
     let random_pitch_num = Math.floor(Math.random() * max_of_random_pitch_num);
+    console.log(mutation_data[input_notes_data_index].notes[1].name_diff[1][6])
     if(random_pitch_num !== 0) {
       pitch[pitch_index] = pitch[pitch_index] + mutation_data[input_notes_data_index].notes[random_num].name_diff[index][random_pitch_num];
     }
@@ -334,12 +333,18 @@ const pitch_mutation = (mutated_melody) => {
 const generate_random_melody = (first_measure_time, first_measure_pitch) => {
   let repeated_melody = repeat_melody(first_measure_time, first_measure_pitch);
   // let random_melodyに代入する↓
-  let mutated_melody = time_mutation(repeated_melody);
-  return pitch_mutation(mutated_melody);
+  if (input_notes_data_index < 2) {
+    let mutated_melody = time_mutation(repeated_melody);
+    return pitch_mutation(mutated_melody);
+  } else {
+    return repeated_melody;
+  }
 };
 const main = () => {
   input_notes();
-  input_mutation_data();
+  if (input_notes_data_index < 2) {
+    input_mutation_data();
+  }
   const first_measure_time = generate_first_measure_time();
   // console.log("初期time↓");
   // console.log(first_measure_time);
