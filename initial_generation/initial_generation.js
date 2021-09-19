@@ -340,20 +340,37 @@ const generate_random_melody = (first_measure_time, first_measure_pitch) => {
     return repeated_melody;
   }
 };
+const format_json = (default_melody) => {
+  let json_format = {
+    header: {
+      name: '',
+      ppq: '96',
+      tempos: [
+        {
+          bpm: 120,
+          ticks: 0
+        }
+      ],
+      tracks: [
+        {
+          channel: 0,
+          notes: []
+        },
+      ]
+    }
+  }
+  console.log(default_melody)
+}
 const main = () => {
   input_notes();
   if (input_notes_data_index < 2) {
     input_mutation_data();
   }
   const first_measure_time = generate_first_measure_time();
-  // console.log("初期time↓");
-  // console.log(first_measure_time);
   const first_measure_pitch = generate_first_measure_pitch(first_measure_time);
-  // console.log("初期pitch↓");
-  // console.log(first_measure_pitch);
   // 最終結果代入
   const random_melody =  generate_random_melody(first_measure_time, first_measure_pitch);
-  console.log(random_melody)
+  format_json(random_melody)
   return random_melody
 };
 main();
