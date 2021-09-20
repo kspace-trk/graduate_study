@@ -15,7 +15,8 @@ let mutation_data = [
   two_measure_repeating_mutation_data,
   four_measure_repeating_mutation_data,
 ];
-let input_notes_data_index = 2; //1小節ごとの繰り返しは0, 2小節ごとの繰り返しは1, 4小節ごとの繰り返しは2
+let input_notes_data_index = 0; //1小節ごとの繰り返しは0, 2小節ごとの繰り返しは1, 4小節ごとの繰り返しは2
+const output_key_index = 0; // 0だとc_maj
 const input_notes = () => {
   input_notes_data[0] = JSON.parse(
     fs.readFileSync("./notes/one_measure_repeating_notes.json", "utf8")
@@ -278,7 +279,6 @@ const add_pitch_mutation = (pitch, time_length, index, input_notes_data_index) =
     // ランダムでひとつ変異データをもってくる
     let max_of_random_pitch_num = mutation_data[input_notes_data_index].notes[random_num].name_diff[index].length
     let random_pitch_num = Math.floor(Math.random() * max_of_random_pitch_num);
-    console.log(mutation_data[input_notes_data_index].notes[1].name_diff[1][6])
     if(random_pitch_num !== 0) {
       pitch[pitch_index] = pitch[pitch_index] + mutation_data[input_notes_data_index].notes[random_num].name_diff[index][random_pitch_num];
     }
@@ -340,26 +340,296 @@ const generate_random_melody = (first_measure_time, first_measure_pitch) => {
     return repeated_melody;
   }
 };
+const format_default_time = (default_time) => {
+  let time_sum = 0
+  let num4calc = 0
+  if (input_notes_data_index === 0) {
+    default_time.forEach((elem, i) => {
+      time_sum += elem
+      if (elem === 0) {
+        default_time[i] = num4calc - time_sum
+        num4calc += 2
+        time_sum += default_time[i]
+      }
+    })
+  } else if (input_notes_data_index === 1) {
+    default_time.forEach((elem) => {
+      time_sum += elem
+      if (elem === 0) {
+        default_time[i] = num4calc - time_sum
+        num4calc += 4
+        time_sum += default_time[i]
+      }
+    })
+  }
+  return default_time
+}
 const format_json = (default_melody) => {
+  let default_time = []
+  let default_pitch = []
+  default_melody.forEach((elem) => {
+    default_time = elem.time.concat(default_time)
+    default_pitch = elem.pitch.concat(default_pitch)
+  })
+  default_time = format_default_time(default_time)
+  console.log(default_time)
+  // timeが0.5増えたらticksは96ふえる0.25→48
+  // durationTicks = 96*2 * duration
+
+  // 以下手順
+  // timeからdurationとticksを算出
+  // duration = time[n+1] - time[n]
+  // 最後の音duration = 8 - timesum
+  // durationからdurationTicksを算出
+  // durationTicks = 96*2 * duration
+
+  // pitchからmidiとnameを算出→出力するメロディーのキーを指定する変数が必要
+  // pitchをstringに変換→マッピングでmidi数値算出
   let json_format = {
     header: {
+      keySignatures: [],
+      meta: [],
       name: '',
-      ppq: '96',
+      ppq: 96,
       tempos: [
         {
           bpm: 120,
           ticks: 0
         }
       ],
-      tracks: [
+      timeSignatures: [
         {
-          channel: 0,
-          notes: []
-        },
+          ticks: 0,
+          timeSignature: [
+            4,
+            4
+          ],
+          measures: 0
+        }
       ]
-    }
+    },
+    tracks: [
+      {
+        channel: 0,
+        controlChanges: {},
+        pitchBends: [],
+        instrument: {
+          family:'piano',
+          name: 'acoustic grand piano',
+          number: 0
+        },
+        notes: [
+          // ここにpushする
+        ],
+        endOfTrackTicks: 1536
+      }
+    ]
   }
-  console.log(default_melody)
+  // timeからdurationとticksを算出
+  // timeからduration算出して代入
+  let duration = create_duration(default_time)
+  let duration_ticks = create_duration_ticks(duration)
+  let midi = create_midi(default_pitch)
+  let name = create_name(default_pitch)
+  let ticks = create_ticks(default_time)
+  let time = create_time(default_time)
+  // json_formatにまとめる
+  default_time.forEach((e, i) => {
+    json_format.tracks[0].notes.push({
+      duration: duration[i],
+      durationTicks: duration_ticks[i],
+      midi: midi[i],
+      name: name[i],
+      ticks: ticks[i],
+      time: time[i],
+      velocity: 0.8
+    })
+  })
+  return json_format
+}
+const create_duration = (default_time) => {
+  let duration = []
+  let time_sum = 0
+  default_time.forEach((elem_time, index) => {
+    time_sum += elem_time
+    if (default_time.length - 1 === index) {
+      duration.push(8 - time_sum)
+    } else {
+      // 余りの値
+      let residual_num = default_time[index + 1]
+      if (residual_num <= 0.125) {
+        duration.push(0.125)
+      } else if (residual_num <= 0.25) {
+        duration.push(0.25)
+      } else if (residual_num <= 0.375) {
+        duration.push(0.375)
+      } else {
+        duration.push(0.5)
+      }
+    }
+  })
+  return duration
+}
+const create_duration_ticks = (duration) => {
+  let durationTicks = []
+  duration.forEach((elem_duration) => {
+    durationTicks.push(96 * 2 * elem_duration)
+  })
+  return durationTicks
+}
+const create_midi = (default_pitch) => {
+  let midi = []
+  const key_mapping = [
+    {
+      num: -7,
+      midi: 48
+    },
+    {
+      num: -6,
+      midi: 50
+    },
+    {
+      num: -5,
+      midi: 52
+    },
+    {
+      num: -4,
+      midi: 53
+    },
+    {
+      num: -3,
+      midi: 55
+    },
+    {
+      num: -2,
+      midi: 57
+    },
+    {
+      num: -1,
+      midi: 59
+    },
+    {
+      num: 0,
+      midi: 60
+    },
+    {
+      num: 1,
+      midi: 62
+    },
+    {
+      num: 2,
+      midi: 64
+    },
+    {
+      num: 3,
+      midi: 65
+    },
+    {
+      num: 4
+      ,
+      midi: 67
+    },
+    {
+      num: 5,
+      midi: 69
+    },
+    {
+      num: 6,
+      midi: 71
+    },
+    {
+      num: 7,
+      midi: 72
+    },
+    {
+      num: 8,
+      midi: 74
+    },
+    {
+      num: 9,
+      midi: 76
+    },
+    {
+      num: 10,
+      midi: 77
+    },
+    {
+      num: 11,
+      midi: 79
+    },
+    {
+      num: 12,
+      midi: 81
+    },
+    {
+      num: 13,
+      midi: 83
+    },
+  ]
+  let matched_index = 0
+  default_pitch.forEach((elem_pitch) => {
+    matched_index = key_mapping.findIndex((elem) => {
+      return elem.num === elem_pitch
+    })
+    midi.push(key_mapping[matched_index].midi)
+  })
+  return midi
+}
+const create_name = (default_pitch) => {
+  let name = []
+  const keys = [
+    ['C', 'D', 'E', 'F', 'G', 'A', 'B'] // c_maj
+  ]
+  const key_mapping = [
+    { num: -7 }, { num: -6 }, { num: -5 }, { num: -4 },
+    { num: -3 }, { num: -2 }, { num: -1 },
+    { num: 0 }, { num: 1 }, { num: 2 }, { num: 3 },
+    { num: 4 }, { num: 5 }, { num: 6 },
+    { num: 7 }, { num: 8 }, { num: 9 }, { num: 10 },
+    { num: 11 }, { num: 12 }, { num: 13 },
+  ]
+  let index_counter = 0
+  key_mapping.forEach((elem, index) => {
+    if (index === 7 || index === 14) {
+      index_counter = 0
+    }
+    if (elem.num < 0) {
+      elem.key = keys[output_key_index][index_counter] + '3'
+    } else if (0 <= elem.num && elem.num <= 6) {
+      elem.key = keys[output_key_index][index_counter] + '4'
+    } else {
+      elem.key = keys[output_key_index][index_counter] + '5'
+    }
+    index_counter++
+  })
+  let matched_index = 0
+  default_pitch.forEach((elem_pitch) => {
+    matched_index = key_mapping.findIndex((elem) => {
+      return elem.num === elem_pitch
+    })
+    name.push(key_mapping[matched_index].key)
+  })
+  return name
+}
+const create_ticks = (default_time) => {
+  let ticks = []
+  let ticks_sum = 0
+  default_time.forEach((elem_time) => {
+    ticks_sum += elem_time * 2 * 96
+    ticks.push(ticks_sum)
+  })
+  return ticks
+}
+const create_time = (default_time) => {
+  let time = []
+  let time_sum = 0
+  default_time.forEach((elem_time) => {
+    time.push(time_sum += elem_time)
+  })
+  return time
+}
+const output_json = (result) => {
+  fs.writeFileSync('../json2midi/output.json', JSON.stringify(result))
 }
 const main = () => {
   input_notes();
@@ -369,8 +639,9 @@ const main = () => {
   const first_measure_time = generate_first_measure_time();
   const first_measure_pitch = generate_first_measure_pitch(first_measure_time);
   // 最終結果代入
-  const random_melody =  generate_random_melody(first_measure_time, first_measure_pitch);
-  format_json(random_melody)
+  const random_melody = generate_random_melody(first_measure_time, first_measure_pitch);
+  const result = format_json(random_melody)
+  output_json(result)
   return random_melody
 };
 main();

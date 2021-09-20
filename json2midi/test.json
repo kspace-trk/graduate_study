@@ -39,7 +39,7 @@
           "name": "F#4",
           "ticks": 0,
           "time": 0,
-          "velocity": 0.7874015748031497
+          "velocity": 0.8
         },
         {
           "duration": 0.375,
@@ -48,7 +48,16 @@
           "name": "G4",
           "ticks": 96,
           "time": 0.5,
-          "velocity": 0.7874015748031497
+          "velocity": 0.8
+        },
+        {
+          "duration": 0.375,
+          "durationTicks": 72,
+          "midi": 67,
+          "name": "G4",
+          "ticks": 192,
+          "time": 0.5,
+          "velocity": 0.8
         }
       ],
       "endOfTrackTicks": 1536
