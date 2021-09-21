@@ -3,7 +3,8 @@ const fs  = require('fs')
 
 const filename = 'output.json';
 
-function createMidiFromJson(filename) {
+
+const createMidiFromJson = (filename) => {
         console.log(filename);
         const json = JSON.parse(fs.readFileSync(filename, 'utf8'));
         const midi2 = new Midi();
@@ -19,5 +20,5 @@ function createMidiRaw(){
         fs.writeFileSync( 'output.midi' , Buffer.from( midi.toArray()))
 }
 
-createMidiRaw();
+// createMidiRaw();
 createMidiFromJson(filename);

@@ -353,7 +353,7 @@ const format_default_time = (default_time) => {
       }
     })
   } else if (input_notes_data_index === 1) {
-    default_time.forEach((elem) => {
+    default_time.forEach((elem, i) => {
       time_sum += elem
       if (elem === 0) {
         default_time[i] = num4calc - time_sum
@@ -372,7 +372,6 @@ const format_json = (default_melody) => {
     default_pitch = elem.pitch.concat(default_pitch)
   })
   default_time = format_default_time(default_time)
-  console.log(default_time)
   // timeが0.5増えたらticksは96ふえる0.25→48
   // durationTicks = 96*2 * duration
 
@@ -481,6 +480,38 @@ const create_midi = (default_pitch) => {
   let midi = []
   const key_mapping = [
     {
+      num: -13,
+      midi: 34
+    },
+    {
+      num: -14,
+      midi: 36
+    },
+    {
+      num: -13,
+      midi: 38
+    },
+    {
+      num: -12,
+      midi: 39
+    },
+    {
+      num: -11,
+      midi: 41
+    },
+    {
+      num: -10,
+      midi: 43
+    },
+    {
+      num: -9,
+      midi: 45
+    },
+    {
+      num: -8,
+      midi: 47
+    },
+    {
       num: -7,
       midi: 48
     },
@@ -525,8 +556,7 @@ const create_midi = (default_pitch) => {
       midi: 65
     },
     {
-      num: 4
-      ,
+      num: 4,
       midi: 67
     },
     {
@@ -581,6 +611,8 @@ const create_name = (default_pitch) => {
     ['C', 'D', 'E', 'F', 'G', 'A', 'B'] // c_maj
   ]
   const key_mapping = [
+    { num: -14 }, { num: -13 }, { num: -12 }, { num: -11 },
+    { num: -10 }, { num: -9 }, { num: -8 },
     { num: -7 }, { num: -6 }, { num: -5 }, { num: -4 },
     { num: -3 }, { num: -2 }, { num: -1 },
     { num: 0 }, { num: 1 }, { num: 2 }, { num: 3 },
@@ -593,7 +625,9 @@ const create_name = (default_pitch) => {
     if (index === 7 || index === 14) {
       index_counter = 0
     }
-    if (elem.num < 0) {
+    if (elem.num < -7) {
+      elem.key = keys[output_key_index][index_counter] + '2'
+    } else if (elem.num < 0) {
       elem.key = keys[output_key_index][index_counter] + '3'
     } else if (0 <= elem.num && elem.num <= 6) {
       elem.key = keys[output_key_index][index_counter] + '4'
@@ -640,6 +674,7 @@ const main = () => {
   const first_measure_pitch = generate_first_measure_pitch(first_measure_time);
   // 最終結果代入
   const random_melody = generate_random_melody(first_measure_time, first_measure_pitch);
+  console.log(random_melody)
   const result = format_json(random_melody)
   output_json(result)
   return random_melody
@@ -664,6 +699,6 @@ const sound_count_test = () => {
       }
     })
   }
-  console.log("実行回数：" + n + "回")
+  console.log("エラーなし。実行回数：" + n + "回")
 }
 // sound_count_test();
