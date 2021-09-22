@@ -622,9 +622,10 @@ const create_name = (default_pitch) => {
   ]
   let index_counter = 0
   key_mapping.forEach((elem, index) => {
-    if (index === 7 || index === 14) {
+    if (index === 7 || index === 14 || index === 21) {
       index_counter = 0
     }
+    console.log(index_counter)
     if (elem.num < -7) {
       elem.key = keys[output_key_index][index_counter] + '2'
     } else if (elem.num < 0) {
