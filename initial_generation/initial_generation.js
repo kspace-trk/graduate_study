@@ -664,7 +664,7 @@ const create_time = (default_time) => {
   return time
 }
 const output_json = (result) => {
-  fs.writeFileSync('../json2midi/output.json', JSON.stringify(result))
+  fs.writeFileSync('../json2midi/output8.json', JSON.stringify(result))
 }
 const main = () => {
   input_notes();
