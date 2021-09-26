@@ -194,6 +194,14 @@ const create_duration = (united_next_ind) => {
   return duration
 }
 
+const create_duration_ticks = (duration) => {
+  let duration_ticks = []
+  duration.forEach((elem_duration) => {
+    duration_ticks.push(96 * 2 * elem_duration)
+  })
+  return duration_ticks
+}
+
 const format_to_json = (next_ind) => {
   let united_next_ind = []
   next_ind.forEach((elem) => {
@@ -241,6 +249,9 @@ const format_to_json = (next_ind) => {
     ]
   }
   let duration = create_duration(united_next_ind)
+  let duration_ticks = create_duration_ticks(duration)
+  console.log(duration)
+  console.log(duration_ticks)
 }
 
 const main = () => {
