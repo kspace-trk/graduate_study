@@ -1,7 +1,7 @@
 const { Midi } = require('@tonejs/midi')
 const fs  = require('fs')
 
-const filename = 'output.json';
+const filename = 'output3d.json';
 
 
 const createMidiFromJson = (filename) => {
