@@ -20,6 +20,9 @@ const fs = require('fs')
 // テスト用に、適応度を定数としていれておく
 // TODO のちにこれを標準入力で受け取れるようにする
 const fitness = [4, 2, 1, 4, 2, 1, 5, 3]
+// 繰り返し数
+// 1小節ごとの繰り返しは0、2小節ごとは1、繰り返しなしは4。
+const repeating_num = 0
 
 const parse_json = () => {
   // json2midi配下のoutputN.jsonを全て読み込む
@@ -70,15 +73,48 @@ const change_format = () => {
   return formatted_data_list
 }
 
+const divide_repeating = () => {
+  const formatted_data_list = change_format()
+  const divided_data_list = []
+  if (repeating_num === 0) {
+    // 1小節ごとの繰り返し
+    formatted_data_list.forEach((formatted_data) => {
+      const divided_data = []
+      divided_data.push(formatted_data.slice(0, 15))
+      divided_data.push(formatted_data.slice(16, 31))
+      divided_data.push(formatted_data.slice(32, 47))
+      divided_data.push(formatted_data.slice(48, 63))
+      divided_data_list.push(divided_data)
+    })
+  } else if (repeating_num === 1) {
+    // 2小節ごとの繰り返し
+    formatted_data_list.forEach((formatted_data) => {
+      const divided_data = []
+      divided_data.push(formatted_data.slice(0, 31))
+      divided_data.push(formatted_data.slice(32, 63))
+      divided_data_list.push(divided_data)
+    })
+  } else {
+    // 4小節ごとの繰り返し
+    divided_data_list.push(formatted_data.slice())
+  }
+  return divided_data_list
+}
+
 const select_of_roulette = () => {
   const ind1_index = 0
   const ind2_index = 0
   // fitnessの合計値を代入する
-  // const fitness_sum = 
+  let fitness_sum = 0
+  fitness.forEach((elem) => {
+    fitness_sum += elem
+  })
+  // fitness_num分のlengthを用意して、そのなかにfitnessをいれて確立で選択する
+  return fitness_sum
 }
 
 const main = async () => {
-  console.log(change_format())
+  divide_repeating()
 }
 
 main ()
