@@ -22,7 +22,7 @@ const fs = require('fs')
 // TODO のちにこれを標準入力で受け取れるようにする
 const fitness_list = [4, 2, 1, 4, 2, 1, 5, 3]
 // 繰り返し数
-// 1小節ごとの繰り返しは0、2小節ごとは1、繰り返しなしは4。
+// 1小節ごとの繰り返しは0、2小節ごとは1、繰り返しなしは2。
 const repeating_num = 0
 
 // 個体群数
@@ -130,6 +130,7 @@ const select_of_roulette = (fitness_list) => {
   return roulette_wheel[selected_roulette_index]
 }
 
+// 親個体選択関数
 const select_ind = () => {
   const ind1_index = select_of_roulette(fitness_list)
   let ind2_index = select_of_roulette(fitness_list)
@@ -142,13 +143,18 @@ const select_ind = () => {
   }
 }
 
+// 一点交叉関数
 const one_point_crossover = (ind1, ind2, crossover_point) => {
-  const next_ind = []
-  console.log(ind1[0].slice(0, crossover_point))
-  console.log(ind2[0].slice(crossover_point, ind2[0].length))
-  console.log(crossover_point)
+  let next_ind = []
+  ind1.forEach((elem_ind1, i) => {
+    let sliced_elem_ind1 = elem_ind1.slice(0, crossover_point)
+    let tmp = sliced_elem_ind1.concat(ind2[i].slice(crossover_point, ind2[0].length))
+    next_ind.push(tmp)
+  })
+  return next_ind
 }
 
+// 交叉関数
 const crossover = (ind1, ind2) => {
   // 交叉点算出
   let crossover_point = 0
@@ -166,20 +172,91 @@ const crossover = (ind1, ind2) => {
     }
   }
   // 一点交叉
-  let next_ind_data_list = []
-  next_ind_data_list.push(one_point_crossover(ind1, ind2, crossover_point))
-  
+  let next_ind = one_point_crossover(ind1, ind2, crossover_point)
+  return next_ind
+}
+
+const create_duration = (united_next_ind) => {
+  let duration = []
+  let counter = []
+  let breakpoint = 0
+  united_next_ind.forEach((elem, i) => {
+    if (elem >= 1 && i !== 0) {
+      counter.push(united_next_ind.slice(breakpoint, i))
+      breakpoint = i
+    } else if (i === united_next_ind.length - 1) {
+      counter.push(united_next_ind.slice(breakpoint, i + 1))
+    }
+  })
+  counter.forEach((elem) => {
+    duration.push(elem.length * 0.125)
+  })
+  return duration
+}
+
+const format_to_json = (next_ind) => {
+  let united_next_ind = []
+  next_ind.forEach((elem) => {
+    united_next_ind = united_next_ind.concat(elem)
+  })
+  console.log(united_next_ind)
+  let json_format = {
+    header: {
+      keySignatures: [],
+      meta: [],
+      name: '',
+      ppq: 96,
+      tempos: [
+        {
+          bpm: 120,
+          ticks: 0
+        }
+      ],
+      timeSignatures: [
+        {
+          ticks: 0,
+          timeSignature: [
+            4,
+            4
+          ],
+          measures: 0
+        }
+      ]
+    },
+    tracks: [
+      {
+        channel: 0,
+        controlChanges: {},
+        pitchBends: [],
+        instrument: {
+          family:'piano',
+          name: 'acoustic grand piano',
+          number: 0
+        },
+        notes: [
+          // ここにpushする
+        ],
+        endOfTrackTicks: 1536
+      }
+    ]
+  }
+  let duration = create_duration(united_next_ind)
 }
 
 const main = () => {
+  // 子個体群配列宣言
+  const next_ind_data_list = []
+  const next_ind_json_list = []
   // 親個体群取得
   const ind_data_list = divide_repeating()
-  // 選択する親個体のindex番号取得
-  const { ind1_index, ind2_index} = select_ind()
-  // 2つの親個体を交叉し、1つの子個体を生成。
-  const next_ind_data_list = []
-  const res = crossover(ind_data_list[ind1_index], ind_data_list[ind2_index])
-  next_ind_data_list.push(res)
+  //for (let i = 0; i < pop_size; i++) {
+    // 選択する親個体のindex番号取得
+    const { ind1_index, ind2_index} = select_ind()
+    // 2つの親個体を交叉し、1つの子個体を生成。
+    const res = crossover(ind_data_list[ind1_index], ind_data_list[ind2_index])
+    next_ind_data_list.push(res)
+    next_ind_json_list.push(format_to_json(res))
+  //}
 }
 
 main ()
