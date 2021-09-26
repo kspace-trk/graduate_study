@@ -105,7 +105,6 @@ const divide_repeating = () => {
     // 4小節ごとの繰り返し
     divided_data_list.push(formatted_data.slice())
   }
-  console.log(divided_data_list[2])
   return divided_data_list
 }
 
@@ -145,9 +144,9 @@ const select_ind = () => {
 
 const one_point_crossover = (ind1, ind2, crossover_point) => {
   const next_ind = []
-  // console.log(ind1[0].slice(0, crossover_point))
-  // console.log(ind2[0].slice(crossover_point, ind2[0].length))
-  // console.log(crossover_point)
+  console.log(ind1[0].slice(0, crossover_point))
+  console.log(ind2[0].slice(crossover_point, ind2[0].length))
+  console.log(crossover_point)
 }
 
 const crossover = (ind1, ind2) => {
