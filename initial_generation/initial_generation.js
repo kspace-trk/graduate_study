@@ -17,6 +17,7 @@ let mutation_data = [
 ];
 let input_notes_data_index = 0; //1小節ごとの繰り返しは0, 2小節ごとの繰り返しは1, 4小節ごとの繰り返しは2
 const output_key_index = 0; // 0だとc_maj
+const pop_size = 8; // 個体群数
 const input_notes = () => {
   input_notes_data[0] = JSON.parse(
     fs.readFileSync("./notes/one_measure_repeating_notes.json", "utf8")
@@ -426,6 +427,7 @@ const format_json = (default_melody) => {
   }
   // timeからdurationとticksを算出
   // timeからduration算出して代入
+  // ticks = time * 2 * 96
   let duration = create_duration(default_time)
   let duration_ticks = create_duration_ticks(duration)
   let midi = create_midi(default_pitch)
@@ -663,22 +665,25 @@ const create_time = (default_time) => {
   })
   return time
 }
-const output_json = (result) => {
-  fs.writeFileSync('../json2midi/output8.json', JSON.stringify(result))
+const output_json = (result, i) => {
+  fs.writeFileSync(`../json2midi/json/output${i + 1}.json`, JSON.stringify(result))
 }
 const main = () => {
   input_notes();
   if (input_notes_data_index < 2) {
     input_mutation_data();
   }
-  const first_measure_time = generate_first_measure_time();
-  const first_measure_pitch = generate_first_measure_pitch(first_measure_time);
-  // 最終結果代入
-  const random_melody = generate_random_melody(first_measure_time, first_measure_pitch);
-  console.log(random_melody)
-  const result = format_json(random_melody)
-  output_json(result)
-  return random_melody
+  for (let i = 0; i < pop_size; i++) {
+    const first_measure_time = generate_first_measure_time();
+    const first_measure_pitch = generate_first_measure_pitch(first_measure_time);
+    // 最終結果代入
+    const random_melody = generate_random_melody(first_measure_time, first_measure_pitch);
+    console.log(random_melody)
+    const result = format_json(random_melody)
+    output_json(result, i)
+  }
+  // テストコード用return
+  // return random_melody
 };
 main();
 

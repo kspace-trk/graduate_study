@@ -20,7 +20,7 @@ const fs = require('fs')
 
 // テスト用に、適応度を定数としていれておく
 // TODO のちにこれを標準入力で受け取れるようにする
-const fitness_list = [4, 2, 1, 4, 2, 1, 5, 3]
+const fitness_list = [2, 2, 2, 2, 4, 3, 2, 4]
 // 繰り返し数
 // 1小節ごとの繰り返しは0、2小節ごとは1、繰り返しなしは2。
 const repeating_num = 0
@@ -34,7 +34,7 @@ const parse_json = () => {
   const inputted_json_data_list = []
   let inputted_json_data
   for (let i = 1; i <= 8; i++) {
-    inputted_json_data = JSON.parse(fs.readFileSync(`../json2midi/output${i}.json`, 'utf8'))
+    inputted_json_data = JSON.parse(fs.readFileSync(`../json2midi/json/output${i}.json`, 'utf8'))
     inputted_json_data_list.push(inputted_json_data.tracks[0].notes)
   }
   return inputted_json_data_list
@@ -465,12 +465,30 @@ const create_name = (midi) => {
   return name
 }
 
+const create_time = (united_next_ind) => {
+  let time = []
+  let time_sum = 0
+  united_next_ind.forEach((elem, i) => {
+    if (elem >= 1) {
+      time.push(i * 0.125)
+    }
+  })
+  return time
+}
+
+const create_ticks = (time) => {
+  let ticks = []
+  time.forEach((elem_time) => {
+    ticks.push(elem_time * 2 * 96)
+  })
+  return ticks
+}
+
 const format_to_json = (next_ind) => {
   let united_next_ind = []
   next_ind.forEach((elem) => {
     united_next_ind = united_next_ind.concat(elem)
   })
-  console.log(united_next_ind)
   let json_format = {
     header: {
       keySignatures: [],
@@ -515,10 +533,26 @@ const format_to_json = (next_ind) => {
   let duration_ticks = create_duration_ticks(duration)
   let midi = create_midi(united_next_ind)
   let name = create_name(midi)
-  console.log(duration)
-  console.log(duration_ticks)
-  console.log(midi)
-  console.log(name)
+  let time = create_time(united_next_ind)
+  let ticks = create_ticks(time)
+  duration.forEach((e, i) => {
+    json_format.tracks[0].notes.push({
+      duration: duration[i],
+      durationTicks: duration_ticks[i],
+      midi: midi[i],
+      name: name[i],
+      ticks: ticks[i],
+      time: time[i],
+      velocity: 0.8
+    })
+  })
+  return json_format
+}
+
+const output_json = (next_ind_json_list) => {
+  next_ind_json_list.forEach((elem_next_ind_json, i) => {
+    fs.writeFileSync(`../json2midi/json/output${i + 1}.json`, JSON.stringify(elem_next_ind_json))
+  })
 }
 
 const main = () => {
@@ -527,14 +561,15 @@ const main = () => {
   const next_ind_json_list = []
   // 親個体群取得
   const ind_data_list = divide_repeating()
-  //for (let i = 0; i < pop_size; i++) {
+  for (let i = 0; i < pop_size; i++) {
     // 選択する親個体のindex番号取得
     const { ind1_index, ind2_index} = select_ind()
     // 2つの親個体を交叉し、1つの子個体を生成。
     const res = crossover(ind_data_list[ind1_index], ind_data_list[ind2_index])
     next_ind_data_list.push(res)
     next_ind_json_list.push(format_to_json(res))
-  //}
+  }
+  output_json(next_ind_json_list)
 }
 
 main ()
