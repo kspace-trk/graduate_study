@@ -201,6 +201,269 @@ const create_duration_ticks = (duration) => {
   })
   return duration_ticks
 }
+const create_midi = (united_next_ind) => {
+  let midi = []
+  united_next_ind.forEach((elem) => {
+    if (elem >= 1) {
+      midi.push(elem)
+    }
+  })
+  return midi
+}
+
+const create_name = (midi) => {
+  let name = []
+  const mapping = [
+    {
+      midi: 48,
+      name: 'C3'
+    },
+    {
+      midi: 49,
+      name: 'C#3'
+    },
+    {
+      midi: 50,
+      name: 'D3'
+    },
+    {
+      midi: 51,
+      name: 'D#3'
+    },
+    {
+      midi: 52,
+      name: 'E3'
+    },
+    {
+      midi: 53,
+      name: 'F3'
+    },
+    {
+      midi: 54,
+      name: 'F#3'
+    },
+    {
+      midi: 55,
+      name: 'G3'
+    },
+    {
+      midi: 56,
+      name: 'G#3'
+    },
+    {
+      midi: 57,
+      name: 'A3'
+    },
+    {
+      midi: 58,
+      name: 'A#3'
+    },
+    {
+      midi: 59,
+      name: 'B3'
+    },
+    {
+      midi: 60,
+      name: 'C4'
+    },
+    {
+      midi: 61,
+      name: 'C#4'
+    },
+    {
+      midi: 62,
+      name: 'D4'
+    },
+    {
+      midi: 63,
+      name: 'D#4'
+    },
+    {
+      midi: 64,
+      name: 'E4'
+    },
+    {
+      midi: 65,
+      name: 'F4'
+    },
+    {
+      midi: 66,
+      name: 'F#4'
+    },
+    {
+      midi: 67,
+      name: 'G4'
+    },
+    {
+      midi: 68,
+      name: 'G#4'
+    },
+    {
+      midi: 69,
+      name: 'A4'
+    },
+    {
+      midi: 70,
+      name: 'A#4'
+    },
+    {
+      midi: 71,
+      name: 'B4'
+    },
+    {
+      midi: 72,
+      name: 'C5'
+    },
+    {
+      midi: 73,
+      name: 'C#5'
+    },
+    {
+      midi: 74,
+      name: 'D5'
+    },
+    {
+      midi: 75,
+      name: 'D#5'
+    },
+    {
+      midi: 76,
+      name: 'E5'
+    },
+    {
+      midi: 77,
+      name: 'F5'
+    },
+    {
+      midi: 78,
+      name: 'F#5'
+    },
+    {
+      midi: 79,
+      name: 'G5'
+    },
+    {
+      midi: 80,
+      name: 'G#5'
+    },
+    {
+      midi: 81,
+      name: 'A5'
+    },
+    {
+      midi: 82,
+      name: 'A#5'
+    },
+    {
+      midi: 83,
+      name: 'B5'
+    },
+    {
+      midi: 84,
+      name: 'C6'
+    },
+    {
+      midi: 85,
+      name: 'C#6'
+    },
+    {
+      midi: 86,
+      name: 'D6'
+    },
+    {
+      midi: 87,
+      name: 'D#6'
+    },
+    {
+      midi: 88,
+      name: 'E6'
+    },
+    {
+      midi: 89,
+      name: 'F6'
+    },
+    {
+      midi: 90,
+      name: 'F#6'
+    },
+    {
+      midi: 91,
+      name: 'G6'
+    },
+    {
+      midi: 92,
+      name: 'G#6'
+    },
+    {
+      midi: 93,
+      name: 'A6'
+    },
+    {
+      midi: 94,
+      name: 'A#6'
+    },
+    {
+      midi: 95,
+      name: 'B6'
+    },
+    {
+      midi: 96,
+      name: 'C7'
+    },
+    {
+      midi: 97,
+      name: 'C#7'
+    },
+    {
+      midi: 98,
+      name: 'D7'
+    },
+    {
+      midi: 99,
+      name: 'D#7'
+    },
+    {
+      midi: 100,
+      name: 'E7'
+    },
+    {
+      midi: 101,
+      name: 'F7'
+    },
+    {
+      midi: 102,
+      name: 'F#7'
+    },
+    {
+      midi: 103,
+      name: 'G7'
+    },
+    {
+      midi: 104,
+      name: 'G#7'
+    },
+    {
+      midi: 105,
+      name: 'A7'
+    },
+    {
+      midi: 106,
+      name: 'A#7'
+    },
+    {
+      midi: 107,
+      name: 'B7'
+    },
+  ]
+  let matched_index = 0
+  midi.forEach((elem_midi) => {
+    matched_index = mapping.findIndex((elem_mapping) => {
+      return elem_mapping.midi === elem_midi
+    })
+    name.push(mapping[matched_index].name)
+  })
+  return name
+}
 
 const format_to_json = (next_ind) => {
   let united_next_ind = []
@@ -250,8 +513,12 @@ const format_to_json = (next_ind) => {
   }
   let duration = create_duration(united_next_ind)
   let duration_ticks = create_duration_ticks(duration)
+  let midi = create_midi(united_next_ind)
+  let name = create_name(midi)
   console.log(duration)
   console.log(duration_ticks)
+  console.log(midi)
+  console.log(name)
 }
 
 const main = () => {
