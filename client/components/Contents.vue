@@ -23,8 +23,23 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import * as Tone from 'tone'
 import PlayBtn from '@/components/svg/PlayBtn.vue'
 import StopBtn from '@/components/svg/StopBtn.vue'
+
+export type ElementTrack = {
+  channel: number,
+  controlChanges: object,
+  endOfTrackTicks: number,
+  instrument: object,
+  notes: {
+    name: string,
+    duration: number,
+    time: number,
+    velocity: number
+  }[],
+  pitchBends: []
+}
 
 export default Vue.extend({
   components: {
@@ -33,12 +48,36 @@ export default Vue.extend({
   },
   data () {
     return {
-      isPlaying: false
+      isPlaying: false,
+      synths: [] as Object[]
     }
   },
   methods: {
-    play () {
+    async play () {
       this.isPlaying = true
+      const midi = await this.$axios.$get('/json/output1.json')
+      const now = Tone.now() + 0.5
+      midi.tracks.forEach((track: ElementTrack) => {
+        // create a synth for each track
+        const synth: any = new Tone.PolySynth(Tone.Synth, {
+          envelope: {
+            attack: 0.02,
+            decay: 0.1,
+            sustain: 0.3,
+            release: 1
+          }
+        }).toDestination()
+        this.synths.push(synth)
+        // schedule all of the events
+        track.notes.forEach((note) => {
+          synth.triggerAttackRelease(
+            note.name,
+            note.duration,
+            note.time + now,
+            note.velocity
+          )
+        })
+      })
     },
     stop () {
       this.isPlaying = false

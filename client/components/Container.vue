@@ -7,6 +7,7 @@
     <Contents />
     <Contents />
     <Contents />
+    <Contents />
   </div>
 </template>
 
@@ -23,6 +24,7 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 .container {
+  max-width: 1200px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, 250px);

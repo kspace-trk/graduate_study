@@ -11,6 +11,7 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7"
   },
@@ -24,6 +25,7 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
     "sass": "^1.42.1",
-    "sass-loader": "^10.1.1"
+    "sass-loader": "^10.1.1",
+    "tone": "^14.7.77"
   }
 }
