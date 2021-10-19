@@ -8,9 +8,9 @@
         <StopBtn />
       </div>
     </div>
-    <div class="download-icon" @click="download()">
+    <a href="/midi/output1.mid" class="download-icon">
       <DownloadIcon />
-    </div>
+    </a>
     <div class="input-range">
       <input type="range" min="1" max="5">
     </div>
@@ -99,9 +99,6 @@ export default Vue.extend({
           synth.disconnect()
         }
       }
-    },
-    download () {
-      alert('MIDIファイルをダウンロードするにょ')
     }
   }
 })
