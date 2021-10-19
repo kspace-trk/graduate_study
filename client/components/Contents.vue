@@ -1,12 +1,15 @@
 <template>
   <div class="contents">
     <div class="btn-wrapper">
-      <div v-if="!isPlaying" class="play-btn" @click="play()">
+      <div v-if="!isPlaying" class="play-btn" @click="start()">
         <PlayBtn />
       </div>
       <div v-if="isPlaying" class="stop-btn" @click="stop()">
         <StopBtn />
       </div>
+    </div>
+    <div class="download-icon" @click="download()">
+      <DownloadIcon />
     </div>
     <div class="input-range">
       <input type="range" min="1" max="5">
@@ -26,6 +29,7 @@ import Vue from 'vue'
 import * as Tone from 'tone'
 import PlayBtn from '@/components/svg/PlayBtn.vue'
 import StopBtn from '@/components/svg/StopBtn.vue'
+import DownloadIcon from '@/components/svg/DownloadIcon.vue'
 
 export type ElementTrack = {
   channel: number,
@@ -44,43 +48,60 @@ export type ElementTrack = {
 export default Vue.extend({
   components: {
     PlayBtn,
-    StopBtn
+    StopBtn,
+    DownloadIcon
   },
   data () {
     return {
       isPlaying: false,
-      synths: [] as Object[]
+      synths: [] as Object[],
+      elementFileName: '' as String
     }
   },
   methods: {
-    async play () {
+    start () {
       this.isPlaying = true
-      const midi = await this.$axios.$get('/json/output1.json')
-      const now = Tone.now() + 0.5
-      midi.tracks.forEach((track: ElementTrack) => {
-        // create a synth for each track
-        const synth: any = new Tone.PolySynth(Tone.Synth, {
-          envelope: {
-            attack: 0.02,
-            decay: 0.1,
-            sustain: 0.3,
-            release: 1
-          }
-        }).toDestination()
-        this.synths.push(synth)
-        // schedule all of the events
-        track.notes.forEach((note) => {
-          synth.triggerAttackRelease(
-            note.name,
-            note.duration,
-            note.time + now,
-            note.velocity
-          )
-        })
-      })
+      this.playToggle()
     },
     stop () {
       this.isPlaying = false
+      this.playToggle()
+    },
+    async playToggle () {
+      if (this.isPlaying) {
+        const midi = await this.$axios.$get('/json/output1.json')
+        const now = Tone.now() + 0.5
+        midi.tracks.forEach((track: ElementTrack) => {
+        // create a synth for each track
+          const synth: any = new Tone.PolySynth(Tone.Synth, {
+            envelope: {
+              attack: 0.02,
+              decay: 0.1,
+              sustain: 0.3,
+              release: 1
+            }
+          }).toDestination()
+          this.synths.push(synth)
+          // schedule all of the events
+          track.notes.forEach((note) => {
+            synth.triggerAttackRelease(
+              note.name,
+              note.duration,
+              note.time + now,
+              note.velocity
+            )
+          })
+        })
+      } else {
+        // dispose the synth and make a new one
+        while (this.synths.length) {
+          const synth = this.synths.shift() as any
+          synth.disconnect()
+        }
+      }
+    },
+    download () {
+      alert('MIDIファイルをダウンロードするにょ')
     }
   }
 })
@@ -113,6 +134,12 @@ input[type="range"] {
   &:active::-webkit-slider-thumb {
     cursor: pointer;
   }
+}
+.download-icon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
 }
 .input-range {
   width: 100%;
