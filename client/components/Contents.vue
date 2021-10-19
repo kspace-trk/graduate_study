@@ -12,7 +12,7 @@
       <DownloadIcon />
     </a>
     <div class="input-range">
-      <input type="range" min="1" max="5">
+      <input v-model="fitness" type="range" min="1" max="5">
     </div>
     <div class="range-num">
       <span>1</span>
@@ -55,7 +55,8 @@ export default Vue.extend({
     return {
       isPlaying: false,
       synths: [] as Object[],
-      elementFileName: '' as String
+      elementFileName: '' as String,
+      fitness: 3 as Number
     }
   },
   methods: {
@@ -128,7 +129,12 @@ input[type="range"] {
   height: 5px;
   width: 100%;
   border-radius: 6px;
-  &:active::-webkit-slider-thumb {
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #6A8791;
     cursor: pointer;
   }
 }
