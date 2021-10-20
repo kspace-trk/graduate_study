@@ -7,10 +7,14 @@
 <script lang="ts">
 import Vue from 'vue'
 import Container from '@/components/Container.vue'
+import initialGenerate from '@/initialGenerate/initialGeneration'
 
 export default Vue.extend({
   components: {
     Container
+  },
+  created () {
+    initialGenerate.main()
   }
 })
 </script>

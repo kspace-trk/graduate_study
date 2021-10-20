@@ -1,4 +1,4 @@
-const fs = require('fs')
+import axios from 'axios'
 const one_measure_repeating_notes = {} // 1小節ごとの繰り返しnoteデータ
 const two_measure_repeating_notes = {} // 2小節ごとの繰り返しnoteデータ
 const four_measure_repeating_notes = {} // 4小節ごとの繰り返しnoteデータ
@@ -18,30 +18,30 @@ const mutation_data = [
 const input_notes_data_index = 0 // 1小節ごとの繰り返しは0, 2小節ごとの繰り返しは1, 4小節ごとの繰り返しは2
 const output_key_index = 0 // 0だとc_maj
 const pop_size = 8 // 個体群数
-const input_notes = () => {
-  input_notes_data[0] = JSON.parse(
-    fs.readFileSync('./notes/one_measure_repeating_notes.json', 'utf8')
-  )
-  input_notes_data[1] = JSON.parse(
-    fs.readFileSync('./notes/one_measure_repeating_notes.json', 'utf8')
-  )
-  input_notes_data[2] = JSON.parse(
-    fs.readFileSync('./notes/one_measure_repeating_notes.json', 'utf8')
-  )
+const input_notes = async () => {
+  const one_measure_repeating_notes = await axios.get('/genreRules/one_measure_repeating_notes.json')
+  const two_measure_repeating_notes = await axios.get('/genreRules/two_measure_repeating_notes.json')
+  const four_measure_repeating_notes = await axios.get('/genreRules/four_measure_repeating_notes.json')
+  await Promise.all([
+    one_measure_repeating_notes,
+    two_measure_repeating_notes,
+    four_measure_repeating_notes
+  ]).then((data) => {
+    input_notes_data[0] = data[0].data
+    input_notes_data[1] = data[1].data
+    input_notes_data[2] = data[2].data
+  })
 }
-const input_mutation_data = () => {
-  mutation_data[0] = JSON.parse(
-    fs.readFileSync(
-      './mutation_data/one_measure_repeating_notes_diff.json',
-      'utf8'
-    )
-  )
-  mutation_data[1] = JSON.parse(
-    fs.readFileSync(
-      './mutation_data/two_measure_repeating_notes_diff.json',
-      'utf8'
-    )
-  )
+const input_mutation_data = async () => {
+  const one_measure_repeating_notes_diff = await axios.get('/genreRules/mutationData/one_measure_repeating_notes_diff.json')
+  const two_measure_repeating_notes_diff = await axios.get('/genreRules/mutationData/two_measure_repeating_notes_diff.json')
+  await Promise.all([
+    one_measure_repeating_notes_diff,
+    two_measure_repeating_notes_diff
+  ]).then((data) => {
+    mutation_data[0] = data[0].data
+    mutation_data[1] = data[1].data
+  })
 }
 const select_time = (input_notes_data_index) => {
   const times = []
@@ -667,13 +667,13 @@ const create_time = (default_time) => {
 const output_json = (result, i) => {
   fs.writeFileSync(`../json2midi/json/output${i + 1}.json`, JSON.stringify(result))
 }
-const main = () => {
-  input_notes()
+const main = async () => {
+  await input_notes()
   if (input_notes_data_index < 2) {
-    input_mutation_data()
+    await input_mutation_data()
   }
   for (let i = 0; i < pop_size; i++) {
-    const first_measure_time = generate_first_measure_time()
+    const first_measure_time = await generate_first_measure_time()
     const first_measure_pitch = generate_first_measure_pitch(first_measure_time)
     // 最終結果代入
     const random_melody = generate_random_melody(first_measure_time, first_measure_pitch)
@@ -686,7 +686,8 @@ const main = () => {
 }
 
 export default {
-  main
+  main,
+  input_notes
 }
 
 // 以下テストコード
