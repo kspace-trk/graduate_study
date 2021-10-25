@@ -12,7 +12,7 @@
       <DownloadIcon />
     </a>
     <div class="input-range">
-      <input v-model="fitness" type="range" min="1" max="5">
+      <input v-model="fitness" type="range" min="1" max="5" @change="$emit('fitness', fitness, index)">
     </div>
     <div class="range-num">
       <span>1</span>
@@ -51,6 +51,16 @@ export default Vue.extend({
     StopBtn,
     DownloadIcon
   },
+  props: {
+    ind: {
+      type: Object,
+      default: () => {}
+    },
+    index: {
+      type: Number,
+      default: 0
+    }
+  },
   data () {
     return {
       isPlaying: false,
@@ -68,9 +78,10 @@ export default Vue.extend({
       this.isPlaying = false
       this.playToggle()
     },
-    async playToggle () {
+    playToggle () {
       if (this.isPlaying) {
-        const midi = await this.$axios.$get('/json/output1.json')
+        const ind = JSON.parse(JSON.stringify(this.ind))
+        const midi = ind
         const now = Tone.now() + 0.5
         midi.tracks.forEach((track: ElementTrack) => {
         // create a synth for each track

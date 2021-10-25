@@ -270,9 +270,10 @@ const time_mutation = (repeated_melody) => {
   })
   return repeated_melody
 }
-const add_pitch_mutation = (pitch, index, input_notes_data_index) => {
+const add_pitch_mutation = (pitch, index) => {
+  const elem_pitch = pitch.slice()
   // ひとつひとつの音高をみていく
-  pitch.forEach((pitch_index) => {
+  pitch.forEach((elem, pitch_index) => {
     // 指定繰り返し回数のmutation dataのlength取得
     const max_of_random_num = mutation_data[input_notes_data_index].notes.length
     // mutation data内の使用する変異曲データ番号を決める
@@ -281,10 +282,10 @@ const add_pitch_mutation = (pitch, index, input_notes_data_index) => {
     const max_of_random_pitch_num = mutation_data[input_notes_data_index].notes[random_num].name_diff[index].length
     const random_pitch_num = Math.floor(Math.random() * max_of_random_pitch_num)
     if (random_pitch_num !== 0) {
-      pitch[pitch_index] = pitch[pitch_index] + mutation_data[input_notes_data_index].notes[random_num].name_diff[index][random_pitch_num]
+      elem_pitch[pitch_index] = elem_pitch[pitch_index] + mutation_data[input_notes_data_index].notes[random_num].name_diff[index][random_pitch_num]
     }
   })
-  return pitch
+  return elem_pitch
 }
 const align_sound_count = (pitch, time_length, index, input_notes_data_index) => {
   // time_lengthとpitchの音数を合わせる
@@ -320,7 +321,7 @@ const pitch_mutation = (mutated_melody) => {
           .name_mutation_start_point[index] !== null
       ) {
         // 音高を変化させる
-        pitch_mutated_data = add_pitch_mutation(elem_pitch, time_length, index, input_notes_data_index)
+        pitch_mutated_data = add_pitch_mutation(elem_pitch, index)
       }
       if (pitch_mutated_data) {
         mutated_melody[index].pitch = pitch_mutated_data.slice()
@@ -435,7 +436,7 @@ const format_json = (default_melody) => {
   const ticks = create_ticks(default_time)
   const time = create_time(default_time)
   // json_formatにまとめる
-  default_time.forEach((i) => {
+  default_time.forEach((dummy, i) => {
     json_format.tracks[0].notes.push({
       duration: duration[i],
       durationTicks: duration_ticks[i],
@@ -664,46 +665,67 @@ const create_time = (default_time) => {
   })
   return time
 }
-const output_json = (result, i) => {
-  fs.writeFileSync(`../json2midi/json/output${i + 1}.json`, JSON.stringify(result))
-}
+// const output_json = (result, i) => {
+//   fs.writeFileSync(`../json2midi/json/output${i + 1}.json`, JSON.stringify(result))
+// }
 const main = async () => {
+  const ind_list = []
   await input_notes()
   if (input_notes_data_index < 2) {
     await input_mutation_data()
   }
   for (let i = 0; i < pop_size; i++) {
-    const first_measure_time = await generate_first_measure_time()
+    const first_measure_time = generate_first_measure_time()
     const first_measure_pitch = generate_first_measure_pitch(first_measure_time)
     // 最終結果代入
-    const random_melody = generate_random_melody(first_measure_time, first_measure_pitch)
-    console.log(random_melody)
+    const random_melody = await generate_random_melody(first_measure_time, first_measure_pitch)
     const result = format_json(random_melody)
-    output_json(result, i)
+    // console.log(result.tracks[0].notes)
+    // output_json(result, i)
+    ind_list.push(result)
   }
   // テストコード用return
   // return random_melody
-}
-
-export default {
-  main,
-  input_notes
+  return ind_list
 }
 
 // 以下テストコード
-// const sound_count_test = () => {
+// テスト内容
+//  - timeとpitchのlengthが同じかどうか
+//  - timeとpitchにNaNがないかどうか
+// const sound_count_test = async () => {
+//   console.log('テスト開始')
 //   let err = false
 //   let n = 0
 //   while (!err && n < 100) {
-//     const result = main()
+//     const result = await main()
 //     n++
 //     result.forEach((elem_measure) => {
 //       if (elem_measure.time.length !== elem_measure.pitch.length) {
 //         err = true
 //         console.log('エラー！')
+//       } else {
+//         elem_measure.time.forEach((elem_time, index) => {
+//           if (isNaN(elem_time)) {
+//             err = true
+//             console.log('timeにNaNがあります')
+//             console.log(elem_time)
+//           } else if (isNaN(elem_measure.pitch[index])) {
+//             err = true
+//             console.log('timeにNaNがあります')
+//           }
+//         })
 //       }
 //     })
 //   }
-//   console.log('エラーなし。実行回数：' + n + '回')
+//   if (err === false) {
+//     console.log('エラーなし。実行回数：' + n + '回')
+//   } else {
+//     console.log('エラーが発生しました。実行回数：' + n + '回')
+//   }
 // }
-// sound_count_test();
+
+export default {
+  main,
+  input_notes
+}

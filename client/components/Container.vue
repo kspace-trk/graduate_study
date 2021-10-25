@@ -1,36 +1,59 @@
 <template>
   <div class="container">
+    {{ generationCounter }}世代目
     <div class="grid">
-      <Contents />
-      <Contents />
-      <Contents />
-      <Contents />
-      <Contents />
-      <Contents />
-      <Contents />
-      <Contents />
+      <div v-for="(elem, i) in currentInd" :key="i">
+        <Contents :ind="elem" :index="i" :fitness="fitnessList[i]" @fitness="fitness" />
+      </div>
     </div>
-    <button>世代交代する</button>
+    <button @click="changeGeneration()">
+      世代交代する
+    </button>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import Contents from '@/components/Contents.vue'
-// import InitialGenerate from '~/initialGenerate/initialGeneration.js'
+import ChangeGeneration from '~/changeGeneration/changeGeneration.js'
 
 export default Vue.extend({
   components: {
     Contents
   },
+  props: {
+    indList: {
+      type: Array,
+      default: () => []
+    }
+  },
   data () {
     return {
-      // aa
+      currentInd: [],
+      fitnessList: [3, 3, 3, 3, 3, 3, 3, 3],
+      generationCounter: 0
     }
   },
   created () {
-    // 初期生成
-    // InitialGenerate.main()
+    this.indList.forEach((elem) => {
+      this.currentInd.push(elem)
+    })
+  },
+  methods: {
+    async changeGeneration () {
+      const res = await ChangeGeneration.main(this.currentInd, this.fitnessList)
+      this.currentInd = []
+      console.log(res)
+      res.forEach((elem) => {
+        this.currentInd.push(elem)
+      })
+      this.generationCounter++
+      // this.fitnessList = [3, 3, 3, 3, 3, 3, 3, 3]
+    },
+    fitness (fitness: number, index: number) {
+      this.fitnessList[index] = Number(fitness)
+      console.log(this.fitnessList)
+    }
   }
 })
 </script>

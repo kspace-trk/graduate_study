@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <Container />
+    <Container :ind-list="indList" />
   </div>
 </template>
 
@@ -13,8 +13,10 @@ export default Vue.extend({
   components: {
     Container
   },
-  created () {
-    initialGenerate.main()
+  async asyncData () {
+    const indList = await initialGenerate.main()
+    // console.log(indList[0].tracks[0].notes[1])
+    return { indList }
   }
 })
 </script>
