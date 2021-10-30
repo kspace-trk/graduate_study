@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    {{ generationCounter }}世代目
+    <p>{{ generationCounter }}世代目</p>
     <div class="grid">
       <div v-for="(elem, i) in currentInd" :key="i">
         <Contents :ind="elem" :index="i" :fitness="fitnessList[i]" @fitness="fitness" />
@@ -9,6 +9,7 @@
     <button @click="changeGeneration()">
       世代交代する
     </button>
+    <FakeLoading v-if="isLoading" message="世代交代しています..." />
   </div>
 </template>
 
@@ -16,10 +17,12 @@
 import Vue from 'vue'
 import Contents from '@/components/Contents.vue'
 import ChangeGeneration from '~/changeGeneration/changeGeneration.js'
+import FakeLoading from '@/components/FakeLoading.vue'
 
 export default Vue.extend({
   components: {
-    Contents
+    Contents,
+    FakeLoading
   },
   props: {
     indList: {
@@ -31,7 +34,8 @@ export default Vue.extend({
     return {
       currentInd: [],
       fitnessList: [3, 3, 3, 3, 3, 3, 3, 3],
-      generationCounter: 0
+      generationCounter: 0,
+      isLoading: false as Boolean
     }
   },
   created () {
@@ -40,15 +44,18 @@ export default Vue.extend({
     })
   },
   methods: {
-    async changeGeneration () {
-      const res = await ChangeGeneration.main(this.currentInd, this.fitnessList)
-      this.currentInd = []
-      console.log(res)
-      res.forEach((elem) => {
-        this.currentInd.push(elem)
-      })
-      this.generationCounter++
-      // this.fitnessList = [3, 3, 3, 3, 3, 3, 3, 3]
+    changeGeneration () {
+      this.isLoading = true
+      setTimeout(async () => {
+        this.isLoading = false
+        const res = await ChangeGeneration.main(this.currentInd, this.fitnessList)
+        this.currentInd = []
+        res.forEach((elem) => {
+          this.currentInd.push(elem)
+        })
+        this.generationCounter++
+        // this.fitnessList = [3, 3, 3, 3, 3, 3, 3, 3]
+      }, 1500)
     },
     fitness (fitness: number, index: number) {
       this.fitnessList[index] = Number(fitness)
@@ -69,8 +76,8 @@ export default Vue.extend({
   max-width: 1200px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 250px);
-  gap: 50px;
+  grid-template-columns: repeat(auto-fit, 200px);
+  gap: 100px;
   justify-content: center;
 }
 button {
@@ -83,5 +90,11 @@ button {
   color: #ffffff;
   margin-top: 50px;
   cursor: pointer;
+}
+p {
+  color: #6A8791;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
 }
 </style>

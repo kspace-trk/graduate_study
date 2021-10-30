@@ -602,10 +602,15 @@ const create_midi = (default_pitch) => {
     {
       num: 13,
       midi: 83
+    },
+    {
+      num: 14,
+      midi: 84
     }
   ]
   let matched_index = 0
   default_pitch.forEach((elem_pitch) => {
+    console.log(elem_pitch)
     matched_index = key_mapping.findIndex((elem) => {
       return elem.num === elem_pitch
     })
@@ -626,7 +631,7 @@ const create_name = (default_pitch) => {
     { num: 0 }, { num: 1 }, { num: 2 }, { num: 3 },
     { num: 4 }, { num: 5 }, { num: 6 },
     { num: 7 }, { num: 8 }, { num: 9 }, { num: 10 },
-    { num: 11 }, { num: 12 }, { num: 13 }
+    { num: 11 }, { num: 12 }, { num: 13 }, { num: 14 }
   ]
   let index_counter = 0
   key_mapping.forEach((elem, index) => {
@@ -674,7 +679,7 @@ const create_time = (default_time) => {
 //   fs.writeFileSync(`../json2midi/json/output${i + 1}.json`, JSON.stringify(result))
 // }
 const main = async (repeating_time) => {
-  input_notes_data_index = repeating_time
+  input_notes_data_index = Number(repeating_time)
   const ind_list = []
   await input_notes()
   if (input_notes_data_index < 2) {

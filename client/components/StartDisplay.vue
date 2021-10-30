@@ -22,19 +22,26 @@
     <p v-if="isError" class="error">
       キーを選択してください
     </p>
+    <FakeLoading v-if="isLoading" message="初期生成しています..." />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import FakeLoading from '@/components/FakeLoading.vue'
+
 export type RepeatingTime = 0 | 1 | 2
 
 export default Vue.extend({
+  components: {
+    FakeLoading
+  },
   data () {
     return {
       keyOfMelody: '' as String,
       isError: false as Boolean,
-      repeatingTime: 1 as RepeatingTime
+      repeatingTime: 1 as RepeatingTime,
+      isLoading: false as Boolean
     }
   },
   methods: {
@@ -42,7 +49,11 @@ export default Vue.extend({
       if (!this.keyOfMelody) {
         this.isError = true
       } else {
-        this.$emit('initialGenerate', this.repeatingTime)
+        this.isLoading = true
+        setTimeout(() => {
+          this.isLoading = false
+          this.$emit('initialGenerate', this.repeatingTime)
+        }, 1500)
       }
     }
   }
@@ -70,9 +81,11 @@ h1 {
   justify-content: center;
   p {
     margin: 0 1rem;
+    color: #666666;
   }
 }
 input[type="range"] {
+  max-width: 300px;
   width: 50%;
   -webkit-appearance: none;
   appearance: none;
