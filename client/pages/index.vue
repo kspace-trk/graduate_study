@@ -1,6 +1,7 @@
 <template>
   <div class="index">
-    <Container :ind-list="indList" />
+    <StartDisplay v-if="!isStarted" @initialGenerate="initialGenerate" />
+    <Container v-if="isStarted" :ind-list="indList" />
   </div>
 </template>
 
@@ -8,15 +9,26 @@
 import Vue from 'vue'
 import Container from '@/components/Container.vue'
 import initialGenerate from '@/initialGenerate/initialGeneration'
+import StartDisplay from '@/components/StartDisplay.vue'
+
+export type RepeatingTime = 0 | 1 | 2
 
 export default Vue.extend({
   components: {
-    Container
+    Container,
+    StartDisplay
   },
-  async asyncData () {
-    const indList = await initialGenerate.main()
-    // console.log(indList[0].tracks[0].notes[1])
-    return { indList }
+  data () {
+    return {
+      indList: [] as Object[],
+      isStarted: false
+    }
+  },
+  methods: {
+    async initialGenerate (repeatingTime: RepeatingTime) {
+      this.indList = await initialGenerate.main(repeatingTime)
+      this.isStarted = true
+    }
   }
 })
 </script>

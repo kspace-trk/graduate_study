@@ -15,7 +15,7 @@ const mutation_data = [
   two_measure_repeating_mutation_data,
   four_measure_repeating_mutation_data
 ]
-const input_notes_data_index = 0 // 1小節ごとの繰り返しは0, 2小節ごとの繰り返しは1, 4小節ごとの繰り返しは2
+let input_notes_data_index = 0 // 1小節ごとの繰り返しは0, 2小節ごとの繰り返しは1, 4小節ごとの繰り返しは2
 const output_key_index = 0 // 0だとc_maj
 const pop_size = 8 // 個体群数
 const input_notes = async () => {
@@ -64,9 +64,14 @@ const select_time = (input_notes_data_index) => {
   }
   while (times_sum < max_times_sum) {
     const random_song_num = Math.floor(
-      Math.random() * input_notes_data[0].notes.length
+      Math.random() * input_notes_data[input_notes_data_index].notes.length
     )
-    const random_measure_num = Math.floor(Math.random() * 3)
+    let random_measure_num
+    if (input_notes_data_index === 0) {
+      random_measure_num = Math.floor(Math.random() * 3)
+    } else {
+      random_measure_num = Math.floor(Math.random() * 1)
+    }
     let random_note_num = Math.floor(
       Math.random() *
         input_notes_data[input_notes_data_index].notes[random_song_num][
@@ -188,7 +193,7 @@ const add_time_mutation = (spliced_time, mutation_base_data, index) => {
   }
   while (times_sum < max_times_sum) {
     const random_song_num = Math.floor(
-      Math.random() * input_notes_data[0].notes.length
+      Math.random() * input_notes_data[input_notes_data_index].notes.length
     )
     const random_measure_num = index
     const max_of_random_note_num =
@@ -668,7 +673,8 @@ const create_time = (default_time) => {
 // const output_json = (result, i) => {
 //   fs.writeFileSync(`../json2midi/json/output${i + 1}.json`, JSON.stringify(result))
 // }
-const main = async () => {
+const main = async (repeating_time) => {
+  input_notes_data_index = repeating_time
   const ind_list = []
   await input_notes()
   if (input_notes_data_index < 2) {
