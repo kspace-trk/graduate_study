@@ -1,5 +1,38 @@
 {
-    "notes": [
+  "header": {
+    "keySignatures": [],
+    "meta": [],
+    "name": "",
+    "ppq": 96,
+    "tempos": [
+      {
+        "bpm": 120,
+        "ticks": 0
+      }
+    ],
+    "timeSignatures": [
+      {
+        "ticks": 0,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "measures": 0
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "channel": 0,
+      "controlChanges": {},
+      "pitchBends": [],
+      "instrument": {
+        "family": "piano",
+        "name": "acoustic grand piano",
+        "number": 0
+      },
+      "name": "FL Keys 1",
+      "notes": [
         {
           "duration": 0.375,
           "durationTicks": 72,
@@ -180,5 +213,8 @@
           "time": 7.75,
           "velocity": 0.7874015748031497
         }
-      ]
+      ],
+      "endOfTrackTicks": 1536
+    }
+  ]
 }

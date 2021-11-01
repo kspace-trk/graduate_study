@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { resolve } = require("path");
 const input_notes = [];
 let notes = [
   {
@@ -57,15 +58,14 @@ const init = () => {
   ];
   measure_repeating_time = null;
 };
-const parse_json = async () => {
-  await fs.readdir("./input_data", (err, files) => {
+const parse_json = () => {
+  fs.readdir("./input_data", async (err, files) => {
     files.forEach((file) => {
+      const res = JSON.parse(fs.readFileSync(`./input_data/${file}`, "utf8"))
       if (file !== ".DS_Store") {
-        input_notes.push(
-          JSON.parse(fs.readFileSync(`./input_data/${file}`, "utf8"))
-        );
+        input_notes.push(res.tracks[0]);
       }
-    });
+    })
   });
 };
 const scale_distin = () => {
@@ -624,9 +624,9 @@ const measure_distin = () => {
   calc_note_diff();
   output_diff();
 };
-const main = async () => {
-  await parse_json();
-  setTimeout(scale_distin, 200);
-  setTimeout(measure_distin, 200);
+const main = () => {
+  parse_json();
+  setTimeout(scale_distin, 500);
+  setTimeout(measure_distin, 500);
 };
 main();

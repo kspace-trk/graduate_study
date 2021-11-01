@@ -1,10 +1,43 @@
 {
-    "notes": [
+  "header": {
+    "keySignatures": [],
+    "meta": [],
+    "name": "",
+    "ppq": 96,
+    "tempos": [
+      {
+        "bpm": 120,
+        "ticks": 0
+      }
+    ],
+    "timeSignatures": [
+      {
+        "ticks": 0,
+        "timeSignature": [
+          4,
+          4
+        ],
+        "measures": 0
+      }
+    ]
+  },
+  "tracks": [
+    {
+      "channel": 0,
+      "controlChanges": {},
+      "pitchBends": [],
+      "instrument": {
+        "family": "piano",
+        "name": "acoustic grand piano",
+        "number": 0
+      },
+      "name": "FL Keys 1",
+      "notes": [
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 83,
-          "name": "B5",
+          "midi": 78,
+          "name": "F#5",
           "ticks": 0,
           "time": 0,
           "velocity": 0.7874015748031497
@@ -12,8 +45,8 @@
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 76,
-          "name": "E5",
+          "midi": 78,
+          "name": "F#5",
           "ticks": 96,
           "time": 0.5,
           "velocity": 0.7874015748031497
@@ -21,17 +54,26 @@
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 83,
-          "name": "B5",
-          "ticks": 240,
-          "time": 1.25,
+          "midi": 78,
+          "name": "F#5",
+          "ticks": 192,
+          "time": 1,
           "velocity": 0.7874015748031497
         },
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 76,
-          "name": "E5",
+          "midi": 75,
+          "name": "D#5",
+          "ticks": 288,
+          "time": 1.5,
+          "velocity": 0.7874015748031497
+        },
+        {
+          "duration": 0.25,
+          "durationTicks": 48,
+          "midi": 77,
+          "name": "F5",
           "ticks": 336,
           "time": 1.75,
           "velocity": 0.7874015748031497
@@ -39,8 +81,8 @@
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 76,
-          "name": "E5",
+          "midi": 77,
+          "name": "F5",
           "ticks": 432,
           "time": 2.25,
           "velocity": 0.7874015748031497
@@ -48,17 +90,8 @@
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 71,
-          "name": "B4",
-          "ticks": 480,
-          "time": 2.5,
-          "velocity": 0.7874015748031497
-        },
-        {
-          "duration": 0.25,
-          "durationTicks": 48,
-          "midi": 78,
-          "name": "F#5",
+          "midi": 77,
+          "name": "F5",
           "ticks": 528,
           "time": 2.75,
           "velocity": 0.7874015748031497
@@ -66,26 +99,35 @@
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 80,
-          "name": "G#5",
-          "ticks": 576,
-          "time": 3,
+          "midi": 73,
+          "name": "C#5",
+          "ticks": 624,
+          "time": 3.25,
           "velocity": 0.7874015748031497
         },
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 83,
-          "name": "B5",
-          "ticks": 768,
-          "time": 4,
+          "midi": 75,
+          "name": "D#5",
+          "ticks": 720,
+          "time": 3.75,
           "velocity": 0.7874015748031497
         },
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 76,
-          "name": "E5",
+          "midi": 75,
+          "name": "D#5",
+          "ticks": 816,
+          "time": 4.25,
+          "velocity": 0.7874015748031497
+        },
+        {
+          "duration": 0.25,
+          "durationTicks": 48,
+          "midi": 70,
+          "name": "A#4",
           "ticks": 864,
           "time": 4.5,
           "velocity": 0.7874015748031497
@@ -93,17 +135,17 @@
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 83,
-          "name": "B5",
-          "ticks": 1008,
-          "time": 5.25,
+          "midi": 70,
+          "name": "A#4",
+          "ticks": 960,
+          "time": 5,
           "velocity": 0.7874015748031497
         },
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 76,
-          "name": "E5",
+          "midi": 75,
+          "name": "D#5",
           "ticks": 1104,
           "time": 5.75,
           "velocity": 0.7874015748031497
@@ -111,8 +153,8 @@
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 71,
-          "name": "B4",
+          "midi": 75,
+          "name": "D#5",
           "ticks": 1200,
           "time": 6.25,
           "velocity": 0.7874015748031497
@@ -120,8 +162,8 @@
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 88,
-          "name": "E6",
+          "midi": 70,
+          "name": "A#4",
           "ticks": 1248,
           "time": 6.5,
           "velocity": 0.7874015748031497
@@ -129,17 +171,8 @@
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 87,
-          "name": "D#6",
-          "ticks": 1296,
-          "time": 6.75,
-          "velocity": 0.7874015748031497
-        },
-        {
-          "duration": 0.25,
-          "durationTicks": 48,
-          "midi": 83,
-          "name": "B5",
+          "midi": 70,
+          "name": "A#4",
           "ticks": 1344,
           "time": 7,
           "velocity": 0.7874015748031497
@@ -147,11 +180,32 @@
         {
           "duration": 0.25,
           "durationTicks": 48,
-          "midi": 80,
-          "name": "G#5",
+          "midi": 70,
+          "name": "A#4",
           "ticks": 1392,
           "time": 7.25,
           "velocity": 0.7874015748031497
+        },
+        {
+          "duration": 0.25,
+          "durationTicks": 48,
+          "midi": 75,
+          "name": "D#5",
+          "ticks": 1440,
+          "time": 7.5,
+          "velocity": 0.7874015748031497
+        },
+        {
+          "duration": 0.25,
+          "durationTicks": 48,
+          "midi": 77,
+          "name": "F5",
+          "ticks": 1488,
+          "time": 7.75,
+          "velocity": 0.7874015748031497
         }
-      ]
+      ],
+      "endOfTrackTicks": 1536
+    }
+  ]
 }
