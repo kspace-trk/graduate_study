@@ -85,24 +85,27 @@ export default Vue.extend({
         const now = Tone.now() + 0.5
         midi.tracks.forEach((track: ElementTrack) => {
         // create a synth for each track
-          const synth: any = new Tone.PolySynth(Tone.Synth, {
-            envelope: {
-              attack: 0.02,
-              decay: 0.1,
-              sustain: 0.3,
-              release: 1
+          const synth: any = new Tone.Sampler({
+            urls: {
+              C4: 'sampler/C5.mp3',
+              G4: 'sampler/G5.mp3',
+              C5: 'sampler/C6.mp3',
+              G5: 'sampler/G6.mp3'
+            },
+            onload: () => {
+              synth.volume.value = -12
+              this.synths.push(synth)
+              // schedule all of the events
+              track.notes.forEach((note) => {
+                synth.triggerAttackRelease(
+                  note.name,
+                  note.duration,
+                  note.time + now,
+                  note.velocity
+                )
+              })
             }
           }).toDestination()
-          this.synths.push(synth)
-          // schedule all of the events
-          track.notes.forEach((note) => {
-            synth.triggerAttackRelease(
-              note.name,
-              note.duration,
-              note.time + now,
-              note.velocity
-            )
-          })
         })
       } else {
         // dispose the synth and make a new one

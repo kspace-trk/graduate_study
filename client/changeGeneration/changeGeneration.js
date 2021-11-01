@@ -166,17 +166,19 @@ const one_point_crossover = async (ind1, ind2, crossover_point) => {
 
 // 二点交差
 const two_point_crossover = async (ind1, ind2, crossover_point1, crossover_point2) => {
+  console.log(crossover_point1 + '&' + crossover_point2)
   const next_ind = []
   await Promise.all(
     ind2.map((elem_ind2, i) => {
       const sliced_elem_ind2 = elem_ind2.slice(crossover_point1, crossover_point2)
       const sliced_elem_ind1_1 = ind1[i].slice(0, crossover_point1)
       const sliced_elem_ind1_2 = ind1.slice(crossover_point2, ind1[i].length)
-      const tmp = sliced_elem_ind1_1.concat(sliced_elem_ind2.concat(sliced_elem_ind1_2))
+      const tmp = sliced_elem_ind1_1.concat(sliced_elem_ind2, sliced_elem_ind1_2)
       next_ind.push(tmp)
       return 0
     })
   )
+  console.log(next_ind)
   return next_ind
 }
 
@@ -186,7 +188,9 @@ const crossover = async (ind1, ind2) => {
   const crossover_point = []
   // N点交叉用に、交叉点をたくさん生成して配列に入れる
   let rand_num = 0
-  for (let i = 0; i < 8; i++) {
+  // 何点交叉するか
+  const crossover_point_num = 2
+  for (let i = 0; i < crossover_point_num; i++) {
     if (repeating_num === 0) {
       while (crossover_point.includes(rand_num) || rand_num === 0 || rand_num === 16) {
         rand_num = Math.floor(Math.random() * 16)
@@ -204,12 +208,13 @@ const crossover = async (ind1, ind2) => {
       crossover_point.push(rand_num)
     }
   }
+  crossover_point.sort((a, b) => a - b)
 
   // 一点交叉
-  // const next_ind = await one_point_crossover(ind1, ind2, crossover_point[0])
+  const next_ind = await one_point_crossover(ind1, ind2, crossover_point[0])
 
   // 二点交差
-  const next_ind = await two_point_crossover(ind1, ind2, crossover_point[0], crossover_point[1])
+  // const next_ind = await two_point_crossover(ind1, ind2, crossover_point[0], crossover_point[1])
   return next_ind
 }
 
