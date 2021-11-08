@@ -610,7 +610,6 @@ const create_midi = (default_pitch) => {
   ]
   let matched_index = 0
   default_pitch.forEach((elem_pitch) => {
-    console.log(elem_pitch)
     matched_index = key_mapping.findIndex((elem) => {
       return elem.num === elem_pitch
     })

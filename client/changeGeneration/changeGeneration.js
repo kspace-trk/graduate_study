@@ -28,6 +28,13 @@ const repeating_num = 0
 // 個体群数
 const pop_size = 8
 
+// キー
+// Cmaj = 0, Dmaj = 1 ...
+const key_of_melody = 0
+
+// 登場する最大のmidi値
+let max_midi_value
+
 // jsonファイルを取得する関数
 const parse_json = (indList) => {
   // json2midi配下のoutputN.jsonを全て読み込む
@@ -40,7 +47,7 @@ const parse_json = (indList) => {
   return inputted_json_data_list
 }
 
-// 配列の中身を、0 or 1 or -1にする関数
+// 配列の中身を、midi数値 or 0にする関数
 const change_format = (indList) => {
   // フォーマットされた全個体を格納する配列宣言
   const formatted_data_list = []
@@ -182,6 +189,75 @@ const two_point_crossover = async (ind1, ind2, crossover_point1, crossover_point
   return next_ind
 }
 
+// 突然変異
+const mutation = (next_ind_measure) => {
+  // 突然変異した値が、この中に入っていればOK
+  // 入っていなければ、不協和音になるのでやり直し
+  const key_bind_list = {
+    C: [],
+    D: [],
+    E: [],
+    F: [],
+    G: [],
+    A: [],
+    B: []
+  }
+  const maj_rule = [2, 2, 1, 2, 2, 2, 1]
+  const base_midi_num = 48
+  let current_midi_num = base_midi_num
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < maj_rule.length; j++) {
+      key_bind_list.C.push(current_midi_num)
+      current_midi_num = current_midi_num + maj_rule[j]
+    }
+  }
+  // ±1〜5変動させる
+  // 1〜5をランダムで取得
+  let mutation_value = Math.floor(Math.random() * 5) + 1
+  // 1 or -1
+  let plus_or_minus
+  // 0だったら-1、1だったら1
+  if (Math.floor(Math.random() * 2) === 0) {
+    plus_or_minus = -1
+  } else {
+    plus_or_minus = 1
+  }
+  // ±1〜5の値が入る
+  mutation_value = mutation_value * plus_or_minus
+
+  // [64, 0, 65, 0, 0, 74 + 3, 0, 0, 67, 0, 0, 65, 0, 0, 0, -1]
+  // ↑こんなことがしたい
+
+  // 音数とindex番号を格納するオブジェクト
+  const sound_point = {
+    times: 0,
+    index: []
+  }
+  // 計測
+  for (let i = 0; i < next_ind_measure.length; i++) {
+    if (next_ind_measure[i] > 0) {
+      sound_point.times++
+      sound_point.index.push(i)
+    }
+  }
+  // 変異(上下)させる音を決定させる
+  const mutation_target_index = Math.floor(Math.random() * sound_point.times)
+  // sound_point.index[mutation_target_index]が、変異対象音のindex番号
+  const mutated_next_ind = next_ind_measure.slice()
+  mutated_next_ind[sound_point.index[mutation_target_index]] = mutated_next_ind[sound_point.index[mutation_target_index]] + mutation_value
+  // 不協和音じゃなくなるまで繰り返す
+  let tmp = mutated_next_ind[sound_point.index[mutation_target_index]]
+  console.log(key_bind_list.C)
+  const is_harmony = key_bind_list.C.includes(tmp)
+  if (!is_harmony) {
+    tmp = tmp + plus_or_minus
+    mutated_next_ind[sound_point.index[mutation_target_index]] = tmp
+    return mutated_next_ind
+  } else {
+    return mutated_next_ind
+  }
+}
+
 // 交叉関数
 const crossover = async (ind1, ind2) => {
   // 交叉点算出
@@ -215,6 +291,17 @@ const crossover = async (ind1, ind2) => {
 
   // 二点交差
   // const next_ind = await two_point_crossover(ind1, ind2, crossover_point[0], crossover_point[1])
+  const max_mutation = Math.floor(Math.random() * 100)
+  const mutation_num = 10
+  // 突然変異
+  if (mutation_num < max_mutation) {
+    const mutated_next_ind = []
+    for (let i = 0; i < next_ind.length; i++) {
+      const mutated_next_ind_measure = mutation(next_ind[i])
+      mutated_next_ind.push(mutated_next_ind_measure)
+    }
+    return mutated_next_ind
+  }
   return next_ind
 }
 
@@ -246,7 +333,7 @@ const create_duration_ticks = (duration) => {
 const create_midi = (united_next_ind) => {
   const midi = []
   united_next_ind.forEach((elem) => {
-    if (elem >= 1) {
+    if (elem > 1) {
       midi.push(elem)
     }
   })
@@ -256,6 +343,14 @@ const create_midi = (united_next_ind) => {
 const create_name = (midi) => {
   const name = []
   const mapping = [
+    {
+      midi: 46,
+      name: 'A2'
+    },
+    {
+      midi: 47,
+      name: 'B2'
+    },
     {
       midi: 48,
       name: 'C3'
@@ -495,15 +590,16 @@ const create_name = (midi) => {
     {
       midi: 107,
       name: 'B7'
-    },
+    }
   ]
   let matched_index = 0
-  midi.forEach((elem_midi) => {
+  for (let i = 0; i < midi.length; i++) {
+    console.log(midi[i])
     matched_index = mapping.findIndex((elem_mapping) => {
-      return elem_mapping.midi === elem_midi
+      return elem_mapping.midi === midi[i]
     })
     name.push(mapping[matched_index].name)
-  })
+  }
   return name
 }
 
@@ -603,6 +699,7 @@ const main = async (indList, fitness_list) => {
   const next_ind_json_list = []
   // 親個体群取得
   const ind_data_list = await divide_repeating(indList)
+  console.log(ind_data_list)
   for (let i = 0; i < pop_size; i++) {
     // 選択する親個体のindex番号取得
     const { ind1_index, ind2_index } = await select_ind(fitness_list)
