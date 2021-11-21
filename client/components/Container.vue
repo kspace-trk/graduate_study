@@ -9,6 +9,9 @@
     <button @click="changeGeneration()">
       世代交代する
     </button>
+    <button @click="reload()">
+      初期生成からやりなおす
+    </button>
     <FakeLoading v-if="isLoading" message="世代交代しています..." />
   </div>
 </template>
@@ -60,6 +63,9 @@ export default Vue.extend({
     fitness (fitness: number, index: number) {
       this.fitnessList[index] = Number(fitness)
       console.log(this.fitnessList)
+    },
+    reload () {
+      location.reload()
     }
   }
 })

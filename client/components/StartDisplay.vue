@@ -1,10 +1,11 @@
 <template>
   <div class="start-display">
     <h1>IGAを用いたProgressive Houseメロディー生成システム</h1>
+    <p>4小節あたりの繰り返し回数</p>
     <div class="input-range">
-      <p>キャッチー</p>
+      <p>4回</p>
       <input v-model="repeatingTime" type="range" min="0" max="2">
-      <p>メロディック</p>
+      <p>1回</p>
     </div>
     <div class="cp_ipselect cp_sl01">
       <select v-model="keyOfMelody">
@@ -73,6 +74,9 @@ h1 {
   font-weight: 500;
   color: #6A8791;
   margin-bottom: 2rem;
+}
+p {
+  color: #666666;
 }
 .input-range {
   width: 100%;
