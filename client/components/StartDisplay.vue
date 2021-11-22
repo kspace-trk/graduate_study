@@ -30,7 +30,7 @@
       </div>
     </div>
     <button @click="initialGenerate()">
-      初期生成する
+      はじめる
     </button>
     <p v-if="isError" class="error">
       キーを選択してください
