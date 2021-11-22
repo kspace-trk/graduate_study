@@ -4,15 +4,18 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'client',
+    title: 'IGAを用いたProgressive Houseメロディー生成システム',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'IGAを用いたProgressive Houseメロディー生成システム' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'IGAを用いたProgressive Houseメロディー生成システム' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:title', property: 'og:title', content: 'IGAを用いたProgressive Houseメロディー生成システム' },
+      { hid: 'og:description', property: 'og:description', content: 'IGAを用いたProgressive Houseメロディー生成システム' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
