@@ -1,5 +1,5 @@
 <template>
-  <div class="fake-loading bg">
+  <div class="fake-loading bg" :style="{top: scrollY + 'px'}">
     <div class="dialog">
       <div class="message">
         {{ message }}
@@ -18,6 +18,35 @@ export default Vue.extend({
       type: String,
       default: '生成しています...'
     }
+  },
+  data () {
+    return {
+      scrollY: 0 as number
+    }
+  },
+  mounted () {
+    this.scrollY = window.scrollY
+    this.noScroll()
+  },
+  destroyed () {
+    this.returnScroll()
+  },
+  methods: {
+    noScrollEvent (event: any) {
+      event.preventDefault()
+    },
+    noScroll () {
+      // SP
+      document.addEventListener('touchmove', this.noScrollEvent, { passive: false })
+      // PC
+      document.addEventListener('mousewheel', this.noScrollEvent, { passive: false })
+    },
+    returnScroll () {
+      // SP
+      document.removeEventListener('touchmove', this.noScrollEvent)
+      // PC
+      document.removeEventListener('mousewheel', this.noScrollEvent)
+    }
   }
 })
 </script>
@@ -29,10 +58,10 @@ export default Vue.extend({
   width: 100%;
   height: 100vh;
   position: absolute;
-  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .bg {
   background-color: #00000016;

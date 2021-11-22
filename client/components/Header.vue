@@ -6,12 +6,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import SvgIcon from '@/components/svg/SvgIcon.vue'
 
 export default Vue.extend({
-  components: {
-    SvgIcon
-  }
 })
 </script>
 
