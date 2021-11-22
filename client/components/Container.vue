@@ -3,16 +3,19 @@
     <p>{{ generationCounter }}世代目</p>
     <div class="grid">
       <div v-for="(elem, i) in currentInd" :key="i">
-        <Contents :ind="elem" :index="i" :fitness="fitnessList[i]" @fitness="fitness" />
+        <Contents :ind="elem" :index="i" :fitness="fitnessList[i]" :counter="generationCounter" @fitness="fitness" />
       </div>
     </div>
+    <div class="message">
+      音がズレている場合は、少し時間をおいて再生しなおしてください。
+    </div>
     <button @click="changeGeneration()">
-      世代交代する
+      評価して新しいメロディを生成
     </button>
     <button @click="reload()">
       はじめからやりなおす
     </button>
-    <FakeLoading v-if="isLoading" message="世代交代しています..." />
+    <FakeLoading v-if="isLoading" message="生成しています..." />
   </div>
 </template>
 
@@ -57,7 +60,7 @@ export default Vue.extend({
           this.currentInd.push(elem)
         })
         this.generationCounter++
-        // this.fitnessList = [3, 3, 3, 3, 3, 3, 3, 3]
+        this.fitnessList = [3, 3, 3, 3, 3, 3, 3, 3]
       }, 1500)
     },
     fitness (fitness: number, index: number) {
@@ -102,5 +105,9 @@ p {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 2rem;
+}
+.message {
+  font-size: 0.8rem;
+  margin-top: 50px;
 }
 </style>
