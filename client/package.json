@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
+    "@tonejs/midi": "^2.0.27",
     "axios": "^0.21.4",
     "core-js": "^3.15.1",
     "fs": "^0.0.1-security",

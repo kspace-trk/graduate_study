@@ -35,7 +35,7 @@ export default Vue.extend({
   },
   data () {
     return {
-      currentInd: [],
+      currentInd: [] as any[],
       fitnessList: [3, 3, 3, 3, 3, 3, 3, 3],
       generationCounter: 0,
       isLoading: false as Boolean
