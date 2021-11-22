@@ -609,11 +609,11 @@ const create_midi = (default_pitch) => {
     },
     {
       num: 15,
-      midi: 85
+      midi: 86
     },
     {
       num: 16,
-      midi: 86
+      midi: 88
     }
   ]
   let matched_index = 0
