@@ -1,21 +1,26 @@
 <template>
   <div class="start-display">
     <h1>IGAを用いたProgressive Houseメロディー生成システム</h1>
-    <p>4小節あたりの繰り返し回数</p>
-    <div class="input-range">
-      <p>4回</p>
-      <input v-model="repeatingTime" type="range" min="0" max="2">
-      <p>1回</p>
+    <div class="card">
+      <p class="card-in-title">
+        4小節あたりの繰り返し回数
+      </p>
+      <img src="https://cdn.discordapp.com/attachments/759981236063043594/912237392021311488/2021-11-22_16.05.32.png" alt="">
+      <div class="input-range">
+        <p>4回</p>
+        <input v-model="repeatingTime" type="range" min="0" max="2">
+        <p>1回</p>
+      </div>
     </div>
-    <div class="cp_ipselect cp_sl01">
-      <select v-model="keyOfMelody">
-        <option value="" hidden>
-          キーを選択してください
-        </option>
-        <option value="C">
-          C maj
-        </option>
-      </select>
+    <div class="card">
+      <div class="card-in-title">キーを選択してください</div>
+      <div class="cp_ipselect cp_sl01">
+        <select v-model="keyOfMelody">
+          <option value="C">
+            C maj
+          </option>
+        </select>
+      </div>
     </div>
     <button @click="initialGenerate()">
       初期生成する
@@ -39,9 +44,9 @@ export default Vue.extend({
   },
   data () {
     return {
-      keyOfMelody: '' as String,
+      keyOfMelody: 'C' as String,
       isError: false as Boolean,
-      repeatingTime: 1 as RepeatingTime,
+      repeatingTime: 0 as RepeatingTime,
       isLoading: false as Boolean
     }
   },
@@ -63,13 +68,14 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 .start-display {
-  max-width: 1200px;
+  max-width: 800px;
   width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 h1 {
+  width: 100%;
   font-size: 1.8rem;
   font-weight: 500;
   color: #6A8791;
@@ -168,5 +174,29 @@ button {
   color: #f06d6d;
   font-size: 0.8rem;
   margin-top: 1rem;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background-color: #ffffff;
+  filter: drop-shadow(0 3px 6px #00000016);
+  & + .card {
+    margin-top: 1.5rem;
+  }
+  img {
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+  }
+  .card-in-title {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    color: #666666;
+  }
 }
 </style>

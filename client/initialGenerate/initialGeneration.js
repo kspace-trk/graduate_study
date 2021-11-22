@@ -606,10 +606,15 @@ const create_midi = (default_pitch) => {
     {
       num: 14,
       midi: 84
+    },
+    {
+      num: 15,
+      midi: 85
     }
   ]
   let matched_index = 0
   default_pitch.forEach((elem_pitch) => {
+    console.log(elem_pitch)
     matched_index = key_mapping.findIndex((elem) => {
       return elem.num === elem_pitch
     })
