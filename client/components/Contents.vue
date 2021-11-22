@@ -8,9 +8,9 @@
         <StopBtn />
       </div>
     </div>
-    <a href="/midi/output1.mid" class="download-icon">
+    <div class="download-icon" @click="download()">
       <DownloadIcon />
-    </a>
+    </div>
     <div class="input-range">
       <input v-model="fitness" type="range" min="1" max="5" @change="$emit('fitness', fitness, index)">
     </div>
@@ -27,6 +27,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import * as Tone from 'tone'
+import { Midi } from '@tonejs/midi'
 import PlayBtn from '@/components/svg/PlayBtn.vue'
 import StopBtn from '@/components/svg/StopBtn.vue'
 import DownloadIcon from '@/components/svg/DownloadIcon.vue'
@@ -66,7 +67,8 @@ export default Vue.extend({
       isPlaying: false,
       synths: [] as Object[],
       elementFileName: '' as String,
-      fitness: 3 as Number
+      fitness: 3 as Number,
+      loop: '' as any
     }
   },
   methods: {
@@ -80,6 +82,7 @@ export default Vue.extend({
     },
     playToggle () {
       if (this.isPlaying) {
+        this.loop = new Tone.Player('loop/4536.mp3')
         const ind = JSON.parse(JSON.stringify(this.ind))
         const midi = ind
         const now = Tone.now() + 0.5
@@ -87,13 +90,11 @@ export default Vue.extend({
         // create a synth for each track
           const synth: any = new Tone.Sampler({
             urls: {
-              C4: 'sampler/C5.mp3',
               G4: 'sampler/G5.mp3',
-              C5: 'sampler/C6.mp3',
               G5: 'sampler/G6.mp3'
             },
             onload: () => {
-              synth.volume.value = -12
+              synth.volume.value = 0
               this.synths.push(synth)
               // schedule all of the events
               track.notes.forEach((note) => {
@@ -107,13 +108,26 @@ export default Vue.extend({
             }
           }).toDestination()
         })
+        this.loop.toDestination().autostart = true
       } else {
         // dispose the synth and make a new one
         while (this.synths.length) {
           const synth = this.synths.shift() as any
           synth.disconnect()
+          this.loop.disconnect()
         }
       }
+    },
+    download () {
+      // const audio = document.querySelector('audio')
+      const ind = JSON.parse(JSON.stringify(this.ind))
+      const midi = new Midi()
+      midi.fromJSON(ind)
+      const blob = new Blob([Buffer.from(midi.toArray())], { type: 'audio/midi' })
+      const link = document.createElement('a')
+      link.href = window.URL.createObjectURL(blob)
+      link.download = 'output.midi'
+      link.click()
     }
   }
 })

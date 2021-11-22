@@ -1,11 +1,16 @@
 <template>
   <div class="start-display">
-    <h1>IGAを用いたProgressive Houseメロディー生成システム</h1>
+    <Readme />
     <div class="card">
       <p class="card-in-title">
         4小節あたりの繰り返し回数
       </p>
-      <img src="https://cdn.discordapp.com/attachments/759981236063043594/912237392021311488/2021-11-22_16.05.32.png" alt="">
+      <div class="image-text">
+        ※イメージ画像です
+      </div>
+      <img v-if="repeatingTime == 2" src="@/assets/img/1time.png" alt="イメージ画像">
+      <img v-else-if="repeatingTime == 1" src="@/assets/img/2time.png" alt="イメージ画像">
+      <img v-else-if="repeatingTime == 0" src="@/assets/img/4time.png" alt="イメージ画像">
       <div class="input-range">
         <p>4回</p>
         <input v-model="repeatingTime" type="range" min="0" max="2">
@@ -13,7 +18,9 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-in-title">キーを選択してください</div>
+      <div class="card-in-title">
+        キーを選択してください
+      </div>
       <div class="cp_ipselect cp_sl01">
         <select v-model="keyOfMelody">
           <option value="C">
@@ -35,12 +42,14 @@
 <script lang="ts">
 import Vue from 'vue'
 import FakeLoading from '@/components/FakeLoading.vue'
+import Readme from '@/components/Readme.vue'
 
 export type RepeatingTime = 0 | 1 | 2
 
 export default Vue.extend({
   components: {
-    FakeLoading
+    FakeLoading,
+    Readme
   },
   data () {
     return {
@@ -184,12 +193,13 @@ button {
   padding: 1.5rem 3rem;
   background-color: #ffffff;
   filter: drop-shadow(0 3px 6px #00000016);
+  position: relative;
   & + .card {
     margin-top: 1.5rem;
   }
   img {
     width: 90%;
-    height: 200px;
+    height: 350px;
     object-fit: cover;
     margin-bottom: 1.5rem;
   }
@@ -198,5 +208,13 @@ button {
     margin-bottom: 1.5rem;
     color: #666666;
   }
+}
+
+.image-text {
+  position: absolute;
+  top: 90px;
+  right: 100px;
+  color: #ffffff;
+  font-weight: 700;
 }
 </style>
