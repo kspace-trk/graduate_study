@@ -2,6 +2,7 @@
   <div class="index">
     <StartDisplay v-if="!isStarted" @initialGenerate="initialGenerate" />
     <Container v-if="isStarted" :ind-list="indList" />
+    <Footer />
   </div>
 </template>
 
@@ -10,13 +11,15 @@ import Vue from 'vue'
 import Container from '@/components/Container.vue'
 import initialGenerate from '@/initialGenerate/initialGeneration'
 import StartDisplay from '@/components/StartDisplay.vue'
+import Footer from '@/components/Footer.vue'
 
 export type RepeatingTime = 0 | 1 | 2
 
 export default Vue.extend({
   components: {
     Container,
-    StartDisplay
+    StartDisplay,
+    Footer
   },
   data () {
     return {
