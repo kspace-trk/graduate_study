@@ -10,7 +10,7 @@
       世代交代する
     </button>
     <button @click="reload()">
-      初期生成からやりなおす
+      はじめからやりなおす
     </button>
     <FakeLoading v-if="isLoading" message="世代交代しています..." />
   </div>
