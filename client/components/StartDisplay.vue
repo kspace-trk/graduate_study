@@ -1,6 +1,7 @@
 <template>
   <div class="start-display">
     <h1>IGAを用いたProgressive Houseメロディー生成システム</h1>
+    <Readme />
     <div class="card">
       <p class="card-in-title">
         4小節あたりの繰り返し回数
@@ -35,12 +36,14 @@
 <script lang="ts">
 import Vue from 'vue'
 import FakeLoading from '@/components/FakeLoading.vue'
+import Readme from '@/components/Readme.vue'
 
 export type RepeatingTime = 0 | 1 | 2
 
 export default Vue.extend({
   components: {
-    FakeLoading
+    FakeLoading,
+    Readme
   },
   data () {
     return {
@@ -73,6 +76,7 @@ export default Vue.extend({
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 80px;
 }
 h1 {
   width: 100%;
