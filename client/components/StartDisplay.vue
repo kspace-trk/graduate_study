@@ -1,6 +1,5 @@
 <template>
   <div class="start-display">
-    <h1>IGAを用いたProgressive Houseメロディー生成システム</h1>
     <Readme />
     <div class="card">
       <p class="card-in-title">
@@ -76,7 +75,6 @@ export default Vue.extend({
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 80px;
 }
 h1 {
   width: 100%;
