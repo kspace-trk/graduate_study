@@ -3,7 +3,7 @@
     <p>{{ generationCounter }}世代目</p>
     <div class="grid">
       <div v-for="(elem, i) in currentInd" :key="i">
-        <Contents :ind="elem" :index="i" :fitness="fitnessList[i]" @fitness="fitness" />
+        <Contents :ind="elem" :index="i" :fitness="fitnessList[i]" :counter="generationCounter" @fitness="fitness" />
       </div>
     </div>
     <button @click="changeGeneration()">
@@ -57,7 +57,7 @@ export default Vue.extend({
           this.currentInd.push(elem)
         })
         this.generationCounter++
-        // this.fitnessList = [3, 3, 3, 3, 3, 3, 3, 3]
+        this.fitnessList = [3, 3, 3, 3, 3, 3, 3, 3]
       }, 1500)
     },
     fitness (fitness: number, index: number) {

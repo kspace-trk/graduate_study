@@ -60,6 +60,10 @@ export default Vue.extend({
     index: {
       type: Number,
       default: 0
+    },
+    counter: {
+      type: Number,
+      default: 0
     }
   },
   data () {
@@ -69,6 +73,12 @@ export default Vue.extend({
       elementFileName: '' as String,
       fitness: 3 as Number,
       loop: '' as any
+    }
+  },
+  watch: {
+    counter () {
+      this.fitness = 3
+      console.log('hoge')
     }
   },
   methods: {
