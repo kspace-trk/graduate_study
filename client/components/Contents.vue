@@ -90,8 +90,8 @@ export default Vue.extend({
         // create a synth for each track
           const synth: any = new Tone.Sampler({
             urls: {
-              G3: 'sampler/G5.mp3',
-              G4: 'sampler/G6.mp3'
+              G4: 'sampler/G5.mp3',
+              G5: 'sampler/G6.mp3'
             },
             onload: () => {
               synth.volume.value = 0
