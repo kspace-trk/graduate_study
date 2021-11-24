@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="message">
-      音がズレている場合は、少し時間をおいて再生しなおしてください。
+      音がズレている場合は、再生しなおしてください。
     </div>
     <button @click="changeGeneration()">
       評価して新しいメロディを生成

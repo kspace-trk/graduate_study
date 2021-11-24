@@ -35,6 +35,9 @@ const key_of_melody = 0
 // 登場する最大のmidi値
 let max_midi_value
 
+// 突然変異確率 (現状298行目)
+// const mutation_prob = 10
+
 // jsonファイルを取得する関数
 const parse_json = (indList) => {
   // json2midi配下のoutputN.jsonを全て読み込む
@@ -292,6 +295,7 @@ const crossover = async (ind1, ind2) => {
   // 二点交差
   // const next_ind = await two_point_crossover(ind1, ind2, crossover_point[0], crossover_point[1])
   const max_mutation = Math.floor(Math.random() * 100)
+  // 突然変異確率 mutation_num%
   const mutation_num = 10
   // 突然変異
   if (mutation_num < max_mutation) {
