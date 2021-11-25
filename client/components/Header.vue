@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    IGAを用いたProgressive Houseメロディ生成システム
+    Progressive Houseメロディ生成システム
   </div>
 </template>
 
