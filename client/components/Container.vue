@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <p>{{ generationCounter }}世代目</p>
+    <p>
+      {{ generationCounter }}世代目
+      <span v-if="generationCounter === 0">(ランダムなメロディー)</span>
+    </p>
     <div class="grid">
       <div v-for="(elem, i) in currentInd" :key="i">
         <Contents :ind="elem" :index="i" :fitness="fitnessList[i]" :counter="generationCounter" @fitness="fitness" />
@@ -10,7 +13,7 @@
       音がズレている場合は、再生しなおしてください。
     </div>
     <button @click="changeGeneration()">
-      評価して新しいメロディを生成
+      評価して次のメロディを生成
     </button>
     <button @click="reload()">
       はじめからやりなおす
@@ -105,6 +108,10 @@ p {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 2rem;
+}
+span {
+  font-size: 0.8rem;
+  color: #6A8791;
 }
 .message {
   font-size: 0.8rem;
