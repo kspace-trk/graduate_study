@@ -13,7 +13,7 @@
       音がズレている場合は、再生しなおしてください。
     </div>
     <button @click="changeGeneration()">
-      評価して新しいメロディを生成
+      評価して次のメロディを生成
     </button>
     <button @click="reload()">
       はじめからやりなおす
