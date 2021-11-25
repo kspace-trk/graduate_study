@@ -96,8 +96,9 @@ button {
   max-width: 300px;
   width: 90%;
   height: 50px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #6A8791;
   color: #ffffff;
   margin-top: 50px;
