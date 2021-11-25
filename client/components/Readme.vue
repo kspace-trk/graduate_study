@@ -34,7 +34,7 @@ import Vue from 'vue'
 export default Vue.extend({
   data () {
     return {
-      isOpened: false as boolean,
+      isOpened: true as boolean,
       rotateNum: -45 as number
     }
   },
