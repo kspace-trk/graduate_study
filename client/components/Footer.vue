@@ -5,7 +5,7 @@
       <a href="https://twitter.com/Kspace_trk" target="_blank">
         <SvgIcon type="Twitter" />
       </a>
-      <a href="https://instagram.com/kspace_trk" target="_blank">
+      <a href="https://instagram.com/kspace_trk/" target="_blank">
         <SvgIcon type="Instagram" />
       </a>
     </div>
