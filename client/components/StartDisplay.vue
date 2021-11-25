@@ -55,7 +55,7 @@ export default Vue.extend({
     return {
       keyOfMelody: 'C' as String,
       isError: false as Boolean,
-      repeatingTime: 0 as RepeatingTime,
+      repeatingTime: 1 as RepeatingTime,
       isLoading: false as Boolean
     }
   },

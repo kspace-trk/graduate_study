@@ -488,9 +488,14 @@ const create_midi = (default_pitch) => {
   const midi = []
   const key_mapping = [
     {
-      num: -13,
-      midi: 34
+      num: -16,
+      midi: 33
     },
+    {
+      num: -15,
+      midi: 35
+    },
+    // C
     {
       num: -14,
       midi: 36
@@ -519,6 +524,7 @@ const create_midi = (default_pitch) => {
       num: -8,
       midi: 47
     },
+    // C
     {
       num: -7,
       midi: 48
@@ -547,6 +553,7 @@ const create_midi = (default_pitch) => {
       num: -1,
       midi: 59
     },
+    // C
     {
       num: 0,
       midi: 60
@@ -640,7 +647,7 @@ const create_name = (default_pitch) => {
     ['C', 'D', 'E', 'F', 'G', 'A', 'B'] // c_maj
   ]
   const key_mapping = [
-    { num: -14 }, { num: -13 }, { num: -12 }, { num: -11 },
+    { num: -16 }, { num: -15 }, { num: -14 }, { num: -13 }, { num: -12 }, { num: -11 },
     { num: -10 }, { num: -9 }, { num: -8 },
     { num: -7 }, { num: -6 }, { num: -5 }, { num: -4 },
     { num: -3 }, { num: -2 }, { num: -1 },

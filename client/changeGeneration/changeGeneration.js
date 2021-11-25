@@ -214,9 +214,9 @@ const mutation = (next_ind_measure) => {
       current_midi_num = current_midi_num + maj_rule[j]
     }
   }
-  // ±1〜5変動させる
-  // 1〜5をランダムで取得
-  let mutation_value = Math.floor(Math.random() * 5) + 1
+  // ±1〜3変動させる
+  // 1〜3をランダムで取得
+  let mutation_value = Math.floor(Math.random() * 3) + 1
   // 1 or -1
   let plus_or_minus
   // 0だったら-1、1だったら1
@@ -296,7 +296,7 @@ const crossover = async (ind1, ind2) => {
   // const next_ind = await two_point_crossover(ind1, ind2, crossover_point[0], crossover_point[1])
   const max_mutation = Math.floor(Math.random() * 100)
   // 突然変異確率 mutation_num%
-  const mutation_num = 10
+  const mutation_num = 5
   // 突然変異
   if (mutation_num < max_mutation) {
     const mutated_next_ind = []
@@ -347,6 +347,42 @@ const create_midi = (united_next_ind) => {
 const create_name = (midi) => {
   const name = []
   const mapping = [
+    {
+      midi: 37,
+      name: 'C2'
+    },
+    {
+      midi: 38,
+      name: 'C#2'
+    },
+    {
+      midi: 39,
+      name: 'D2'
+    },
+    {
+      midi: 40,
+      name: 'D#2'
+    },
+    {
+      midi: 41,
+      name: 'E2'
+    },
+    {
+      midi: 42,
+      name: 'F2'
+    },
+    {
+      midi: 43,
+      name: 'F#2'
+    },
+    {
+      midi: 44,
+      name: 'G2'
+    },
+    {
+      midi: 45,
+      name: 'G#2'
+    },
     {
       midi: 46,
       name: 'A2'
