@@ -488,7 +488,7 @@ const create_midi = (default_pitch) => {
   const midi = []
   const key_mapping = [
     {
-      num: -13,
+      num: -15,
       midi: 34
     },
     {
