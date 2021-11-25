@@ -18,6 +18,12 @@
     <button @click="reload()">
       はじめからやりなおす
     </button>
+    <a href="https://forms.gle/xL4MCHcHEN8A52G98" target="_blank" class="to-form">
+      感想を入力する →
+    </a>
+    <div class="announce">
+      感想を入力していただけますと、僕の研究活動に役に立つので喜びます、、！
+    </div>
     <FakeLoading v-if="isLoading" message="生成しています..." />
   </div>
 </template>
@@ -83,6 +89,7 @@ export default Vue.extend({
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .grid {
   max-width: 1200px;
@@ -103,6 +110,34 @@ button {
   color: #ffffff;
   margin-top: 50px;
   cursor: pointer;
+}
+a {
+  max-width: 200px;
+  width: 90%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6A8791;
+  color: #ffffff;
+  margin-top: 50px;
+  cursor: pointer;
+  position: absolute;
+  right: 100px;
+  bottom: 0px;
+  @media screen and (max-width: 1000px) {
+    position: unset;
+  }
+}
+.announce {
+  font-size: 0.8rem;
+  position: absolute;
+  right: 100px;
+  bottom: -30px;
+  @media screen and (max-width: 1000px) {
+    position: unset;
+    margin-top: 20px;
+  }
 }
 p {
   color: #6A8791;
