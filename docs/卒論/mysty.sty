@@ -1,0 +1,146 @@
+% レイアウトパラメータ
+\topmargin -0.54cm
+\headsep 0cm
+\headheight 0cm
+%\footheight 0.5cm
+\footskip 1cm
+\oddsidemargin 0.96cm
+\evensidemargin 0.96cm
+\textwidth 15.5cm
+\textheight 25cm
+
+% ヘッダにページ番号と章タイトルを表示
+\pagestyle{plain}
+
+% 関連図書→参考文献
+\renewcommand{\bibname}{参 考 文 献}
+
+% 参考文献を目次に出力するため
+\renewenvironment{thebibliography}[1]
+{\chapter*{\bibname\@mkboth{\bibname}{\bibname}}
+ \addcontentsline{toc}{chapter}{\bibname}
+   \list{\@biblabel{\@arabic\c@enumiv}}
+        {\settowidth\labelwidth{\@biblabel{#1}}
+         \leftmargin\labelwidth
+         \advance\leftmargin\labelsep
+         \@openbib@code
+         \usecounter{enumiv}
+         \let\p@enumiv\@empty
+         \renewcommand\theenumiv{\@arabic\c@enumiv}}
+   \sloppy
+   \clubpenalty4000
+   \@clubpenalty\clubpenalty
+   \widowpenalty4000
+   \sfcode`\.\@m}
+  {\def\@noitemerr
+    {\@latex@warning{Empty `thebibliography' environment}}
+   \endlist}
+
+% キャプション位置調整
+\setlength\abovecaptionskip{5\p@}
+\setlength\belowcaptionskip{5\p@}
+
+% enumerate, itemize, descriptionの行間を詰める
+\renewenvironment{enumerate}
+  {\ifnum \@enumdepth >\thr@@\@toodeep\else
+   \advance\@enumdepth\@ne
+   \edef\@enumctr{enum\romannumeral\the\@enumdepth}
+   \list{\csname label\@enumctr\endcsname}{
+      \iftdir
+         \ifnum \@listdepth=\@ne \topsep.5\normalbaselineskip
+           \else\topsep\z@\fi
+         \labelwidth1zw \labelsep.3zw
+         \ifnum \@enumdepth=\@ne \leftmargin1zw\relax
+           \else\leftmargin\leftskip\fi
+         \advance\leftmargin 1zw
+      \fi
+         \parskip\z@ \itemsep\z@ \parsep\z@
+         \usecounter{\@enumctr}%
+         \def\makelabel##1{\hss\llap{##1}}}
+   \fi}{\endlist}
+\renewenvironment{itemize}
+  {\ifnum \@itemdepth >\thr@@\@toodeep\else 
+   \advance\@itemdepth\@ne
+   \edef\@itemitem{labelitem\romannumeral\the\@itemdepth}
+   \expandafter
+   \list{\csname \@itemitem\endcsname}{
+      \iftdir
+         \ifnum \@listdepth=\@ne \topsep.5\normalbaselineskip
+           \else\topsep\z@\fi
+         \labelwidth1zw \labelsep.3zw
+         \ifnum \@itemdepth =\@ne \leftmargin1zw\relax
+           \else\leftmargin\leftskip\fi
+         \advance\leftmargin 1zw
+      \fi
+         \parskip\z@ \itemsep\z@ \parsep\z@
+         \def\makelabel##1{\hss\llap{##1}}}
+   \fi}{\endlist}
+\renewenvironment{description}
+  {\list{}{\labelwidth\z@ \itemindent-\leftmargin
+   \iftdir
+     \leftmargin\leftskip \advance\leftmargin3\Cwd
+     \rightmargin\rightskip
+     \labelsep=1zw
+   \fi
+     \itemsep\z@
+     \listparindent\z@ \topskip\z@ \parskip\z@ \partopsep\z@
+           \let\makelabel\descriptionlabel}}{\endlist}
+
+% 「フォントがない」という警告を出さないようにするため
+\DeclareRelationFont{JY1}{mc}{it}{}{OT1}{cmr}{it}{}
+\DeclareRelationFont{JT1}{mc}{it}{}{OT1}{cmr}{it}{}
+\DeclareFontShape{JY1}{mc}{m}{it}{<5> <6> <7> <8> <9> <10> sgen*min
+    <10.95><12><14.4><17.28><20.74><24.88> min10
+    <-> min10}{}
+\DeclareFontShape{JT1}{mc}{m}{it}{<5> <6> <7> <8> <9> <10> sgen*tmin
+    <10.95><12><14.4><17.28><20.74><24.88> tmin10
+    <-> tmin10}{}
+\DeclareRelationFont{JY1}{mc}{sl}{}{OT1}{cmr}{sl}{}
+\DeclareRelationFont{JT1}{mc}{sl}{}{OT1}{cmr}{sl}{}
+\DeclareFontShape{JY1}{mc}{m}{sl}{<5> <6> <7> <8> <9> <10> sgen*min
+    <10.95><12><14.4><17.28><20.74><24.88> min10
+    <-> min10}{}
+\DeclareFontShape{JT1}{mc}{m}{sl}{<5> <6> <7> <8> <9> <10> sgen*tmin
+    <10.95><12><14.4><17.28><20.74><24.88> tmin10
+    <-> tmin10}{}
+\DeclareRelationFont{JY1}{mc}{sc}{}{OT1}{cmr}{sc}{}
+\DeclareRelationFont{JT1}{mc}{sc}{}{OT1}{cmr}{sc}{}
+\DeclareFontShape{JY1}{mc}{m}{sc}{<5> <6> <7> <8> <9> <10> sgen*min
+    <10.95><12><14.4><17.28><20.74><24.88> min10
+    <-> min10}{}
+\DeclareFontShape{JT1}{mc}{m}{sc}{<5> <6> <7> <8> <9> <10> sgen*tmin
+    <10.95><12><14.4><17.28><20.74><24.88> tmin10
+    <-> tmin10}{}
+\DeclareRelationFont{JY1}{gt}{it}{}{OT1}{cmbx}{it}{}
+\DeclareRelationFont{JT1}{gt}{it}{}{OT1}{cmbx}{it}{}
+\DeclareFontShape{JY1}{mc}{bx}{it}{<5> <6> <7> <8> <9> <10> sgen*goth
+    <10.95><12><14.4><17.28><20.74><24.88> goth10
+    <-> goth10}{}
+\DeclareFontShape{JT1}{mc}{bx}{it}{<5> <6> <7> <8> <9> <10> sgen*tgoth
+    <10.95><12><14.4><17.28><20.74><24.88> tgoth10
+    <-> tgoth10}{}
+\DeclareRelationFont{JY1}{gt}{sl}{}{OT1}{cmbx}{sl}{}
+\DeclareRelationFont{JT1}{gt}{sl}{}{OT1}{cmbx}{sl}{}
+\DeclareFontShape{JY1}{mc}{bx}{sl}{<5> <6> <7> <8> <9> <10> sgen*goth
+    <10.95><12><14.4><17.28><20.74><24.88> goth10
+    <-> goth10}{}
+\DeclareFontShape{JT1}{mc}{bx}{sl}{<5> <6> <7> <8> <9> <10> sgen*tgoth
+    <10.95><12><14.4><17.28><20.74><24.88> tgoth10
+    <-> tgoth10}{}
+\DeclareRelationFont{JY1}{gt}{sc}{}{OT1}{cmbx}{sc}{}
+\DeclareRelationFont{JT1}{gt}{sc}{}{OT1}{cmbx}{sc}{}
+\DeclareFontShape{JY1}{mc}{bx}{sc}{<5> <6> <7> <8> <9> <10> sgen*goth
+    <10.95><12><14.4><17.28><20.74><24.88> goth10
+    <-> goth10}{}
+\DeclareFontShape{JT1}{mc}{bx}{sc}{<5> <6> <7> <8> <9> <10> sgen*tgoth
+    <10.95><12><14.4><17.28><20.74><24.88> tgoth10
+    <-> tgoth10}{}
+\DeclareRelationFont{JY1}{gt}{it}{}{OT1}{cmr}{it}{}
+\DeclareRelationFont{JT1}{gt}{it}{}{OT1}{cmr}{it}{}
+\DeclareFontShape{JY1}{gt}{m}{it}{<5> <6> <7> <8> <9> <10> sgen*goth
+    <10.95><12><14.4><17.28><20.74><24.88> goth10
+    <-> goth10}{}
+\DeclareFontShape{JT1}{gt}{m}{it}{<5> <6> <7> <8> <9> <10> sgen*tgoth
+    <10.95><12><14.4><17.28><20.74><24.88> tgoth10
+    <-> tgoth10}{}
+\endinput

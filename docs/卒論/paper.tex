@@ -1,0 +1,57 @@
+\documentclass[fleqn,11pt]{jreport}
+\usepackage{mysty}
+\usepackage{graphicx}
+
+\begin{document}
+\baselineskip 21.5pt
+
+\begin{titlepage}
+	\vspace*{3cm}
+	\begin{center}
+		{\Large\gt 東京都市大学メディア情報学部}\\
+		\vspace*{0.5cm}
+		{\Large\bf 2016年度卒業研究}\\
+		\vspace{1.5cm}
+
+		% 論文タイトルが1行の場合
+		{\huge\bf 釣銭誤り検出システムの構築}\\
+
+		% 論文タイトルが2行の場合
+		%{\huge\bf 都市計画用住民データ推定における}\\
+		%\vspace{0.5cm}
+		%{\huge\bf 適合度算出手法の改良}\\
+
+		\vspace{9cm}
+		{\Large メディア情報学部 情報システム学科 1372999}\\
+		{\Large 岡野 彩香}\\
+		\vspace*{0.5cm}
+		{\Large 指導教員 大谷紀子 教授}\\
+	\end{center}
+\end{titlepage}
+
+\pagenumbering{roman}
+\tableofcontents
+\cleardoublepage
+
+\pagenumbering{arabic}
+% 本文のファイルを以下に列挙する
+\input{01}
+\input{02}
+\input{03}
+\input{04}
+\input{05}
+\input{06}
+
+\input{thanks}
+
+\markboth{参考文献}{参考文献}
+\bibliographystyle{jsai}
+%\bibliographystyle{plain}
+\bibliography{mybib}
+
+\appendix
+% 付録のファイルを以下に列挙する
+\input{a}
+\input{b}
+
+\end{document}
