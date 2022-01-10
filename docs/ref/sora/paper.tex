@@ -1,0 +1,55 @@
+\documentclass[fleqn,11pt,dvipdfmx]{jreport}
+\usepackage{mysty}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+
+\begin{document}
+\baselineskip 21.5pt
+
+\begin{titlepage}
+	\vspace*{3cm}
+	\begin{center}
+		{\Large\gt 東京都市大学メディア情報学部}\\
+		\vspace*{0.5cm}
+		{\Large\bf 2020年度卒業研究}\\
+		\vspace{1.5cm}
+
+		{\huge\bf 多数決機械によるユーザ行動特徴の}\\
+		\vspace{0.5cm}
+		{\huge\bf リアルタイム学習機能を備えたポーカーシステム}\\
+
+		\vspace{9cm}
+		{\Large メディア情報学部 情報システム学科 1772091}\\
+		{\Large 山口宙来}\\
+		\vspace*{0.5cm}
+		{\Large 指導教員 大谷紀子 教授}\\
+	\end{center}
+\end{titlepage}
+
+\pagenumbering{roman}
+\tableofcontents
+\cleardoublepage
+
+\pagenumbering{arabic}
+% 本文のファイルを以下に列挙する
+\input{introduction}
+\input{TH}
+\input{MM}
+\input{configuration}
+\input{evaluation}
+\input{consideration}
+\input{end.tex}
+\input{thanks}
+
+\markboth{参考文献}{参考文献}
+\bibliographystyle{jsai}
+\bibliography{mybib}
+
+\appendix
+
+% 付録のファイルを以下に列挙する
+\input{a}
+\input{b}
+\input{c}
+\input{d}
+\end{document}
