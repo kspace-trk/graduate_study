@@ -1,0 +1,154 @@
+\chapter{伴奏部の生成方法}
+学習用の既存楽曲から獲得した編曲ルールを用いて，自動作曲システムにより生成された楽曲の伴奏部を生成する．学習用の既存楽曲は，プロの作曲家が作曲した曲を使用する．既存楽曲は全部で89曲あり，そのうち長調は44曲，短調は41曲，無調は4曲である．楽曲はすべて4/4拍子であり，アウフタクトはデータとして考慮しない．
+
+\section{編曲ルールの獲得}
+メロディと伴奏部の音高とリズムの関係をルールの前提部とし，分散和音の標準的な型をルールの帰結部とする．
+分散和音の4つの標準的な型を図\ref{fig:type}に示す．アルペジオ・上昇は和音を構成する音を1音ずつ分けて昇順で演奏すること，
+アルペジオ・下降は和音を構成する音を1音ずつ分けて降順で演奏すること，
+アルベルティ・単音は和音を構成する音を低音，高音，中音，高音の順に分けて単音で演奏すること，
+アルベルティ・和音は和音を構成する音を低音，高音，中音，高音の順に分けて1，3音目を単音，
+2，4音目を和音で演奏することである．
+学習用既存楽曲の各小節の伴奏部が分散和音の型の条件に当てはまる場合，
+当該小節のメロディを前提部，分散和音の型を結論部とする編曲ルールを作成する．分散和音の4つの標準的な型の条件を表\ref{tab:jyouken}に示す．
+
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=0.6]{image/type.png}
+  \caption{分散和音の標準的な型}
+  \label{fig:type}
+\end{figure}
+
+\newpage
+
+\begin{table}[tbp]
+  \caption{分散和音の標準的な型の条件}
+  \label{tab:jyouken}
+  \centering
+  \begin{tabular}{|l|l|} \hline
+       & \multicolumn{1}{|c|}{条件} \\ \hline
+
+       \multirow{3}{*}{(a)アルペジオ・上昇}  &すべての音が単音である．  \\ \cline{2-2}
+       &和音を構成する音である．\\ \cline{2-2}
+       &音高について，後続音よりも先行音が高い．\\ \cline{1-2}
+
+       \multirow{3}{*}{(b)アルペジオ・下降}  &すべての音が単音である．  \\ \cline{2-2}
+       &和音を構成する音である．\\ \cline{2-2}
+       &音高について，先行音よりも後続音が高い．\\ \cline{1-2}
+
+       \multirow{6}{*}{(c)アルベルティ・単音}  &すべての音が単音である． \\ \cline{2-2}
+       &和音を構成する音である．\\ \cline{2-2}
+       &音高について，2音目が1音目より高い．\\ \cline{2-2}
+       &音高について，3音目が1音目より高い．\\ \cline{2-2}
+       &音高について，3音目が2音目より低い．\\ \cline{2-2}
+       &音高について，4音目が3音目より高い．\\ \cline{1-2}
+
+       \multirow{7}{*}{(d)アルベルティ・和音}  &1，3音目が単音である．  \\ \cline{2-2}
+       &2，4音目が和音である．\\ \cline{2-2}
+       &和音を構成する音である．\\ \cline{2-2}
+       &音高について，2音目のどの音も1音目より高い．\\ \cline{2-2}
+       &音高について，3音目が1音目よりも高い．\\ \cline{2-2}
+       &音高について、3音目が2音目のどの音よりも低い．\\ \cline{2-2}
+       &音高について，4音目のどの音も3音目より高い．\\ \cline{1-2}
+  \end{tabular}
+\end{table}
+
+
+% \section{分散和音の標準的な型}
+% 4つの分散和音の標準的な型の条件を以下に示す．
+
+% \begin{description}
+%   \item{アルペジオ・上昇}
+  
+%   \begin{enumerate}
+%     \item すべての音が単音である
+%     \item 和音を構成する音である
+%     \item 音高について，後続音よりも先行音が高い
+%   \end{enumerate}
+
+%   \item{アルペジオ・下降}
+  
+%   \begin{enumerate}
+%     \item すべての音が単音である
+%     \item 和音を構成する音である
+%     \item 音高について，先行音よりも後続音が高い
+%   \end{enumerate}
+
+%   \item{アルベルティ・単音}
+  
+%   \begin{enumerate}
+%     \item すべての音が単音である
+%     \item 和音を構成する音である
+%     \item 音高について，2音目が1音目より高い
+%     \item 音高について，3音目が1音目より高い
+%     \item 音高について，3音目が2音目より低い
+%     \item 音高について，4音目が3音目より高い
+%   \end{enumerate}
+  
+%   \item{アルベルティ・和音}
+  
+%   \begin{enumerate}
+%     \item 1，3音目が単音である
+%     \item 2，4音目が和音である
+%     \item 和音を構成する音である
+%     \item 音高について，2音目のどの音も1音目より高い
+%     \item 音高について，3音目が1音目よりも高い
+%     \item 音高について、3音目が2音目のどの音よりも低い
+%     \item 音高について，4音目のどの音も3音目より高い
+%   \end{enumerate}
+
+% \end{description}
+
+
+\section{リズムと音高の表現方法}
+学習データのメロディのリズムは1，$-1$，および0の列で表現する．
+各数は1/4拍分の音の状態で，16分音符を表している．1は音を鳴らし始めること，
+$-1$は音を鳴らさないこと，0は先行音の状態を延長することを表す．
+また，メロディの音高も1，$-1$および0の列で表現する．1は先行音より音高が上がること，
+$-1$は先行音より音高が下がること，0は先行音と音高が同じことを表す．リズム列および音高列の作成例を図\ref{fig:pitch_rythm}に示す．
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=1.0]{image/pitch_rythm.png}
+  \caption{リズムと音高の表現方法の例}
+  \label{fig:pitch_rythm}
+\end{figure}
+
+\newpage
+
+\section{ルール適用方法}
+分散和音の型$T_i$の$j$番目の編曲ルールの前提部と，対象楽曲の$k$番目の小節に関して，
+リズム列が一致する拍数をリズム点数$r(T_i, j, k)$，音高列が一致する拍数を音高点数$p(T_i, j ,k)$とし，
+分散和音の型$T_i$の編曲ルール数を$n(T_i)$として，分散和音の型$T_i$の評価値$V(T_i)$を式\ref{eq:culc1}，\ref{eq:culc2}により算出する．
+
+\begin{eqnarray}
+  p'(T_i,j)=\left\{
+  \begin{array}{ll}
+  0&\sum_{k} r(T_i, j, k)=0\\
+  \sum_{k} p(T_i, j ,k)&otherwise
+  \end{array}
+  \right.
+  \label{eq:culc1}
+\end{eqnarray}
+
+\begin{eqnarray}
+  V(T_i)=\frac{1}{n(T_i)} \sum_{j=1}^{n(T_i)} \sum_{k} \{r(T_i, j, k)+p'(T_i,j)\}
+  \label{eq:culc2}
+\end{eqnarray}
+
+$V(T_i)$の値が最も大きい型を対象楽曲の伴奏部に適した型と判定し，
+対象楽曲の最終小節以外の同時和音を判定された型の条件に当てはまるように変換することで，伴奏部を生成する．適用前の楽曲の例を図\ref{fig:before}，アルペジオ・上昇が適用された例を図\ref{fig:after}に示す．
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=0.4]{image/before.png}
+  \caption{適用前の楽曲}
+  \label{fig:before}
+\end{figure}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=0.4]{image/after.png}
+  \caption{アルペジオ・上昇が適用された楽曲}
+  \label{fig:after}
+\end{figure}

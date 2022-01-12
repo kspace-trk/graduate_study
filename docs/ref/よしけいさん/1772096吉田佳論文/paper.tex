@@ -1,0 +1,58 @@
+\documentclass[fleqn,11pt]{jreport}
+\usepackage{mysty}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{multirow}
+
+\begin{document}
+\baselineskip 21.5pt
+
+\begin{titlepage}
+\vspace*{3cm}
+\begin{center}
+{\Large\gt 東京都市大学メディア情報学部}\\
+\vspace*{0.5cm}
+{\Large\bf 2020年度卒業研究}\\
+\vspace{1.5cm}
+
+% 論文タイトルが1行の場合
+%{\huge\bf aaaa}\\
+
+% 論文タイトルが2行の場合
+{\huge\bf 自動作曲におけるメロディに即した伴奏部の}\\
+\vspace{0.5cm}
+{\huge\bf 生成に関する研究}\\
+
+\vspace{9cm}
+{\Large メディア情報学部 情報システム学科 1772096}\\
+{\Large 吉田 佳}\\
+\vspace*{0.5cm}
+{\Large 指導教員 大谷紀子 教授}\\
+\end{center}
+\end{titlepage}
+
+\pagenumbering{roman}
+\tableofcontents
+\cleardoublepage
+
+\pagenumbering{arabic}
+% 本文のファイルを以下に列挙する
+\input{01}
+\input{02}
+\input{03}
+\input{04}
+\input{05}
+\input{06}
+
+\input{thanks}
+
+\markboth{参考文献}{参考文献}
+\bibliographystyle{jsai}
+%\bibliographystyle{plain}
+\bibliography{mybib}
+
+\appendix
+% 付録のファイルを以下に列挙する
+\input{a}
+\input{b}
+
+\end{document}

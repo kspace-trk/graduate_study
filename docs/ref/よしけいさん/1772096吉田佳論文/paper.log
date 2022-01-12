@@ -1,0 +1,3010 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.14)  22 DEC 2021 05:06
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex
+(y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> (c:/texlive/2021/texmf-dist/tex/platex/base/jreport.cls
+
+c:/texlive/2021/texmf-dist/tex/platex/base/jreport.cls:16: LaTeX Error: This file needs format `pLaTeX2e'
+               but this is `LaTeX2e'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \NeedsTeXFormat{pLaTeX2e}
+                              
+The current input file will not be processed further,
+because it was written for some other flavor of TeX.
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:16: LaTeX Error: Command \bibname undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \renewcommand{\bibname}
+                            {参 考 文 献}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:19: LaTeX Error: Environment thebibliography undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \renewenvironment{thebibliography}
+                                       [1]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:40: Undefined control sequence.
+<argument> \abovecaptionskip 
+                             
+l.40 \setlength\abovecaptionskip{5\p@}
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:40: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 \setlength\abovecaptionskip{5\p@}
+                                      
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 5 in font nullfont!
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:40: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.40 \setlength\abovecaptionskip{5\p@}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:40: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.40 \setlength\abovecaptionskip{5\p@}
+                                      
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:41: Undefined control sequence.
+<argument> \belowcaptionskip 
+                             
+l.41 \setlength\belowcaptionskip{5\p@}
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 5 in font nullfont!
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:41: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.41 \setlength\belowcaptionskip{5\p@}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:41: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.41 \setlength\belowcaptionskip{5\p@}
+                                      
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 40--42
+[]
+ []
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:78: LaTeX Error: Environment description undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 \renewenvironment{description}
+                                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:90: Undefined control sequence.
+l.90 \DeclareRelationFont
+                         {JY1}{mc}{it}{}{OT1}{cmr}{it}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:90: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.90 \DeclareRelationFont{J
+                           Y1}{mc}{it}{}{OT1}{cmr}{it}{}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:91: Undefined control sequence.
+l.91 \DeclareRelationFont
+                         {JT1}{mc}{it}{}{OT1}{cmr}{it}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:94: LaTeX Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94     <-> min10}{}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:97: LaTeX Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.97     <-> tmin10}{}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:98: Undefined control sequence.
+l.98 \DeclareRelationFont
+                         {JY1}{mc}{sl}{}{OT1}{cmr}{sl}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:99: Undefined control sequence.
+l.99 \DeclareRelationFont
+                         {JT1}{mc}{sl}{}{OT1}{cmr}{sl}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:102: LaTeX Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102     <-> min10}{}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:105: LaTeX Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.105     <-> tmin10}{}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:106: Undefined control sequence.
+l.106 \DeclareRelationFont
+                          {JY1}{mc}{sc}{}{OT1}{cmr}{sc}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:107: Undefined control sequence.
+l.107 \DeclareRelationFont
+                          {JT1}{mc}{sc}{}{OT1}{cmr}{sc}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:110: LaTeX Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110     <-> min10}{}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:113: LaTeX Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113     <-> tmin10}{}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:114: Undefined control sequence.
+l.114 \DeclareRelationFont
+                          {JY1}{gt}{it}{}{OT1}{cmbx}{it}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:115: Undefined control sequence.
+l.115 \DeclareRelationFont
+                          {JT1}{gt}{it}{}{OT1}{cmbx}{it}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:118: LaTeX Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118     <-> goth10}{}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:121: LaTeX Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.121     <-> tgoth10}{}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:122: Undefined control sequence.
+l.122 \DeclareRelationFont
+                          {JY1}{gt}{sl}{}{OT1}{cmbx}{sl}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:123: Undefined control sequence.
+l.123 \DeclareRelationFont
+                          {JT1}{gt}{sl}{}{OT1}{cmbx}{sl}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:126: LaTeX Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126     <-> goth10}{}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:129: LaTeX Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129     <-> tgoth10}{}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:130: Undefined control sequence.
+l.130 \DeclareRelationFont
+                          {JY1}{gt}{sc}{}{OT1}{cmbx}{sc}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:131: Undefined control sequence.
+l.131 \DeclareRelationFont
+                          {JT1}{gt}{sc}{}{OT1}{cmbx}{sc}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:134: LaTeX Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134     <-> goth10}{}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:137: LaTeX Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.137     <-> tgoth10}{}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:138: Undefined control sequence.
+l.138 \DeclareRelationFont
+                          {JY1}{gt}{it}{}{OT1}{cmr}{it}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:139: Undefined control sequence.
+l.139 \DeclareRelationFont
+                          {JT1}{gt}{it}{}{OT1}{cmr}{it}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:142: LaTeX Error: Font family `JY1+gt' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.142     <-> goth10}{}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/mysty.sty:145: LaTeX Error: Font family `JT1+gt' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145     <-> tgoth10}{}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) (c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+) (c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Overfull \hbox (20.0pt too wide) in paragraph at lines 90--27
+[]
+ []
+
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+(c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 105.
+ (c:/texlive/2021/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2021/03/18 v5.0j Graphics/color driver for dvipdfmx
+))
+\Gin@req@height=\dimen138
+\Gin@req@width=\dimen139
+) (c:/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip47
+\multirow@cntb=\count179
+\multirow@dima=\skip48
+\bigstrutjot=\dimen140
+)
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:6: Improper `at' size (0.0pt), replaced by 10pt.
+<to be read again> 
+                   relax 
+l.6 \begin{document}
+                    
+I can only handle fonts at positive sizes that are
+less than 2048pt, so I've changed what you said to 10pt.
+
+(c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count180
+\l__pdf_internal_box=\box47
+) (y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.aux)
+\openout1 = `paper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:6: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \begin{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:9: LaTeX Error: Environment titlepage undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \begin{titlepage}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Undefined control sequence.
+l.12 {\Large
+            \gt 東京都市大学メディア情報学部}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Undefined control sequence.
+l.12 {\Large\gt
+                東京都市大学メディア情報学部}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Package inputenc Error: Unicode character 東 (U+6771)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 {\Large\gt 東
+                   京都市大学メディア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Package inputenc Error: Unicode character 京 (U+4EAC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 {\Large\gt 東京
+                      都市大学メディア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Package inputenc Error: Unicode character 都 (U+90FD)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 {\Large\gt 東京都
+                         市大学メディア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Package inputenc Error: Unicode character 市 (U+5E02)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 {\Large\gt 東京都市
+                            大学メディア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Package inputenc Error: Unicode character 大 (U+5927)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 {\Large\gt 東京都市大
+                               学メディア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Package inputenc Error: Unicode character 学 (U+5B66)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 {\Large\gt 東京都市大学
+                                  メディア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Package inputenc Error: Unicode character メ (U+30E1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 {\Large\gt 東京都市大学メ
+                                     ディア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Package inputenc Error: Unicode character デ (U+30C7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 {\Large\gt 東京都市大学メデ
+                                        ィア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Package inputenc Error: Unicode character ィ (U+30A3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 {\Large\gt 東京都市大学メディ
+                                           ア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Package inputenc Error: Unicode character ア (U+30A2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 {\Large\gt 東京都市大学メディア
+                                              情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Package inputenc Error: Unicode character 情 (U+60C5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 {\Large\gt 東京都市大学メディア情
+                                                 報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Package inputenc Error: Unicode character 報 (U+5831)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...ge\gt 東京都市大学メディア情報
+                                                  学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Package inputenc Error: Unicode character 学 (U+5B66)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...gt 東京都市大学メディア情報学
+                                                  部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: Package inputenc Error: Unicode character 部 (U+90E8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...東京都市大学メディア情報学部
+                                                  }\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:12: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...京都市大学メディア情報学部}\\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:14: Undefined control sequence.
+l.14 {\Large
+            \bf 2020年度卒業研究}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:14: Undefined control sequence.
+l.14 {\Large\bf
+                2020年度卒業研究}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:14: Package inputenc Error: Unicode character 年 (U+5E74)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 {\Large\bf 2020年
+                       度卒業研究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:14: Package inputenc Error: Unicode character 度 (U+5EA6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 {\Large\bf 2020年度
+                          卒業研究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:14: Package inputenc Error: Unicode character 卒 (U+5352)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 {\Large\bf 2020年度卒
+                             業研究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:14: Package inputenc Error: Unicode character 業 (U+696D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 {\Large\bf 2020年度卒業
+                                研究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:14: Package inputenc Error: Unicode character 研 (U+7814)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 {\Large\bf 2020年度卒業研
+                                   究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:14: Package inputenc Error: Unicode character 究 (U+7A76)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 {\Large\bf 2020年度卒業研究
+                                      }\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Undefined control sequence.
+l.21 {\huge
+           \bf 自動作曲におけるメロディに即した伴奏部の}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Undefined control sequence.
+l.21 {\huge\bf
+               自動作曲におけるメロディに即した伴奏部の}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character 自 (U+81EA)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 {\huge\bf 自
+                  動作曲におけるメロディに即した伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character 動 (U+52D5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 {\huge\bf 自動
+                     作曲におけるメロディに即した伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character 作 (U+4F5C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 {\huge\bf 自動作
+                        曲におけるメロディに即した伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character 曲 (U+66F2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 {\huge\bf 自動作曲
+                           におけるメロディに即した伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 {\huge\bf 自動作曲に
+                              おけるメロディに即した伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character お (U+304A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 {\huge\bf 自動作曲にお
+                                 けるメロディに即した伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character け (U+3051)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 {\huge\bf 自動作曲におけ
+                                    るメロディに即した伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character る (U+308B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 {\huge\bf 自動作曲における
+                                       メロディに即した伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character メ (U+30E1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 {\huge\bf 自動作曲におけるメ
+                                          ロディに即した伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character ロ (U+30ED)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 {\huge\bf 自動作曲におけるメロ
+                                             ディに即した伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character デ (U+30C7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 {\huge\bf 自動作曲におけるメロデ
+                                                ィに即した伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character ィ (U+30A3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...ge\bf 自動作曲におけるメロディ
+                                                  に即した伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...bf 自動作曲におけるメロディに
+                                                  即した伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character 即 (U+5373)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...自動作曲におけるメロディに即
+                                                  した伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character し (U+3057)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...動作曲におけるメロディに即し
+                                                  た伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character た (U+305F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...作曲におけるメロディに即した
+                                                  伴奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character 伴 (U+4F34)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...曲におけるメロディに即した伴
+                                                  奏部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character 奏 (U+594F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...におけるメロディに即した伴奏
+                                                  部の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character 部 (U+90E8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...おけるメロディに即した伴奏部
+                                                  の}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...けるメロディに即した伴奏部の
+                                                  }\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:21: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...るメロディに即した伴奏部の}\\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:23: Undefined control sequence.
+l.23 {\huge
+           \bf 生成に関する研究}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:23: Undefined control sequence.
+l.23 {\huge\bf
+               生成に関する研究}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:23: Package inputenc Error: Unicode character 生 (U+751F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 {\huge\bf 生
+                  成に関する研究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:23: Package inputenc Error: Unicode character 成 (U+6210)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 {\huge\bf 生成
+                     に関する研究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:23: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 {\huge\bf 生成に
+                        関する研究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:23: Package inputenc Error: Unicode character 関 (U+95A2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 {\huge\bf 生成に関
+                           する研究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:23: Package inputenc Error: Unicode character す (U+3059)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 {\huge\bf 生成に関す
+                              る研究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:23: Package inputenc Error: Unicode character る (U+308B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 {\huge\bf 生成に関する
+                                 研究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:23: Package inputenc Error: Unicode character 研 (U+7814)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 {\huge\bf 生成に関する研
+                                    究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:23: Package inputenc Error: Unicode character 究 (U+7A76)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 {\huge\bf 生成に関する研究
+                                       }\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:23: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 {\huge\bf 生成に関する研究}\\
+                                          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Undefined control sequence.
+l.26 {\Large
+             メディア情報学部 情報システム学科 1772096}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character メ (U+30E1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 {\Large メ
+                ディア情報学部 情報システム学科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character デ (U+30C7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 {\Large メデ
+                   ィア情報学部 情報システム学科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character ィ (U+30A3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 {\Large メディ
+                      ア情報学部 情報システム学科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character ア (U+30A2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 {\Large メディア
+                         情報学部 情報システム学科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character 情 (U+60C5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 {\Large メディア情
+                            報学部 情報システム学科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character 報 (U+5831)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 {\Large メディア情報
+                               学部 情報システム学科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character 学 (U+5B66)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 {\Large メディア情報学
+                                  部 情報システム学科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character 部 (U+90E8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 {\Large メディア情報学部
+                                      情報システム学科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character 情 (U+60C5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 {\Large メディア情報学部 情
+                                         報システム学科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character 報 (U+5831)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 {\Large メディア情報学部 情報
+                                            システム学科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character シ (U+30B7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 {\Large メディア情報学部 情報シ
+                                               ステム学科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 {\Large メディア情報学部 情報シス
+                                                  テム学科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character テ (U+30C6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 ...e メディア情報学部 情報システ
+                                                  ム学科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character ム (U+30E0)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 ...��ディア情報学部 情報システム
+                                                  学科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character 学 (U+5B66)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 ...��ィア情報学部 情報システム学
+                                                  科 1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:26: Package inputenc Error: Unicode character 科 (U+79D1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 ...��ア情報学部 情報システム学科
+                                                   1772096}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:27: Undefined control sequence.
+l.27 {\Large
+             吉田 佳}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:27: Package inputenc Error: Unicode character 吉 (U+5409)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 {\Large 吉
+                田 佳}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:27: Package inputenc Error: Unicode character 田 (U+7530)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 {\Large 吉田
+                    佳}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:27: Package inputenc Error: Unicode character 佳 (U+4F73)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 {\Large 吉田 佳
+                       }\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:27: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 {\Large 吉田 佳}\\
+                          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:29: Undefined control sequence.
+l.29 {\Large
+             指導教員 大谷紀子 教授}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:29: Package inputenc Error: Unicode character 指 (U+6307)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 {\Large 指
+                導教員 大谷紀子 教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:29: Package inputenc Error: Unicode character 導 (U+5C0E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 {\Large 指導
+                   教員 大谷紀子 教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:29: Package inputenc Error: Unicode character 教 (U+6559)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 {\Large 指導教
+                      員 大谷紀子 教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:29: Package inputenc Error: Unicode character 員 (U+54E1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 {\Large 指導教員
+                          大谷紀子 教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:29: Package inputenc Error: Unicode character 大 (U+5927)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 {\Large 指導教員 大
+                             谷紀子 教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:29: Package inputenc Error: Unicode character 谷 (U+8C37)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 {\Large 指導教員 大谷
+                                紀子 教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:29: Package inputenc Error: Unicode character 紀 (U+7D00)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 {\Large 指導教員 大谷紀
+                                   子 教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:29: Package inputenc Error: Unicode character 子 (U+5B50)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 {\Large 指導教員 大谷紀子
+                                       教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:29: Package inputenc Error: Unicode character 教 (U+6559)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 {\Large 指導教員 大谷紀子 教
+                                          授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:29: Package inputenc Error: Unicode character 授 (U+6388)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 {\Large 指導教員 大谷紀子 教授
+                                             }\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:29: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 {\Large 指導教員 大谷紀子 教授}\\
+                                                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:31: LaTeX Error: \begin{document} ended by \end{titlepage}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 \end{titlepage}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:34: Undefined control sequence.
+l.34 \tableofcontents
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+y:/otanilab/過去の卒業研究/卒研ＣＤ2020/論文/1772096吉田佳論文/paper.tex:35: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.35 \cleardoublepage
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./01.tex
+./01.tex:1: Undefined control sequence.
+l.1 \chapter
+            {はじめに}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./01.tex:1: Package inputenc Error: Unicode character は (U+306F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{は
+                じめに}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:1: Package inputenc Error: Unicode character じ (U+3058)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{はじ
+                   めに}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:1: Package inputenc Error: Unicode character め (U+3081)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{はじめ
+                      に}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:1: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{はじめに
+                         }
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 現 (U+73FE)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現
+       在，個人の感性を反映した楽曲の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 在 (U+5728)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現在
+          ，個人の感性を反映した楽曲の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現在，
+             個人の感性を反映した楽曲の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 個 (U+500B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現在，個
+                人の感性を反映した楽曲の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 人 (U+4EBA)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現在，個人
+                   の感性を反映した楽曲の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現在，個人の
+                      感性を反映した楽曲の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 感 (U+611F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現在，個人の感
+                         性を反映した楽曲の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 性 (U+6027)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現在，個人の感性
+                            を反映した楽曲の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character を (U+3092)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現在，個人の感性を
+                               反映した楽曲の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 反 (U+53CD)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現在，個人の感性を反
+                                  映した楽曲の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 映 (U+6620)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現在，個人の感性を反映
+                                     した楽曲の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character し (U+3057)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現在，個人の感性を反映し
+                                        た楽曲の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character た (U+305F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現在，個人の感性を反映した
+                                           楽曲の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 楽 (U+697D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現在，個人の感性を反映した楽
+                                              曲の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 曲 (U+66F2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 現在，個人の感性を反映した楽曲
+                                                 の自動生成に関する...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�，個人の感性を反映した楽曲の
+                                                  自動生成に関する�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 自 (U+81EA)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�個人の感性を反映した楽曲の自
+                                                  動生成に関する研�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 動 (U+52D5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�人の感性を反映した楽曲の自動
+                                                  生成に関する研究�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 生 (U+751F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�の感性を反映した楽曲の自動生
+                                                  成に関する研究が�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 成 (U+6210)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�感性を反映した楽曲の自動生成
+                                                  に関する研究が進�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�性を反映した楽曲の自動生成に
+                                                  関する研究が進め�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 関 (U+95A2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�を反映した楽曲の自動生成に関
+                                                  する研究が進めら�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character す (U+3059)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�反映した楽曲の自動生成に関す
+                                                  る研究が進められ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character る (U+308B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�映した楽曲の自動生成に関する
+                                                  研究が進められて�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 研 (U+7814)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�した楽曲の自動生成に関する研
+                                                  究が進められてい�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 究 (U+7A76)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�た楽曲の自動生成に関する研究
+                                                  が進められている．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character が (U+304C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�楽曲の自動生成に関する研究が
+                                                  進められている．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character 進 (U+9032)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�曲の自動生成に関する研究が進
+                                                  められている．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character め (U+3081)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�の自動生成に関する研究が進め
+                                                  られている．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character ら (U+3089)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�自動生成に関する研究が進めら
+                                                  れている．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character れ (U+308C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�動生成に関する研究が進められ
+                                                  ている．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character て (U+3066)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�生成に関する研究が進められて
+                                                  いる．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character い (U+3044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�成に関する研究が進められてい
+                                                  る．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character る (U+308B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�に関する研究が進められている
+                                                  ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:2: Package inputenc Error: Unicode character ． (U+FF0E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�関する研究が進められている．
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character 大 (U+5927)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 大
+       谷らが開発したシステム\cite{otani16}では，ユーザに�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character 谷 (U+8C37)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 大谷
+          らが開発したシステム\cite{otani16}では，ユーザに�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character ら (U+3089)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 大谷ら
+             が開発したシステム\cite{otani16}では，ユーザに�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character が (U+304C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 大谷らが
+                開発したシステム\cite{otani16}では，ユーザに�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character 開 (U+958B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 大谷らが開
+                   発したシステム\cite{otani16}では，ユーザに�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character 発 (U+767A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 大谷らが開発
+                      したシステム\cite{otani16}では，ユーザに�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character し (U+3057)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 大谷らが開発し
+                         たシステム\cite{otani16}では，ユーザに�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character た (U+305F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 大谷らが開発した
+                            システム\cite{otani16}では，ユーザに�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character シ (U+30B7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 大谷らが開発したシ
+                               ステム\cite{otani16}では，ユーザに�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 大谷らが開発したシス
+                                  テム\cite{otani16}では，ユーザに�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character テ (U+30C6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 大谷らが開発したシステ
+                                     ム\cite{otani16}では，ユーザに�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character ム (U+30E0)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 大谷らが開発したシステム
+                                        \cite{otani16}では，ユーザに�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+./01.tex:3: Improper `at' size (0.0pt), replaced by 10pt.
+<to be read again> 
+                   relax 
+l.3 ...��が開発したシステム\cite{otani16}
+                                                  では，ユーザに指�...
+I can only handle fonts at positive sizes that are
+less than 2048pt, so I've changed what you said to 10pt.
+
+
+LaTeX Warning: Citation `otani16' on page 1 undefined on input line 3.
+
+
+./01.tex:3: Package inputenc Error: Unicode character で (U+3067)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...��開発したシステム\cite{otani16}で
+                                                  は，ユーザに指定�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character は (U+306F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...��発したシステム\cite{otani16}では
+                                                  ，ユーザに指定さ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character ， (U+FF0C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...��したシステム\cite{otani16}では，
+                                                  ユーザに指定された
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character ユ (U+30E6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...��たシステム\cite{otani16}では，ユ
+                                                  ーザに指定された
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character ー (U+30FC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...��システム\cite{otani16}では，ユー
+                                                  ザに指定された
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character ザ (U+30B6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...��ステム\cite{otani16}では，ユーザ
+                                                  に指定された
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...��テム\cite{otani16}では，ユーザに
+                                                  指定された
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character 指 (U+6307)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...��ム\cite{otani16}では，ユーザに指
+                                                  定された
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character 定 (U+5B9A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...��\cite{otani16}では，ユーザに指定
+                                                  された
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character さ (U+3055)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...cite{otani16}では，ユーザに指定さ
+                                                  れた
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character れ (U+308C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...e{otani16}では，ユーザに指定され
+                                                  た
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:3: Package inputenc Error: Unicode character た (U+305F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 ...tani16}では，ユーザに指定された
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character 既 (U+65E2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既
+       存楽曲から個人の感性モデルを獲得し，進化計算ア...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character 存 (U+5B58)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既存
+          楽曲から個人の感性モデルを獲得し，進化計算ア...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character 楽 (U+697D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既存楽
+             曲から個人の感性モデルを獲得し，進化計算ア...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character 曲 (U+66F2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既存楽曲
+                から個人の感性モデルを獲得し，進化計算ア...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character か (U+304B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既存楽曲か
+                   ら個人の感性モデルを獲得し，進化計算ア...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character ら (U+3089)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既存楽曲から
+                      個人の感性モデルを獲得し，進化計算ア...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character 個 (U+500B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既存楽曲から個
+                         人の感性モデルを獲得し，進化計算ア...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character 人 (U+4EBA)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既存楽曲から個人
+                            の感性モデルを獲得し，進化計算ア...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既存楽曲から個人の
+                               感性モデルを獲得し，進化計算ア...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character 感 (U+611F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既存楽曲から個人の感
+                                  性モデルを獲得し，進化計算ア...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character 性 (U+6027)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既存楽曲から個人の感性
+                                     モデルを獲得し，進化計算ア...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character モ (U+30E2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既存楽曲から個人の感性モ
+                                        デルを獲得し，進化計算ア...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character デ (U+30C7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既存楽曲から個人の感性モデ
+                                           ルを獲得し，進化計算ア...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character ル (U+30EB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既存楽曲から個人の感性モデル
+                                              を獲得し，進化計算ア...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./01.tex:4: Package inputenc Error: Unicode character を (U+3092)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 既存楽曲から個人の感性モデルを
+                                                 獲得し，進化計算ア...
+(That makes 100 errors; please try again.) 
+Here is how much of TeX's memory you used:
+ 760 strings out of 478994
+ 12734 string characters out of 5862206
+ 295599 words of memory out of 5000000
+ 18299 multiletter control sequences out of 15000+600000
+ 403738 words of font info for 28 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 68i,4n,74p,284b,98s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+./01.tex:4:  ==> Fatal error occurred, no output PDF file produced!
