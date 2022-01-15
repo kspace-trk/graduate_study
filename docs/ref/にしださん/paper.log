@@ -1,0 +1,245 @@
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.sjis) (TeX Live 2020/W32TeX) (preloaded format=platex 2020.12.19)  22 JAN 2021 14:50
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Users/owner/Desktop/卒業研究/卒業論文/論文/論文4/my_paper/paper.tex
+(c:/Users/owner/Desktop/卒業研究/卒業論文/論文/論文4/my_paper/paper.tex
+pLaTeX2e <2020-10-01>+1 (based on LaTeX2e <2020-10-01> patch level 2)
+L3 programming layer <2020-12-07> xparse <2020-03-03> (c:/texlive/2020/texmf-dist/tex/platex/base/jreport.cls
+Document Class: jreport 2020/09/30 v1.8f Standard pLaTeX class
+\c@@paper=\count176
+(c:/texlive/2020/texmf-dist/tex/latex/base/fleqn.clo
+File: fleqn.clo 2016/12/29 v1.2b Standard LaTeX option (flush left equations)
+\mathindent=\skip47
+Applying: [2015/01/01] Make \[ robust on input line 50.
+LaTeX Info: Redefining \[ on input line 51.
+Already applied: [0000/00/00] Make \[ robust on input line 62.
+Applying: [2015/01/01] Make \] robust on input line 74.
+LaTeX Info: Redefining \] on input line 75.
+Already applied: [0000/00/00] Make \] robust on input line 83.
+) (c:/texlive/2020/texmf-dist/tex/platex/base/jsize11.clo
+File: jsize11.clo 2020/09/30 v1.8f Standard pLaTeX file (size option)
+)
+\c@part=\count177
+\c@chapter=\count178
+\c@section=\count179
+\c@subsection=\count180
+\c@subsubsection=\count181
+\c@paragraph=\count182
+\c@subparagraph=\count183
+\c@figure=\count184
+\c@table=\count185
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 704.
+\toclineskip=\dimen154
+\@lnumwidth=\dimen155
+\bibindent=\dimen156
+\heisei=\count186
+) (./mysty.sty) (c:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (c:/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvips.def on input line 105.
+(c:/texlive/2020/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
+))
+\Gin@req@height=\dimen157
+\Gin@req@width=\dimen158
+) (c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2020-09-24 L3 backend support: dvips
+\l__pdf_internal_box=\box64
+\g__pdf_backend_object_int=\count187
+\l__pdf_backend_content_box=\box65
+\l__pdf_backend_model_box=\box66
+\g__pdf_backend_annotation_int=\count188
+\g__pdf_backend_link_int=\count189
+\g__pdf_backend_link_sf_int=\count190
+) (out/paper.aux)
+\openout1 = `paper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 13.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 13.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 22.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 22.
+[1
+
+] (out/paper.toc
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 4.
+)
+\tf@toc=\write3
+\openout3 = `paper.toc'.
+
+[1
+
+] (./01.tex
+第 1 章
+) (./02.tex [1
+
+
+]
+第 2 章
+) (./03.tex [2
+
+]
+第 3 章
+File: image/GA/03001.eps Graphic file (type eps)
+<image/GA/03001.eps>
+File: image/GA/03002.eps Graphic file (type eps)
+<image/GA/03002.eps> [3
+
+] [4]) (./04.tex [5]
+第 4 章
+File: image/create/04041.eps Graphic file (type eps)
+<image/create/04041.eps>
+File: image/execute/04043.eps Graphic file (type eps)
+<image/execute/04043.eps>
+File: image/confirm/04044_1.eps Graphic file (type eps)
+<image/confirm/04044_1.eps>
+File: image/confirm/04044_2.eps Graphic file (type eps)
+<image/confirm/04044_2.eps>
+File: image/new_file/04042_1.eps Graphic file (type eps)
+<image/new_file/04042_1.eps>
+File: image/new_file/04042_2.eps Graphic file (type eps)
+<image/new_file/04042_2.eps>
+File: image/new_file/04042_3.eps Graphic file (type eps)
+<image/new_file/04042_3.eps>
+File: image/new_file/04042_4.eps Graphic file (type eps)
+<image/new_file/04042_4.eps>
+File: image/new_file/04042_5.eps Graphic file (type eps)
+<image/new_file/04042_5.eps>
+File: image/new_file/04045.eps Graphic file (type eps)
+<image/new_file/04045.eps> [6
+
+] [7] [8] [9] [10]) (./05.tex [11]
+第 5 章
+) (./06.tex [12
+
+] [13]
+第 6 章
+) (./07.tex [14
+
+]
+第 7 章
+) (./thanks.tex [15
+
+]) (./paper.bbl [16
+
+]) (./a.tex [17
+
+]
+付 録 A  
+File: image/questionA/a1.eps Graphic file (type eps)
+<image/questionA/a1.eps>
+File: image/questionA/a2.eps Graphic file (type eps)
+<image/questionA/a2.eps>
+File: image/questionA/a3.eps Graphic file (type eps)
+<image/questionA/a3.eps>
+File: image/questionA/a4.eps Graphic file (type eps)
+<image/questionA/a4.eps>
+File: image/questionA/a5.eps Graphic file (type eps)
+<image/questionA/a5.eps>
+File: image/questionA/a6.eps Graphic file (type eps)
+<image/questionA/a6.eps>
+File: image/questionA/a7.eps Graphic file (type eps)
+<image/questionA/a7.eps>
+File: image/questionA/a8.eps Graphic file (type eps)
+<image/questionA/a8.eps>
+File: image/questionA/a9.eps Graphic file (type eps)
+<image/questionA/a9.eps>
+File: image/questionA/a10.eps Graphic file (type eps)
+<image/questionA/a10.eps>
+File: image/questionA/a11.eps Graphic file (type eps)
+<image/questionA/a11.eps>
+File: image/questionA/a12.eps Graphic file (type eps)
+<image/questionA/a12.eps>
+File: image/questionA/a13.eps Graphic file (type eps)
+<image/questionA/a13.eps>
+File: image/questionA/a14.eps Graphic file (type eps)
+<image/questionA/a14.eps>
+File: image/questionA/a15.eps Graphic file (type eps)
+<image/questionA/a15.eps>
+File: image/questionA/a16.eps Graphic file (type eps)
+<image/questionA/a16.eps>
+File: image/questionA/a17.eps Graphic file (type eps)
+<image/questionA/a17.eps>
+File: image/questionB/b1.eps Graphic file (type eps)
+<image/questionB/b1.eps>
+File: image/questionB/b2.eps Graphic file (type eps)
+<image/questionB/b2.eps>
+File: image/questionB/b3.eps Graphic file (type eps)
+<image/questionB/b3.eps>
+File: image/questionB/b4.eps Graphic file (type eps)
+<image/questionB/b4.eps>
+File: image/questionB/b5.eps Graphic file (type eps)
+<image/questionB/b5.eps>
+File: image/questionB/b6.eps Graphic file (type eps)
+<image/questionB/b6.eps>
+File: image/questionB/b7.eps Graphic file (type eps)
+<image/questionB/b7.eps>
+File: image/questionB/b8.eps Graphic file (type eps)
+<image/questionB/b8.eps>
+File: image/questionB/b9.eps Graphic file (type eps)
+<image/questionB/b9.eps>
+File: image/questionB/b10.eps Graphic file (type eps)
+<image/questionB/b10.eps>
+File: image/questionB/b11.eps Graphic file (type eps)
+<image/questionB/b11.eps>) (./b.tex [18
+
+] [19] [20] [21] [22]
+付 録 B  
+[23
+
+]) [24] (out/paper.aux) ) 
+Here is how much of TeX's memory you used:
+ 1185 strings out of 479853
+ 18749 string characters out of 5884962
+ 306095 words of memory out of 5000000
+ 18463 multiletter control sequences out of 15000+600000
+ 415226 words of font info for 73 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 66i,13n,72p,953b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on out/paper.dvi (26 pages, 47560 bytes).
