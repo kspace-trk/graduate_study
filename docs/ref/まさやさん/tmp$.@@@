@@ -1,0 +1,8 @@
+-q
+-dNOPAUSE
+-sDEVICE=pbmraw
+-sOUTPUTFILE=last.pbm
+-r300
+-g1584x1292
+tmp$.ps
+quit.ps
