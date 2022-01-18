@@ -1,0 +1,57 @@
+\chapter{先行研究}
+
+現在，個人の感性に即した楽曲を自動生成するシステムの研究が進められている．本章では大谷らの研究\cite{otani14}について説明する．
+
+楽曲を生成する手順として，ユーザに既存楽曲を聴かせ，それぞれの楽曲を評価させる．評価結果と既存楽曲のデータに基づき帰納論理プログラミングを用いて，枠組構造，モチーフ，和音進行の感性モデルを獲得する．次に各感性モデルに基づき進化計算アルゴリズムによって楽曲を生成する．
+
+既存楽曲のデータには，キー，BPM，メロディの各音の音高と音価，和音進行の各和音のコードネームと音価が含まれている．図\ref{fig:mu}に示した楽譜のメロディのデータを表\ref{tab:exmelo}，和音進行のデータを表\ref{tab:excode}に示す．メロディのデータにおいて，オクターブは中央のオクターブを5として表現し，音価の値は4分の1拍の長さを1とする．和音のデータの音価は1拍の長さを1とする．
+現行のシステムが用いる楽曲データはすべて手作業で入力されている．したがって多くの楽曲を選択肢として提示するためには膨大な作業を必要とする問題がある．
+
+
+\begin{figure}[tbhp]
+\begin{center}
+\includegraphics[scale=0.15]{image/exmu.eps}
+\caption{データ例の楽譜}
+\label{fig:mu}
+\end{center}
+\end{figure}
+
+\begin{table}[tbp]
+\begin{center}
+\caption{メロディのデータ例}
+\label{tab:exmelo}
+\begin{tabular}{|c|c|c|} \hline
+オクターブ&音名&音価\\ \hline
+5&G\#&4\\ \hline
+5&A&2\\ \hline
+5&B&6\\ \hline
+$-1$&rest&2\\ \hline
+5&G\#&2\\ \hline
+5&G\#&2\\ \hline
+5&B\#&4\\ \hline
+6&C\#&4\\ \hline
+6&D\#&4\\ \hline
+6&F\#&2\\ \hline
+6&F\#&4\\ \hline
+6&E&2\\ \hline
+6&E&18\\ \hline
+$-1$&rest&8\\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[tbp]
+\begin{center}
+\caption{和音進行のデータ例}
+\label{tab:excode}
+\begin{tabular}{|c|c|c|} \hline
+ルート&タイプ&音価 \\ \hline
+E&&4\\ \hline
+G\#&7&4\\ \hline
+C\#&m&4\\ \hline
+E&7&4\\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+

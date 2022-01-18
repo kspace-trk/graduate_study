@@ -1,0 +1,120 @@
+\chapter{歩数計測法}
+本研究においては，粒子群最適化を用いた歩数計測法，自己相関関数を用いた歩数計測法，動的閾値を用いた歩数計測法の3つの手法を提案する．また，iPhoneから取得した3軸加速度信号内で周期性が確認される箇所を抜き出し，ローパスフィルタとしてRCフィルタを適用して下処理したデータを用いる．さらに，右足・左足・杖による1歩ずつの歩行を合わせて「1回の歩行」と定義する．従来の歩数計として，iPhoneのライブウォーキングデータを取得できるApple提供のAPI，CMPedometerを用いる．
+
+\section{歩行モデルの理解}
+本研究において，歩行の解析に使用できる特性の中から関連パラメータとして加速度を選ぶ．人間の動作は図\ref{fig:01se}に示すように前方向，垂直方向，横方向の3つの成分に分けることができる．iPhoneは\ref{fig:02se}のように，x,y,z軸方向の加速度を検出する．iPhoneを身につける向きは決まっていないため，測定精度が運動軸と加速度センサ測定軸の関係に決定的に依存しないようにする．
+
+\begin{figure}[tbhp]
+  \begin{center}
+  \includegraphics[width=0.4\hsize]{image/Fig-1.jpg}
+  \end{center}
+  \begin{center}
+  出典： Neil Zhao : Full-Featured Pedometer Design Realized with 3-Axis Digital Ac-celerometer,Analog Dialogue, Vol. 44, No. 2, pp. 17–21 (2010)
+  \caption{人間の動作の3成分}
+  \label{fig:01se}
+  \end{center}
+\end{figure}
+\begin{figure}[tbhp]
+  \begin{center}
+  \includegraphics[width=0.5\hsize]{image/fig-2.png}
+  \caption{iPhoneで取得できる加速度信号の3成分}
+  \label{fig:02se}
+  \end{center}
+\end{figure}
+
+
+図\ref{fig:03se}は健常者における歩行時の1歩を歩行動作の単位サイクルとして定義したものであり，各サイクルの各段階と垂直方向および前方向の加速度の変化の関係を示したものである．
+また，図\ref{fig:04se}は杖歩行者における3点動作歩行を用いた歩行動作の各サイクルと加速度の変化の関係である．
+図\ref{fig:051se}，\ref{fig:052se}に健常者による歩行時の加速度信号と杖歩行者における歩行時の加速度信号を示す．
+本研究においては，右足・左足・杖による1歩ずつの歩行を合わせて「1回の歩行」と定義する．
+歩数計をどのように身につけているかに関わらず，少なくとも1つの軸に相対的に大きな加速度の周期的変化が見られる．そのため，3軸すべてにおいて歩数計測法の適用を行い，各軸における歩数を計測する．
+
+\begin{figure}[tbhp]
+  \begin{center}
+  \includegraphics[width=1\hsize]{image/Fig-3.png}
+  \caption{健常者における歩行の各段階と各速度パターン}
+  \label{fig:03se}
+  \end{center}
+\end{figure}
+\begin{figure}[tbhp]
+  \begin{center}
+  \includegraphics[width=1\hsize]{image/Fig-4.png}
+  \caption{杖歩行者における歩行の各段階と各速度パターン}
+  \label{fig:04se}
+  \end{center}
+\end{figure}
+
+
+\begin{figure}[tbhp]
+  \begin{center}
+  \includegraphics[width=1\hsize]{image/Fig-5-kenjo.png}
+  \caption{健常者による歩行時の加速度信号}
+  \label{fig:051se}
+  \end{center}
+\end{figure}
+\begin{figure}[tbhp]
+  \begin{center}
+  \includegraphics[width=1\hsize]{image/Fig-5-tue.png}
+  \caption{杖歩行者における歩行時の加速度信号}
+  \label{fig:052se}
+  \end{center}
+\end{figure}
+
+
+\section{ローパスフィルタ}
+ローパスフィルタとは，信号を平滑化させるフィルタの一種であり，遮断周波数より低い周波数の成分はできるだけ維持し，遮断周波数より高い周波数の成分を逓減させるフィルタである．
+
+\subsection{指数移動平均}
+指数移動平均とは，時系列データの平滑化に用いられるフィルタであり，式（\ref{sisu}）で表されるものである．このとき，$n$は期間，$\alpha$は重み，$C_{t}$は現在の値を示す．
+\begin{equation}
+  \label{sisu}
+  S_{t} = S_{t-1} +  \alpha (C_{t} - S_{t-1}) \\
+  ( \alpha = \frac{2}{n+1} )
+\end{equation}
+指数移動平均では指数関数的に重みを減少させるため，直近のデータを重視するとともに古いデータを完全に切り捨てずに平滑化させることができる．図\ref{fig:sisu}はある信号を16サンプルごとに指数移動平均によって平滑化したものである．
+
+\begin{figure}[tbp]
+  \begin{center}
+  \includegraphics[width=1\hsize]{image/Fig-sisu.png}
+  \caption{指数移動平均による平滑化}
+  \label{fig:sisu}
+  \end{center}
+\end{figure}
+
+
+\subsection{RCフィルタ}
+RCフィルタは，入力信号に並列するコンデンサと，入力信号と直列する抵抗器から成るフィルタであり，式（\ref{rc}）で表される．ここで，定数$\alpha$は重みを示す．
+また，図\ref{fig:rcfiltered}は元の信号とRCフィルタによって平滑化した信号である．指数移動平均と比較すると計算が単純かつ，より優れた平滑化が可能であるとわかる．
+\begin{equation}
+  \label{rc}
+  S_{t} = \alpha S_{t-1} + (1- \alpha) S_{t}
+\end{equation}
+
+\begin{figure}[h]
+  \subfigure[元の信号]{%
+  \includegraphics[clip, width=0.5\columnwidth]{image/Fig-035original.png}}%
+  \subfigure[平滑化した信号]{%
+  \includegraphics[clip, width=0.5\columnwidth]{image/Fig-035RC.png}}%
+  \caption{RCフィルタによる平滑化}
+  \label{fig:rcfiltered}
+\end{figure}
+
+さらに，図\ref{fig:rcweight}はそれぞれ重みが0.7，0.8，0.9，0.99とした時のRCフィルタに通した信号のグラフである．
+それぞれの重みを比較したところ，重み0.9のとき最もバランスよく平滑化されたため，本研究における信号の下処理としてのローパスフィルタには重み0.9のRCフィルタを用いることとする．
+
+\begin{figure}[h]
+  \begin{center}
+  \subfigure[重み0.7のとき]{%
+  \includegraphics[clip, width=0.5\columnwidth]{image/Fig-rc07.png}}%
+  \subfigure[重み0.8のとき]{%
+  \includegraphics[clip, width=0.5\columnwidth]{image/Fig-rc08.png}}%
+  \end{center}
+  \begin{center}
+  \subfigure[重み0.9のとき]{%
+  \includegraphics[clip, width=0.5\columnwidth]{image/Fig-rc09.png}}%
+  \subfigure[重み0.99のとき]{%
+  \includegraphics[clip, width=0.5\columnwidth]{image/Fig-rc099.png}}%
+  \end{center}
+  \caption{重みを変化させたRCフィルタによる平滑化の様子}
+  \label{fig:rcweight}
+\end{figure}
