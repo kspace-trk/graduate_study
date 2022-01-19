@@ -11,7 +11,7 @@ https://otanilab.esa.io/
 # 事前準備
 ##  Latex インストール(めっちゃ時間かかる)
  ###  Windows
-[このサイトの １行目にあるinstall-tl-windows.exeのリンクを踏んでexeを実行してください。(流れに従えば大丈夫です。)](https://www.tug.org/texlive/acquire-netinstall.html)
+[このサイトの １行目にあるinstall-tl-windows.exeのリンクを踏んでexeを実行してください．(流れに従えば大丈夫です．)](https://www.tug.org/texlive/acquire-netinstall.html)
  ### Mac
 ```bash
 $ brew cask install mactex-no-gui
@@ -27,12 +27,12 @@ $ sudo apt install texlive-full
 
 ## Latex用のビルドファイルを生成
 
-`.latexmkrc`をそれぞれ、いかのファイルパス先で作成する必要するがあります。  
+`.latexmkrc`をそれぞれ，いかのファイルパス先で作成する必要するがあります．  
 - windows :  `C:\Users\[ユーザ名]\.latexmkrc`
 - mac : `/Users/USERNAME/.latexmkrc`
 - linux : `~\.latexmkrc`
 
-内容は以下のとおりです。  
+内容は以下のとおりです．  
 ```bash
 #!/usr/bin/env perl
 
@@ -68,7 +68,7 @@ if ($^O eq 'linux') {
 $clean_full_ext = "%R.synctex.gz"
 ```
 ## 拡張機能 LaTeX Workshop のインストール
-VSCodeの拡張機能検索画面から `latex`と入力して拡張機能をインストールしましょう。  
+VSCodeの拡張機能検索画面から `latex`と入力して拡張機能をインストールしましょう．  
 
 # ビルド
 
@@ -78,21 +78,21 @@ VSCodeの拡張機能検索画面から `latex`と入力して拡張機能をイ
 -  Windows/Linux は `ctrl + alt + b`  
 -  Mac は `? + ? + b `
 
-を押すと、ホットリロード形式のビルドが始まります。  
-エラーがないばあい何も表示されないのでちょっと怖いですが。  
+を押すと，ホットリロード形式のビルドが始まります．  
+エラーがないばあい何も表示されないのでちょっと怖いですが．  
 
 ## pdfのプレビュー
 
-ホットリロード形式になったpdfをVSCodeの右側に表示します。  
+ホットリロード形式になったpdfをVSCodeの右側に表示します．  
 
 `paper.tex`を開いた状態で
 
 -  Windows/Linux は `ctrl + alt + v`  
 -  Mac は `? + ? + v`
 
-で右側に表示されるはずです。  
+で右側に表示されるはずです．  
 
-これでホットリロード状態になっているはずです。  
-試しに01.texなどを書き換えてみてください。  
-保存に多少時間がかかりますが、変更が反映できていれば大丈夫です。  
+これでホットリロード状態になっているはずです．  
+試しに01.texなどを書き換えてみてください．  
+保存に多少時間がかかりますが，変更が反映できていれば大丈夫です．  
 
