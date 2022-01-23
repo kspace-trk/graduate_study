@@ -1,0 +1,2799 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.11)  12 JAN 2022 13:38
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex
+(/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/platex/base/jreport.cls
+
+/usr/local/texlive/2021/texmf-dist/tex/platex/base/jreport.cls:16: LaTeX Error: This file needs format `pLaTeX2e'
+               but this is `LaTeX2e'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \NeedsTeXFormat{pLaTeX2e}
+                              
+The current input file will not be processed further,
+because it was written for some other flavor of TeX.
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:16: LaTeX Error: Command \bibname undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \renewcommand{\bibname}
+                            {参 考 文 献}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:19: LaTeX Error: Environment thebibliography undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \renewenvironment{thebibliography}
+                                       [1]
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:40: Undefined control sequence.
+<argument> \abovecaptionskip 
+                             
+l.40 \setlength\abovecaptionskip{5\p@}
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:40: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 \setlength\abovecaptionskip{5\p@}
+                                      
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 5 in font nullfont!
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:40: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.40 \setlength\abovecaptionskip{5\p@}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:40: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.40 \setlength\abovecaptionskip{5\p@}
+                                      
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:41: Undefined control sequence.
+<argument> \belowcaptionskip 
+                             
+l.41 \setlength\belowcaptionskip{5\p@}
+                                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 5 in font nullfont!
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:41: Missing number, treated as zero.
+<to be read again> 
+                   \relax 
+l.41 \setlength\belowcaptionskip{5\p@}
+                                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:41: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \relax 
+l.41 \setlength\belowcaptionskip{5\p@}
+                                      
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 40--42
+[]
+ []
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:78: LaTeX Error: Environment description undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 \renewenvironment{description}
+                                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:90: Undefined control sequence.
+l.90 \DeclareRelationFont
+                         {JY1}{mc}{it}{}{OT1}{cmr}{it}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:90: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.90 \DeclareRelationFont{J
+                           Y1}{mc}{it}{}{OT1}{cmr}{it}{}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:91: Undefined control sequence.
+l.91 \DeclareRelationFont
+                         {JT1}{mc}{it}{}{OT1}{cmr}{it}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:94: LaTeX Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94     <-> min10}{}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:97: LaTeX Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.97     <-> tmin10}{}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:98: Undefined control sequence.
+l.98 \DeclareRelationFont
+                         {JY1}{mc}{sl}{}{OT1}{cmr}{sl}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:99: Undefined control sequence.
+l.99 \DeclareRelationFont
+                         {JT1}{mc}{sl}{}{OT1}{cmr}{sl}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:102: LaTeX Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102     <-> min10}{}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:105: LaTeX Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.105     <-> tmin10}{}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:106: Undefined control sequence.
+l.106 \DeclareRelationFont
+                          {JY1}{mc}{sc}{}{OT1}{cmr}{sc}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:107: Undefined control sequence.
+l.107 \DeclareRelationFont
+                          {JT1}{mc}{sc}{}{OT1}{cmr}{sc}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:110: LaTeX Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110     <-> min10}{}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:113: LaTeX Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113     <-> tmin10}{}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:114: Undefined control sequence.
+l.114 \DeclareRelationFont
+                          {JY1}{gt}{it}{}{OT1}{cmbx}{it}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:115: Undefined control sequence.
+l.115 \DeclareRelationFont
+                          {JT1}{gt}{it}{}{OT1}{cmbx}{it}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:118: LaTeX Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118     <-> goth10}{}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:121: LaTeX Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.121     <-> tgoth10}{}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:122: Undefined control sequence.
+l.122 \DeclareRelationFont
+                          {JY1}{gt}{sl}{}{OT1}{cmbx}{sl}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:123: Undefined control sequence.
+l.123 \DeclareRelationFont
+                          {JT1}{gt}{sl}{}{OT1}{cmbx}{sl}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:126: LaTeX Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126     <-> goth10}{}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:129: LaTeX Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129     <-> tgoth10}{}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:130: Undefined control sequence.
+l.130 \DeclareRelationFont
+                          {JY1}{gt}{sc}{}{OT1}{cmbx}{sc}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:131: Undefined control sequence.
+l.131 \DeclareRelationFont
+                          {JT1}{gt}{sc}{}{OT1}{cmbx}{sc}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:134: LaTeX Error: Font family `JY1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134     <-> goth10}{}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:137: LaTeX Error: Font family `JT1+mc' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.137     <-> tgoth10}{}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:138: Undefined control sequence.
+l.138 \DeclareRelationFont
+                          {JY1}{gt}{it}{}{OT1}{cmr}{it}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no Y in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:139: Undefined control sequence.
+l.139 \DeclareRelationFont
+                          {JT1}{gt}{it}{}{OT1}{cmr}{it}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no J in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:142: LaTeX Error: Font family `JY1+gt' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.142     <-> goth10}{}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/mysty.sty:145: LaTeX Error: Font family `JT1+gt' unknown.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145     <-> tgoth10}{}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Overfull \hbox (20.0pt too wide) in paragraph at lines 90--27
+[]
+ []
+
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen138
+\Gin@req@width=\dimen139
+)
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:5: Improper `at' size (0.0pt), replaced by 10pt.
+<to be read again> 
+                   relax 
+l.5 \begin{document}
+                    
+I can only handle fonts at positive sizes that are
+less than 2048pt, so I've changed what you said to 10pt.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count179
+\l__pdf_internal_box=\box47
+) (/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.aux)
+\openout1 = `paper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:5: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 \begin{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count180
+\scratchdimen=\dimen140
+\scratchbox=\box48
+\nofMPsegments=\count181
+\nofMParguments=\count182
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count183
+\MPscratchDim=\dimen141
+\MPnumerator=\count184
+\makeMPintoPDFobject=\count185
+\everyMPtoPDFconversion=\toks17
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:8: LaTeX Error: Environment titlepage undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 \begin{titlepage}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Undefined control sequence.
+l.11 		{\Large
+              \gt 東京都市大学メディア情報学部}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Undefined control sequence.
+l.11 		{\Large\gt
+                  東京都市大学メディア情報学部}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Package inputenc Error: Unicode character 東 (U+6771)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 		{\Large\gt 東
+                     京都市大学メディア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Package inputenc Error: Unicode character 京 (U+4EAC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 		{\Large\gt 東京
+                        都市大学メディア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Package inputenc Error: Unicode character 都 (U+90FD)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 		{\Large\gt 東京都
+                           市大学メディア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Package inputenc Error: Unicode character 市 (U+5E02)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 		{\Large\gt 東京都市
+                              大学メディア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Package inputenc Error: Unicode character 大 (U+5927)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 		{\Large\gt 東京都市大
+                                 学メディア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Package inputenc Error: Unicode character 学 (U+5B66)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 		{\Large\gt 東京都市大学
+                                    メディア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Package inputenc Error: Unicode character メ (U+30E1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 		{\Large\gt 東京都市大学メ
+                                       ディア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Package inputenc Error: Unicode character デ (U+30C7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 		{\Large\gt 東京都市大学メデ
+                                          ィア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Package inputenc Error: Unicode character ィ (U+30A3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 		{\Large\gt 東京都市大学メディ
+                                             ア情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Package inputenc Error: Unicode character ア (U+30A2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 		{\Large\gt 東京都市大学メディア
+                                                情報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Package inputenc Error: Unicode character 情 (U+60C5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...Large\gt 東京都市大学メディア情
+                                                  報学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Package inputenc Error: Unicode character 報 (U+5831)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...ge\gt 東京都市大学メディア情報
+                                                  学部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Package inputenc Error: Unicode character 学 (U+5B66)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...gt 東京都市大学メディア情報学
+                                                  部}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: Package inputenc Error: Unicode character 部 (U+90E8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...東京都市大学メディア情報学部
+                                                  }\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:11: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...京都市大学メディア情報学部}\\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:13: Undefined control sequence.
+l.13 		{\Large
+              \bf 2016年度卒業研究}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:13: Undefined control sequence.
+l.13 		{\Large\bf
+                  2016年度卒業研究}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:13: Package inputenc Error: Unicode character 年 (U+5E74)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 		{\Large\bf 2016年
+                         度卒業研究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:13: Package inputenc Error: Unicode character 度 (U+5EA6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 		{\Large\bf 2016年度
+                            卒業研究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:13: Package inputenc Error: Unicode character 卒 (U+5352)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 		{\Large\bf 2016年度卒
+                               業研究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:13: Package inputenc Error: Unicode character 業 (U+696D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 		{\Large\bf 2016年度卒業
+                                  研究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:13: Package inputenc Error: Unicode character 研 (U+7814)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 		{\Large\bf 2016年度卒業研
+                                     究}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:13: Package inputenc Error: Unicode character 究 (U+7A76)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 		{\Large\bf 2016年度卒業研究
+                                        }\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Undefined control sequence.
+l.17 		{\huge
+             \bf 釣銭誤り検出システムの構築}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Undefined control sequence.
+l.17 		{\huge\bf
+                 釣銭誤り検出システムの構築}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Package inputenc Error: Unicode character 釣 (U+91E3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 		{\huge\bf 釣
+                    銭誤り検出システムの構築}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Package inputenc Error: Unicode character 銭 (U+92AD)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 		{\huge\bf 釣銭
+                       誤り検出システムの構築}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Package inputenc Error: Unicode character 誤 (U+8AA4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 		{\huge\bf 釣銭誤
+                          り検出システムの構築}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Package inputenc Error: Unicode character り (U+308A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 		{\huge\bf 釣銭誤り
+                             検出システムの構築}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Package inputenc Error: Unicode character 検 (U+691C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 		{\huge\bf 釣銭誤り検
+                                出システムの構築}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Package inputenc Error: Unicode character 出 (U+51FA)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 		{\huge\bf 釣銭誤り検出
+                                   システムの構築}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Package inputenc Error: Unicode character シ (U+30B7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 		{\huge\bf 釣銭誤り検出シ
+                                      ステムの構築}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 		{\huge\bf 釣銭誤り検出シス
+                                         テムの構築}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Package inputenc Error: Unicode character テ (U+30C6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 		{\huge\bf 釣銭誤り検出システ
+                                            ムの構築}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Package inputenc Error: Unicode character ム (U+30E0)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 		{\huge\bf 釣銭誤り検出システム
+                                               の構築}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 		{\huge\bf 釣銭誤り検出システムの
+                                                  構築}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Package inputenc Error: Unicode character 構 (U+69CB)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...ge\bf 釣銭誤り検出システムの構
+                                                  築}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: Package inputenc Error: Unicode character 築 (U+7BC9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...bf 釣銭誤り検出システムの構築
+                                                  }\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:17: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...釣銭誤り検出システムの構築}\\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Undefined control sequence.
+l.25 		{\Large
+               メディア情報学部 情報システム学科 1372999}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character メ (U+30E1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 		{\Large メ
+                  ディア情報学部 情報システム学科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character デ (U+30C7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 		{\Large メデ
+                     ィア情報学部 情報システム学科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character ィ (U+30A3)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 		{\Large メディ
+                        ア情報学部 情報システム学科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character ア (U+30A2)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 		{\Large メディア
+                           情報学部 情報システム学科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character 情 (U+60C5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 		{\Large メディア情
+                              報学部 情報システム学科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character 報 (U+5831)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 		{\Large メディア情報
+                                 学部 情報システム学科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character 学 (U+5B66)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 		{\Large メディア情報学
+                                    部 情報システム学科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character 部 (U+90E8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 		{\Large メディア情報学部
+                                        情報システム学科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character 情 (U+60C5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 		{\Large メディア情報学部 情
+                                           報システム学科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character 報 (U+5831)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 		{\Large メディア情報学部 情報
+                                              システム学科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character シ (U+30B7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 		{\Large メディア情報学部 情報シ
+                                                 ステム学科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character ス (U+30B9)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...arge メディア情報学部 情報シス
+                                                  テム学科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character テ (U+30C6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...e メディア情報学部 情報システ
+                                                  ム学科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character ム (U+30E0)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...��ディア情報学部 情報システム
+                                                  学科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character 学 (U+5B66)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...��ィア情報学部 情報システム学
+                                                  科 1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:25: Package inputenc Error: Unicode character 科 (U+79D1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 ...��ア情報学部 情報システム学科
+                                                   1372999}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:26: Undefined control sequence.
+l.26 		{\Large
+               岡野 彩香}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:26: Package inputenc Error: Unicode character 岡 (U+5CA1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 		{\Large 岡
+                  野 彩香}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:26: Package inputenc Error: Unicode character 野 (U+91CE)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 		{\Large 岡野
+                      彩香}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:26: Package inputenc Error: Unicode character 彩 (U+5F69)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 		{\Large 岡野 彩
+                         香}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:26: Package inputenc Error: Unicode character 香 (U+9999)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 		{\Large 岡野 彩香
+                            }\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:26: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 		{\Large 岡野 彩香}\\
+                               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:28: Undefined control sequence.
+l.28 		{\Large
+               指導教員 大谷紀子 教授}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:28: Package inputenc Error: Unicode character 指 (U+6307)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 		{\Large 指
+                  導教員 大谷紀子 教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:28: Package inputenc Error: Unicode character 導 (U+5C0E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 		{\Large 指導
+                     教員 大谷紀子 教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:28: Package inputenc Error: Unicode character 教 (U+6559)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 		{\Large 指導教
+                        員 大谷紀子 教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:28: Package inputenc Error: Unicode character 員 (U+54E1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 		{\Large 指導教員
+                            大谷紀子 教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:28: Package inputenc Error: Unicode character 大 (U+5927)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 		{\Large 指導教員 大
+                               谷紀子 教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:28: Package inputenc Error: Unicode character 谷 (U+8C37)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 		{\Large 指導教員 大谷
+                                  紀子 教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:28: Package inputenc Error: Unicode character 紀 (U+7D00)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 		{\Large 指導教員 大谷紀
+                                     子 教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:28: Package inputenc Error: Unicode character 子 (U+5B50)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 		{\Large 指導教員 大谷紀子
+                                         教授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:28: Package inputenc Error: Unicode character 教 (U+6559)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 		{\Large 指導教員 大谷紀子 教
+                                            授}\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:28: Package inputenc Error: Unicode character 授 (U+6388)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 		{\Large 指導教員 大谷紀子 教授
+                                               }\\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:28: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 		{\Large 指導教員 大谷紀子 教授}\\
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:30: LaTeX Error: \begin{document} ended by \end{titlepage}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 \end{titlepage}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:33: Undefined control sequence.
+l.33 \tableofcontents
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/paper.tex:34: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.34 \cleardoublepage
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:1: Undefined control sequence.
+l.1 \chapter
+            {はじめに}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:1: Package inputenc Error: Unicode character は (U+306F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{は
+                じめに}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:1: Package inputenc Error: Unicode character じ (U+3058)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{はじ
+                   めに}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:1: Package inputenc Error: Unicode character め (U+3081)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{はじめ
+                      に}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:1: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{はじめに
+                         }
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 あ
+       あああああああああああああああああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ああ
+          ああああああああああああああああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 あああ
+             あああああああああああああああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ああああ
+                ああああああああああああああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 あああああ
+                   あああああああああああああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ああああああ
+                      ああああああああああああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 あああああああ
+                         あああああああああああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ああああああああ
+                            ああああああああああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 あああああああああ
+                               あああああああああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ああああああああああ
+                                  ああああああああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 あああああああああああ
+                                     あああああああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ああああああああああああ
+                                        ああああああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 あああああああああああああ
+                                           あああああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ああああああああああああああ
+                                              ああああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 あああああああああああああああ
+                                                 あああああああああ...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2: Package inputenc Error: Unicode character あ (U+3042)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...�ああああああああああああああ
+                                                  ああああああああ�...
+(That makes 100 errors; please try again.) 
+Here is how much of TeX's memory you used:
+ 1053 strings out of 478994
+ 17286 string characters out of 5858184
+ 300851 words of memory out of 5000000
+ 18584 multiletter control sequences out of 15000+600000
+ 403430 words of font info for 27 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 68i,4n,74p,522b,92s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+/Users/keigo/ghq/github.com/kspace-trk/graduate_study/docs/tex/01.tex:2:  ==> Fatal error occurred, no output PDF file produced!
