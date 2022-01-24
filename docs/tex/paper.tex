@@ -2,6 +2,14 @@
 \usepackage{mysty}
 \usepackage{graphicx}
 \usepackage{pdfpages}
+ 
+\newcommand{\bettershortstack}[4][c]{%
+  \renewcommand{\arraystretch}{#2}
+  \begin{tabular}[t]{@{}#1@{}}
+  #4
+  \end{tabular}%
+  \renewcommand{\arraystretch}{#3}
+}
 
 \begin{document}
 \baselineskip 21.5pt
