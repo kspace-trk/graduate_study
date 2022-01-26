@@ -1,0 +1,38 @@
+\contentsline {chapter}{\numberline {第1章}はじめに}{1}%
+\contentsline {chapter}{\numberline {第2章}トランプのデザイン}{2}%
+\contentsline {chapter}{\numberline {第3章}対話型遺伝的アルゴリズム}{4}%
+\contentsline {section}{\numberline {3.1}遺伝的アルゴリズム}{4}%
+\contentsline {subsection}{\numberline {3.1.1}染色体表現}{4}%
+\contentsline {subsection}{\numberline {3.1.2}親個体の選択}{5}%
+\contentsline {subsubsection}{ルーレット選択}{5}%
+\contentsline {subsubsection}{トーナメント選択}{6}%
+\contentsline {subsubsection}{ランキング選択}{6}%
+\contentsline {subsection}{\numberline {3.1.3}交叉}{7}%
+\contentsline {subsection}{\numberline {3.1.4}突然変異}{7}%
+\contentsline {subsection}{\numberline {3.1.5}進化戦略}{7}%
+\contentsline {section}{\numberline {3.2}対話型遺伝的アルゴリズム}{9}%
+\contentsline {section}{\numberline {3.3}対話型遺伝的アルゴリズムの適用例}{9}%
+\contentsline {chapter}{\numberline {第4章}IGAを用いたトランプのバックデザイン生成システム}{10}%
+\contentsline {section}{\numberline {4.1}デザインの表現方法}{10}%
+\contentsline {subsection}{\numberline {4.1.1}図形の構成要素}{10}%
+\contentsline {section}{\numberline {4.2}染色体の設計}{11}%
+\contentsline {section}{\numberline {4.3}初期集団の生成}{11}%
+\contentsline {section}{\numberline {4.4}評価および次世代生成}{13}%
+\contentsline {section}{\numberline {4.5}終了画面}{16}%
+\contentsline {chapter}{\numberline {第5章}評価実験}{17}%
+\contentsline {section}{\numberline {5.1}実験内容}{17}%
+\contentsline {section}{\numberline {5.2}実験結果}{17}%
+\contentsline {chapter}{\numberline {第6章}考察}{26}%
+\contentsline {section}{\numberline {6.1}本システムの有用性と満足度}{26}%
+\contentsline {section}{\numberline {6.2}区分Aと区分Bの被験者の差}{26}%
+\contentsline {subsection}{\numberline {6.2.1}区分別の評価の高いデザイン}{27}%
+\contentsline {section}{\numberline {6.3}今後の課題}{27}%
+\contentsline {subsection}{\numberline {6.3.1}スプレッドとファンを使ったデザインプレビュー}{28}%
+\contentsline {subsection}{\numberline {6.3.2}SVG形式でのファイル出力}{28}%
+\contentsline {subsection}{\numberline {6.3.3}背景と枠およびボーダーの設定}{29}%
+\contentsline {chapter}{\numberline {第7章}おわりに}{30}%
+\contentsline {chapter}{謝 辞}{31}%
+\contentsline {chapter}{参 考 文 献}{32}%
+\contentsline {chapter}{\numberline {付 録A }既存のデザインの名称と製作者}{33}%
+\contentsline {chapter}{\numberline {付 録B }アンケート画面}{34}%
+\contentsline {chapter}{\numberline {付 録C }高く評価されたデザイン}{37}%

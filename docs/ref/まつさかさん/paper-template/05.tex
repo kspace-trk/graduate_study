@@ -1,0 +1,82 @@
+\chapter{自己相関関数による歩数計測}
+自己相関関数を用いた歩数計測法では，自己相関関数を用いて歩数を検出および計測する．3軸それぞれの加速度信号に対し，長さが128サンプルの窓を64サンプルずつ時間軸方向へシフトして自己相関関数を求めることで，繰り返しの信号か否かを判別する．相関関係が確認される回数を歩数とする．
+
+\section{自己相関関数}
+自己相関関数は，信号に含まれる繰り返しパターンの検出に有効であるといわれる数学的道具であり，信号が信号自身を時間軸方向にn時刻だけシフトした信号とどれだけ一致しているかという指標として使われる．
+
+\begin{math}
+  時間的に変化する信号x(t)について，ある時刻tと時刻t+ \tau における値の積の時間平均をとったものを自己相関関数といい，
+\end{math}
+式（\ref{jiko}）で表される．
+\begin{equation}
+  \label{jiko}
+  R(\tau) = \int_{-\infty}^{\infty} x(t) \cdot x(t+\tau)dt
+\end{equation}
+\begin{math}
+  R( \tau )は信号波形について，時間τだけ離れた点の相関の大きさを表す量であり， \tau は遅れ時間と呼ばれる定数である．
+\end{math}
+
+\begin{math}
+本研究においては，自己相関関数をより効率的に計算するためにウィーナー・ヒンチンの定理を用いる．ウィーナー・ヒンチンの定理とは，広義定常確率過程のパワースペクトル密度が，対応する自己相関関数のフーリエ変換であることを示した定理である．ある非周期関数f(x)に対するフーリエ変換とフーリエ逆変換，さらにパワースペクトルをそれぞれ
+\end{math}
+式（\ref{furie}），（\ref{gyakuf}），（\ref{power}）で表す．
+\begin{equation}
+  \label{furie}
+  F(\omega) = \int^{\infty}_{-\infty} f(y)e^{-i\omega y}dy
+\end{equation}
+\begin{equation}
+  \label{gyakuf}
+  f(x) = \frac{1}{2π} \int^{\infty}_{-\infty} F(\omega)e^{-\omega y}d\omega
+\end{equation}
+\begin{equation}
+  \label{power}
+  E(\omega) = |F(\omega)|^{2} = F(\omega)F^{*}(\omega)
+\end{equation}
+このとき，ウィーナーヒンチンの定理を用いるとパワースペクトルと自己相関関数はそれぞれ式（\ref{winer1}），（\ref{winer2}）と表すことができ，2回の高速フーリエ変換で自己相関関数を算出することが可能となる．
+\begin{equation}
+  \label{winer1}
+  E(\omega) = F[R(\tau)]
+\end{equation}
+\begin{equation}
+  \label{winer2}
+  R(\tau) = F^{-1}[E(\omega)]
+\end{equation}
+
+
+図\ref{fig:jiko04}は周期性を確認できる箇所の信号と，自己相関関数を適用した後の信号である．また，図\ref{fig:jiko06}は周期性が乏しい箇所の信号と，自己相関関数を適用した後の信号である．自己相関の有無を確認することができる．
+\begin{figure}[tbhp]
+  \subfigure[元の信号]{%
+  \includegraphics[clip, width=0.5\columnwidth]{image/Fig-jikoOri.png}}%
+  \subfigure[自己相関関数後の信号]{%
+  \includegraphics[clip, width=0.5\columnwidth]{image/Fig-jikoGo.png}}%
+  \caption{周期性がある場合の自己相関関数の様子}
+  \label{fig:jiko04}
+\end{figure}
+
+\begin{figure}[tbhp]
+  \subfigure[元の信号]{%
+  \includegraphics[clip, width=0.5\columnwidth]{image/Fig-jikoOriN.png}}%
+  \subfigure[自己相関関数後の信号]{%
+  \includegraphics[clip, width=0.5\columnwidth]{image/Fig-jikoGoN.png}}%
+  \caption{周期性が乏しい場合の自己相関関数の様子}
+  \label{fig:jiko06}
+\end{figure}
+
+\section{歩数計測法}
+本研究において，Appleが提供するライブラリであるAccelerate内のvDSPを用いて高速フーリエ変換を行う．
+自己相関関数に入力する信号の窓長は2周期分かつ2の累乗である必要があるため128サンプルとし，さらに1歩ずつ自己相関関数を求めたいため，64サンプルずつ時間軸方向へシフトさせる．各入力において，vDSPの高速フーリエ変換を用いてパワースペクトルを算出し，算出したパワースペクトルをフーリエ逆変換することで自己相関関数を求める．
+求めた自己相関関数をさらにRCフィルタに通して平滑化する．図\ref{fig:jikoaa}は入力信号の自己相関関数を求め，平滑化する一連の処理の様子である．
+
+\begin{figure}[tbp]
+  \subfigure[入力信号]{%
+  \includegraphics[clip, width=0.33\columnwidth]{image/Fig-jiko01.png}}%
+  \subfigure[出力信号]{%
+  \includegraphics[clip, width=0.33\columnwidth]{image/Fig-jiko02.png}}%
+  \subfigure[平滑化した信号]{%
+  \includegraphics[clip, width=0.33\columnwidth]{image/Fig-jiko03.png}}%
+  \caption{処理の流れの様子}
+  \label{fig:jikoaa}
+\end{figure}
+
+次に，前述の処理によって得た平滑化された自己相関関数内で，時刻tにおける値とt+3における値を比較し，値が一度下降した後に上昇し，さらにもう一度下降した場合に相関関係があるとする．このとき，平滑化した自己相関関数内においてもノイズは多少残るため，自己相関関数が過敏になりすぎないよう3サンプルずつシフトしていく．
+最後に，信号全体において自己相関があると確認された回数を歩数とする．

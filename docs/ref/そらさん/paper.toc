@@ -1,0 +1,26 @@
+\contentsline {chapter}{\numberline {第1章}はじめに}{1}{}%
+\contentsline {chapter}{\numberline {第2章}テキサス・ホールデム}{2}{}%
+\contentsline {section}{\numberline {2.1}ルール}{2}{}%
+\contentsline {section}{\numberline {2.2}各アクション}{2}{}%
+\contentsline {section}{\numberline {2.3}ゲーム進行}{3}{}%
+\contentsline {chapter}{\numberline {第3章}多数決機械}{5}{}%
+\contentsline {section}{\numberline {3.1}多数決による分類}{5}{}%
+\contentsline {section}{\numberline {3.2}荷重ベクトルと基準値の学習}{6}{}%
+\contentsline {chapter}{\numberline {第4章}システム構成}{7}{}%
+\contentsline {section}{\numberline {4.1}情報入力部}{7}{}%
+\contentsline {subsection}{\numberline {4.1.1}勝利確率の算出}{8}{}%
+\contentsline {subsection}{\numberline {4.1.2}顔面骨格座標の取得}{8}{}%
+\contentsline {section}{\numberline {4.2}意思決定部}{9}{}%
+\contentsline {section}{\numberline {4.3}行動出力部}{9}{}%
+\contentsline {chapter}{\numberline {第5章}評価実験}{11}{}%
+\contentsline {section}{\numberline {5.1}方法}{11}{}%
+\contentsline {section}{\numberline {5.2}アンケート}{11}{}%
+\contentsline {section}{\numberline {5.3}結果}{12}{}%
+\contentsline {chapter}{\numberline {第6章}考察}{14}{}%
+\contentsline {chapter}{\numberline {第7章}おわりに}{15}{}%
+\contentsline {chapter}{謝 辞}{16}{}%
+\contentsline {chapter}{参 考 文 献}{17}{}%
+\contentsline {chapter}{\numberline {付 録A }実験の説明サイト}{18}{}%
+\contentsline {chapter}{\numberline {付 録B }対戦1後のアンケート}{32}{}%
+\contentsline {chapter}{\numberline {付 録C }全体を通したアンケート}{42}{}%
+\contentsline {chapter}{\numberline {付 録D }被験者の自由記述欄回答}{44}{}%

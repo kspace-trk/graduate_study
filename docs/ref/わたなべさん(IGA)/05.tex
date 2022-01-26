@@ -1,0 +1,220 @@
+\chapter{IGAを使用した作曲システム}
+本章ではIGAを使用した作曲システムについて説明する．
+
+\section{概要}
+本システムはIGAと水野式黒鍵作曲法を使用し，ユーザの感性に即した楽曲を生成する．
+まず，水野式黒鍵作曲法に則って生成した楽曲をユーザに提示し，それぞれ5段階で評価させる．評価と楽曲を元にGAの操作で新たに楽曲を生成する．評価と生成を繰り返すことによってユーザの感性に即した楽曲を提示するシステムである．ユーザは図
+\ref{fig:gui}
+に示したGUIを用いて楽曲を評価する．
+楽曲の再生には染色体の情報をもとに生成したMIDIファイルを用いる．
+IGAでは次世代生成のたびにユーザがそれぞれ評価しなければならないので，評価の回数が多いとユーザに負担がかかる．負担がユーザの感性や評価に影響を与えないようにするために，一度にユーザが評価する楽曲を6曲，次世代生成の回数を4回に設定した．
+
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[scale=0.30]{image/gui.eps}
+\caption{本システムのGUI}
+\label{fig:gui}
+\end{center}
+\end{figure}
+
+\section{染色体表現}
+本システムでは水野式黒鍵作曲法の各パートにおける，指定された黒鍵群からの黒鍵の選び方や音価を染色体とする．
+
+\subsection{アルペジオ}
+各黒鍵群の5音を0から4の整数で表し，染色体において奇数番目の遺伝子が黒鍵群2の音，偶数番目の遺伝子が黒鍵群4の音を表す．各遺伝子型に対応する表現型を表
+\ref{arpe}
+に示す．16分音符を4小節分並べるので1つの個体でアルペジオの表現に遺伝子を64個使用する．遺伝子座は0から63とする．
+
+\begin{table}[tbp]
+\begin{center}
+\caption{アルペジオの遺伝子表現}
+\label{arpe}
+\begin{tabular}{|c|c|c|c|} \hline
+\multicolumn{2}{|c|}{遺伝子座　偶数}& \multicolumn{2}{|c|}{遺伝子座　奇数}\\ \hline
+遺伝子型 & 表現型 &遺伝子型 & 表現型 \\ \hline
+0&黒鍵群2のC\#&0&黒鍵群4のC\#\\ \hline
+1&黒鍵群2のD\#&1&黒鍵群4のD\#\\ \hline
+2&黒鍵群2のF\#&2&黒鍵群4のF\#\\ \hline
+3&黒鍵群2のG\#&3&黒鍵群4のG\#\\ \hline
+4&黒鍵群2のA\#&4&黒鍵群4のA\#\\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{コード}
+10音を表す0から9と，無音を表す10から6つを選択した組み合わせでコードを表現する．各遺伝子型に対応する表現型を表
+\ref{arpe}
+に示す．コードを全音符で4小節分並べるので，表現に遺伝子を24個使用する．遺伝子座は64から87を用いる．
+また，コードは5音または6音の組み合わせなので遺伝子6個ずつ区切り，順序表現を用いて表現する．
+
+
+\begin{table}[tbp]
+\begin{center}
+\caption{コードの遺伝子表現}
+\label{cord}
+\begin{tabular}{|c|c|c|c|} \hline
+遺伝子型 & 表現型 &遺伝子型 & 表現型 \\ \hline
+0&5音 & & \\ \hline
+1&黒鍵群2のC\#&6&黒鍵群3のC\# \\ \hline
+2&黒鍵群2のD\#&7&黒鍵群3のD\#\\ \hline
+3&黒鍵群2のF\#&8&黒鍵群3のF\#\\ \hline
+4&黒鍵群2のG\#&9&黒鍵群3のG\#\\ \hline
+5&黒鍵群2のA\#&10&黒鍵群3のA\#\\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{ベースライン}
+黒鍵群1の5音を0から4の整数で表して遺伝子とする．各遺伝子型に対応する表現型を表
+\ref{base}に示す．2分音符を4小節分並べるので，1つの個体に遺伝子を8個使用する，遺伝子座は88から95を用いる．
+
+\begin{table}[tbp]
+\begin{center}
+\caption{ベースラインの遺伝子表現}
+\label{base}
+\begin{tabular}{|c|c|} \hline
+遺伝子型 & 表現型 \\ \hline
+0&黒鍵群1のC\#\\ \hline
+1&黒鍵群1のD\#\\ \hline
+2&黒鍵群1のF\#\\ \hline
+3&黒鍵群1のG\#\\ \hline
+4&黒鍵群1のA\#\\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{メロディ}
+整数の0から9で10音，10から25で先行音の延長を表現し遺伝子とする．先行音の延長を遺伝子にすることで，初期個体集団を生成するときにさまざまな音価に設定できる．いずれの値でも音価は4分の1拍とする．遺伝子型と表現型を表
+\ref{mero}
+に示す．遺伝子1つにつき4分の1拍を表現するので1小節の表現に遺伝子を16個用いる．したがってメロディ全体を遺伝子を64個使用する，遺伝子座は96から159を用いて表現する．
+
+\begin{table}[tbp]
+\begin{center}
+\caption{メロディの遺伝子表現}
+\label{mero}
+\begin{tabular}{|c|c|c|c|} \hline
+遺伝子型 & 表現型 &遺伝子型 & 表現型 \\ \hline
+& &10～25&延長\\ \hline
+0&黒鍵群3のC\#&5&黒鍵群4のC\# \\ \hline
+1&黒鍵群3のD\#&6&黒鍵群4のD\#\\ \hline
+2&黒鍵群3のF\#&7&黒鍵群4のF\#\\ \hline
+3&黒鍵群3のG\#&8&黒鍵群4のG\#\\ \hline
+4&黒鍵群3のA\#&9&黒鍵群4のA\#\\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{次世代生成}
+ユーザが入力した1から5の5段階評価の値を各個体の適応度として次世代の個体を生成する．
+適応度が5の個体はエリートとして保存し，次世代の個体集団に加える．複数の個体が適応度5であった場合は，無作為に1つの個体を選択しエリートとする．
+親個体はルーレット選択を用いて選択し交叉させる．交叉後の個体の各遺伝子には1/160の確率で突然変異が発生する．
+
+\subsection{交叉と予備実験}
+交叉方法を決めるにあたって予備実験を実施した．
+実験に用いた交叉方法は以下の5つである．
+\begin{enumerate}
+\item 一点交叉
+\item 二点交叉
+\item 三点交叉
+\item 四点交叉
+\item パートごとにタイミングがおおよそ同じところで一点交叉　
+\end{enumerate}
+
+5.の交叉方法について説明する．まず，1以上63以下の整数乱数を取得し，値を変数$cross$とする．アルペジオの交叉点は遺伝子座が$cross$の遺伝子の前とする．また，メロディの交叉点は遺伝子座が$cross$+96の遺伝子の前とする．
+コードの交叉点は遺伝子座が変数$code\_cross$の遺伝子の前とする．
+それぞれのコードの構成を崩さないように，$code\_cross$は70，76，82のいずれかの値となるようにする．$code\_cross$の算出式を式\ref{eq:code}に示す．また，
+$cross$と$code\_cross$の対応を表\ref{tab:cs_cd}に示す．
+
+\begin{equation}
+code\_cross=64+6\times \lfloor cross\div21.001+1 \rfloor \label{eq:code}
+\end{equation}
+
+\begin{table}[tbp]
+\begin{center}
+\caption{変数$cross$と変数$code\_cross$の対応}
+\label{tab:cs_cd}
+\begin{tabular}{|c|c|} \hline
+$cross$&$code\_cross$ \\ \hline
+1～21&70 \\ \hline
+22～42&76\\ \hline
+43～63&82\\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+ベースラインの交叉点は遺伝子座が変数$base\_cross$の遺伝子の前とする．
+$base\_cross$は88以上95以下のいずれかの値となる．
+$base\_cross$の算出式を式\ref{eq:base}に示す．また，
+$cross$と$base\_cross$の対応を表\ref{tab:cs_bs}に示す．
+
+\begin{equation}
+base\_cross=88+\lfloor cross\div9.001+1 \rfloor\label{eq:base}
+\end{equation}
+
+\begin{table}[tbp]
+\begin{center}
+\caption{変数$cross$と変数$base\_cross$の対応}
+\label{tab:cs_bs}
+\begin{tabular}{|c|c|} \hline
+$cross$&$base\_cross$ \\ \hline
+1～9&89 \\ \hline
+10～18&90\\ \hline
+19～27&91\\ \hline
+28～36&92 \\ \hline
+37～45&93 \\ \hline
+46～54&94 \\ \hline
+55～63&95 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+各交叉方法ごとにメロディ部に交叉点が含まれている場合と含まれていない場合に分け,
+本システムで無作為に生成した2曲と交叉させた後の1曲を実験に用いた．
+楽曲数は1～4の交叉方法につきそれぞれ6曲，5.の交叉方法は必ずメロディ部が交叉するので3曲になる．
+実験は被験者5人に，交叉方法を伏せて交叉前の楽曲か交叉後の楽曲かを伝えて楽曲を聴かせた．
+被験者には交叉後の楽曲を聴いた後に，楽曲の混ざり具合の印象をアンケートで回答させた．
+使用したアンケートフォームを図\ref{fig:form0}，結果を表\ref{tab:form0}に示す．
+評価が4に近いほど高評価とした．
+結果より平均が4近く，各回答の4からの距離が近い三点交叉を採用した．
+
+
+
+\begin{figure}[tbp]
+\begin{center}
+\includegraphics[scale=0.30]{image/form0.eps}
+\caption{予備実験のアンケート画面}
+\label{fig:form0}
+\end{center}
+\end{figure}
+
+\begin{table}[tbp]
+\begin{center}
+\caption{予備実験結果}
+\label{tab:form0}
+\begin{tabular}{|c|c|c|c|} \hline
+交叉方法 & メロディ部の交叉&平均&4からの距離の合計 \\ \hline
+\multirow{2}{*}{一点交叉} &あり&2.4& 8\\ \cline{2-4}
+&なし& 2.4&10 \\ \hline
+\multirow{2}{*}{二点交叉}&あり&2.6 &7 \\ \cline{2-4}
+&なし&2.4 & 8\\ \hline
+\multirow{2}{*}{三点交叉}&あり&3.4&5 \\ \cline{2-4}
+&なし&3.6 &6 \\ \hline
+\multirow{2}{*}{四点交叉}&あり&3.6 &6 \\ \cline{2-4}
+&なし& 3.0&5 \\ \hline
+各パート一点&& 3.8&7 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{最終出力}
+最後の評価が終了すると，最も適応度の高い楽曲が図\ref{fig:fin}のように提示される．最も適応度の高い楽曲が複数あった場合は無作為に1曲選択して提示する．
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.50]{image/fin.eps}
+\caption{最終出力提示画面}
+\label{fig:fin}
+\end{center}
+\end{figure}
+
+
+

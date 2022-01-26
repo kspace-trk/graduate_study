@@ -1,0 +1,140 @@
+\chapter{評価実験}
+本章では，構築したシステムの有用性を示すために行った評価実験の内容と結果について説明する．
+
+\section{実験内容}
+レーベルからリリース経験のあるProgressive House作曲家7名を被験者として，評価実験を実施した．システムを使用させた上で，以下の9項目についてアンケート形式で回答させた．
+\begin{enumerate}
+  \item アーティスト名義を教えてください．
+  \item 作曲歴（自由記述）
+  \item 1曲を完成させるのに，普段はどれくらいの時間がかかっているか．（自由記述）
+  \item 本システムによって生成されたメロディは独自性が高かったか．
+  \item 本システムを使用することで，メロディアイデアが思い浮かんだか．
+  \item 本システムを使用することで，作曲意欲が向上したか．
+  \item 本システムが作曲活動に役に立つ感じたか．
+  \item 本システムを使用することによって見込まれる作曲の短縮時間（自由記述）
+  \item 感想(自由記述)
+\end{enumerate}
+本システムの画面を付録Aに，本実験で用いたGoogleフォームの画面を付録Bに示す．
+
+\section{実験結果}
+回答した被験者を番号1-7とし，項目2-9の回答をそれぞれ表5.1-5.8に示す．
+
+\begin{table}[htbp]
+  \begin{center}
+    \caption{作曲歴についての回答}
+    \begin{tabular}{|c|c|}
+      \hline
+      被験者番号 & 回答 \rule[-3mm]{0mm}{8mm}\\ \hline \hline
+      1 & 2年5か月\rule[-3mm]{0mm}{8mm} \\ \hline
+      2 & 5年\rule[-3mm]{0mm}{8mm} \\ \hline
+      3 & 2年半\rule[-3mm]{0mm}{8mm} \\ \hline
+      4 & 6年\rule[-3mm]{0mm}{8mm} \\ \hline
+      5 & 4〜5年\rule[-3mm]{0mm}{8mm} \\ \hline
+      6 & 4年\rule[-3mm]{0mm}{8mm} \\ \hline
+      7 & 3年\rule[-3mm]{0mm}{8mm} \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[htbp]
+  \begin{center}
+    \caption{1曲あたりの作曲時間についての回答}
+    \begin{tabular}{|c|p{30em}|}
+      \hline
+      \multicolumn{1}{|c|}{被験者番号} & \multicolumn{1}{c|}{回答} \rule[-3mm]{-1.3mm}{8mm} \\ \hline
+      1 & メロディーを作るのにかかる時間は毎回ちがうので言えませんが，メロディーができてからの作業時間は12～24時間くらいです．\rule[-3mm]{0mm}{8mm} \\ \hline
+      2 & 72時間位\rule[-3mm]{0mm}{8mm} \\ \hline
+      3 & 30〜50時間\rule[-3mm]{0mm}{8mm} \\ \hline
+      4 & 10時間\rule[-3mm]{0mm}{8mm} \\ \hline
+      5 & 早くて1週間〜2週間\rule[-3mm]{0mm}{8mm} \\ \hline
+      6 & 早くて一日\rule[-3mm]{0mm}{8mm} \\ \hline
+      7 & 1時間\rule[-3mm]{0mm}{8mm} \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[htbp]
+  \begin{center}
+    \caption{生成されたメロディの独自性の高さについての回答}
+    \begin{tabular}{|c|p{10em}|c|}
+      \hline
+      回答 & \multicolumn{1}{c|}{被験者番号} & 割合\rule[-3mm]{0mm}{8mm} \\ \hline \hline
+      はい & 1, 4, 6, 7 & 57.1\% \rule[-3mm]{0mm}{8mm} \\ \hline
+      いいえ & 2, 3 & 28.6\% \rule[-3mm]{0mm}{8mm} \\ \hline
+      その他 & 5 & 14.3\% \rule[-3mm]{0mm}{8mm} \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[htbp]
+  \begin{center}
+    \caption{メロディアイデアが思い浮かんだかについての回答}
+    \begin{tabular}{|c|p{10em}|c|}
+      \hline
+      回答 & \multicolumn{1}{c|}{被験者番号} & 割合\rule[-3mm]{0mm}{8mm} \\ \hline \hline
+      はい & 1, 2, 3, 5, 6, 7 & 85.7\% \rule[-3mm]{0mm}{8mm} \\ \hline
+      いいえ & 4 & 14.3\% \rule[-3mm]{0mm}{8mm} \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[htbp]
+  \begin{center}
+    \caption{作曲意欲が向上したかについての回答}
+    \begin{tabular}{|c|p{10em}|c|}
+      \hline
+      回答 & \multicolumn{1}{c|}{被験者番号} & 割合\rule[-3mm]{0mm}{8mm} \\ \hline \hline
+      はい & 1, 4, 5, 6, 7 & 71.4\% \rule[-3mm]{0mm}{8mm} \\ \hline
+      いいえ & 2, 3 & 28.6\% \rule[-3mm]{0mm}{8mm} \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[htbp]
+  \begin{center}
+    \caption{作曲活動に役に立つかついての回答}
+    \begin{tabular}{|c|p{10em}|c|}
+      \hline
+      回答 & \multicolumn{1}{c|}{被験者番号} & 割合\rule[-3mm]{0mm}{8mm} \\ \hline \hline
+      はい & 1, 2, 3, 4, 5, 6, 7 & 100\% \rule[-3mm]{0mm}{8mm} \\ \hline
+      いいえ &  & 0\% \rule[-3mm]{0mm}{8mm} \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[htbp]
+  \begin{center}
+    \caption{見込まれる作曲の短縮時間についての回答}
+    \begin{tabular}{|c|p{30em}|}
+      \hline
+      被験者番号 & \multicolumn{1}{c|}{回答}\rule[-3mm]{-1.3mm}{8mm} \\ \hline \hline
+      1 & 僕の場合，半日くらいたっても全然メロディーが思いつかなくて時間を無駄にしてしまうことがあるのですが，このシステムで作られたメロディーからインスピレーションを受ければ10分前後でいいメロディーが作れるのでは？と思いました！\rule[-3mm]{0mm}{8mm} \\ \hline
+      2 & 全作曲時間の20％程だが，時間短縮と言うよりは曲の数が増えるイメージ\rule[-3mm]{0mm}{8mm} \\ \hline
+      3 & 2,3時間\rule[-3mm]{0mm}{8mm} \\ \hline
+      4 & 0.5時間\rule[-3mm]{0mm}{8mm} \\ \hline
+      5 & 最初の15〜30分のスタートダッシュの部分が一気に高速化できそうだなと感じました！\rule[-3mm]{0mm}{8mm} \\ \hline
+      6 & 2時間くらい\rule[-3mm]{0mm}{8mm} \\ \hline
+      7 & 16分程 \rule[-3mm]{0mm}{8mm} \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[htbp]
+  \begin{center}
+    \caption{自由記述感想}
+    \begin{tabular}{|c|p{30em}|}
+      \hline
+      被験者番号 & \multicolumn{1}{c|}{回答}\rule[-2mm]{-1.3mm}{6mm} \\ \hline \hline
+      1 & \bettershortstack[l]{0.9}{1.0}{メロディーが思いつかなくなったときにこのシステムを使うととても\\便利だと思いました．また，個人的にはコード進行をいくつか選べる\\ようにしたほうがいいと思いました！} \\ \hline
+      2 & \bettershortstack[l]{0.9}{1.0}{細かい所を詰めていけば，これ以上ない作曲家のサポートコンテンツ\\になり得る素敵なシステムだと思いました！
+      素人の意見であるという\\事と研究の目的とのズレなどはあるかもしれませんが，「使える」シス\\テムにするには，ペンタトニック，メロディーの認知と心理的影響，\\メロディ認知における調性感と終止音導出などを良い感じに導入でき\\ると良い感じになりそうだなって思いました．
+      やっててすごく面白か\\ったです～！応援してます！} \\ \hline
+      3 & \bettershortstack[l]{0.9}{1.0}{良いメロディを作るというのは自分も悩んでいたので面白い取り組み\\だと思いました．出てきたメロディがすぐに使えるものではなかった\\（この辺はある程度耳に親しみやすいメロディを予め決め打つことで\\改善できそう？）メロディを再生する楽器がピアノだとより良かった\\です．（耳に痛くない）再生する際，ベース抜きでメロディのみの方が\\メロディを生成するという観点では良いように感じた．MIDIを視覚\\化して，ユーザー側がそれを操作できるようなUIが作れたらユーザ\\ー側もより楽しめるのではないかと感じた．（将来的な話として）} \\ \hline
+      4 & メロディが思い浮かばないときにきっかけを与えてくれるツールとして利用するなどすると便利そうだなと感じました！8個評価して，新しい世代のメロディを作り進めていくのに結構時間がかかると感じたので，再生が終わったら自動的にxアイコンからxに戻るようにしたり，一つの音声を再生している時に他の物を再生した場合自動で音楽が停止するようにするなど細かいところを簡単に操作できるようにすると理想のメロディにもっと素早くたどり着けるようになるんじゃないかなと思いました！最終的にどのようなものに仕上がるのか楽しみです！頑張ってください！ \\ \hline
+      5 & 非常に楽しませていただきました！
+      自分の引き出しにはなかったタイプのメロディがたくさん出てきたので，引き出しを増やすという観点からも非常に面白かったです！ただ，シンプルさが求められるプログレのパターン系・繰り返し系メロディとランダマイズの仕組みの兼ね合いが非常に難しそうだと感じたので，実際に制作に組み込むとなるとその点が非常にキーポイントになりそうだと感じました！！こんなすごい研究をされてて本当に尊敬です．．！貴重な体験をさせて頂き，ありがとうございました！ \\ \hline
+      6 & Progressive Houseのメロディーを生成してくれるという画期的で素晴らしいシステムを作ってくれて感謝します．改善してほしいところとしてはリードとドラムのズレとたまにキーにない音が鳴ってしまうところです．コード進行も王道進行だけでなく3種類ほどから選べるといいかなと思いました．実用的なメロディーに近づけるためには多くの人による生成と評価が必要だと思いました．このシステムは日本語ですが，多言語に対応していると世界中の人が使ってくれてヒットすると思います． \\ \hline
+      7 &  \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
