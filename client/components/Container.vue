@@ -9,21 +9,12 @@
         <Contents :ind="elem" :index="i" :fitness="fitnessList[i]" :counter="generationCounter" @fitness="fitness" />
       </div>
     </div>
-    <div class="message">
-      リードとベース等がズレている場合は、再生しなおしてください。(大体最初ズレます)
-    </div>
     <button @click="changeGeneration()">
       評価して次のメロディを生成
     </button>
     <button @click="reload()">
       はじめからやりなおす
     </button>
-    <a href="https://forms.gle/xL4MCHcHEN8A52G98" target="_blank" class="to-form">
-      感想を入力する →
-    </a>
-    <div class="announce">
-      感想を入力していただけますと、僕の研究活動に役に立つので喜びます、、！
-    </div>
     <FakeLoading v-if="isLoading" message="生成しています..." />
   </div>
 </template>
