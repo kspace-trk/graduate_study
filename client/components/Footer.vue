@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    Copyright &copy; 2021 Keigo Nakao All Rights Reserved.
+    Copyright &copy; 2022 Keigo Nakao All Rights Reserved.
     <div class="icons">
       <a href="https://twitter.com/Kspace_trk" target="_blank">
         <SvgIcon type="Twitter" />
